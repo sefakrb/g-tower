@@ -21,7 +21,17 @@
               :key="item"
               v-slot="{ active, toggle }"
             >
-              <v-btn class="mx-2" depressed flat small> {{ item }} </v-btn>
+              <v-btn
+                class="mx-2"
+                depressed
+                flat
+                small
+                :input-value="active"
+                active-class="purple white--text"
+                @click="toggle"
+              >
+                {{ item }}
+              </v-btn>
             </v-slide-item>
           </v-slide-group>
         </v-card>
