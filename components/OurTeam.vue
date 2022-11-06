@@ -1,31 +1,34 @@
 <template>
   <v-row v-resize="onResize" class="d-flex justify-center">
-    <template class="pa-0" v-for="(item, index) in items">
-      <v-col class="ma-8 pa-0" :cols="cardSize">
-        <v-card
-          height="100%"
-          class="ma-4 d-flex flex-column justify-center align-center"
-          color="#EFFFEF"
-          rounded="lg"
-        >
-          <v-img
-            max-width="90%"
-            contain
-            :src="require('../static/employee/' + item.image)"
-          ></v-img>
-          <v-card-title
-            class="justify-center"
-            style="font-weight: 600; font-size: 1.2rem"
-            >{{ item.name }}</v-card-title
-          >
-          <div style="width: 100%" class="d-flex justify-end">
-            <v-btn small flat text depressed
-              >More<v-icon>mdi-arrow-right-thin</v-icon></v-btn
-            >
-          </div>
-        </v-card></v-col
+    <v-col
+      v-for="item in items"
+      :key="item.image"
+      class="ma-8 pa-0"
+      :cols="cardSize"
+    >
+      <v-card
+        height="100%"
+        class="ma-4 d-flex flex-column justify-center align-center"
+        color="#EFFFEF"
+        rounded="lg"
       >
-    </template>
+        <v-img
+          max-width="90%"
+          contain
+          :src="require('../static/employee/' + item.image)"
+        ></v-img>
+        <v-card-title
+          class="justify-center"
+          style="font-weight: 600; font-size: 1.2rem"
+          >{{ item.name }}</v-card-title
+        >
+        <div style="width: 100%" class="d-flex justify-end">
+          <v-btn small text depressed
+            >More<v-icon>mdi-arrow-right-thin</v-icon></v-btn
+          >
+        </div>
+      </v-card></v-col
+    >
   </v-row>
 </template>
 

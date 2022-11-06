@@ -1,6 +1,6 @@
 <template>
   <v-row class="d-felx justify-center">
-    <v-card class="pa-10" width="60vw" color="#F7FBFD">
+    <v-card class="px-2" width="60vw" color="#F7FBFD">
       <v-card-text>
         <span style="color: #b1d234">G-Tower</span> is a global support
         structure (tower & pole) solutions company.<br />

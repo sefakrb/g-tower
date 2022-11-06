@@ -1,7 +1,7 @@
 <template>
   <v-row class="mx-5 d-flex justify-center">
     <v-carousel hide-delimiters v-model="model" style="width: 60vw">
-      <v-carousel-item v-for="(item, i) in items" :key="item">
+      <v-carousel-item v-for="item in items" :key="item.image">
         <v-card
           flat
           class="d-flex flex-column justify-center align-center"
@@ -28,11 +28,6 @@ export default {
     return {
       model: null,
       items: [
-        {
-          image: 'project1.png',
-          title: 'Wataynikaneyap Power Project',
-          text: 'G-Tower provided transmission line engineering services and prepared 30% preliminary Plan & Profile drawings for Phase-1 300km long 230kV S/C Tline in Ontarion.',
-        },
         {
           image: 'project1.png',
           title: 'Wataynikaneyap Power Project',

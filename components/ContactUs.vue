@@ -1,5 +1,5 @@
 <template>
-  <v-row v-resize="onResize" class="d-flex justify-center">
+  <v-row v-resize="onResize" class="d-flex mx-5">
     <v-col class="d-flex justify-center" cols="12">
       <v-card width="60vw" flat class="d-flex justify-center">
         <v-img
@@ -10,44 +10,46 @@
       </v-card>
     </v-col>
 
-    <v-col class="d-flex justify-start pa-0" cols="12">
-      <v-col class="pa-0" :cols="locationSize">
-        <v-card height="100%" class="ma-4 d-flex flex-column" flat rounded="lg">
-          <v-card-title
-            style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
-            >United States - Headquarter</v-card-title
-          >
-          <v-card-text style="font-weight: 450; font-size: 1rem">
-            4571 Broadway St, Boulder, CO 80304 <br />
-            <br />
-            contact.us@g-tower.com
-          </v-card-text>
-        </v-card></v-col
-      >
-    </v-col>
+    <v-col class="pa-0 ma-0" :cols="locationSize">
+      <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
+        <v-card-title
+          style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
+          >United States - Headquarter</v-card-title
+        >
+        <v-card-text style="font-weight: 450; font-size: 1rem">
+          4571 Broadway St, Boulder, CO 80304 <br />
+          <br />
+          contact.us@g-tower.com
+        </v-card-text>
+      </v-card></v-col
+    >
+    <v-col cols="12"></v-col>
     <!-- :style="{
         'flex-direction': locationSize > '4' ? 'row' : 'column',
         'align-items': locationSize > '4' ? 'center' : 'start',
       }" -->
-    <template class="pa-0 ma-0" v-for="(item, index) in items">
-      <v-col class="pa-0 ma-0" :cols="locationSize">
-        <v-card height="100%" class="d-flex" flat rounded="lg">
-          <div class="d-flex flex-column">
-            <v-card-title
-              :color="item.color"
-              :style="{ color: item.color }"
-              style="font-weight: 700; font-size: 1.2rem"
-              >{{ item.region }}</v-card-title
-            >
-            <v-card-text style="font-weight: 450; font-size: 1rem">
-              {{ item.location }} <br />
-              <br />
-              {{ item.email }}
-            </v-card-text>
-          </div>
-          <v-divider inset vertical></v-divider> </v-card
-      ></v-col>
-    </template>
+    <v-col
+      v-for="item in items"
+      :key="item.region"
+      class="pa-0 ma-0"
+      :cols="locationSize"
+    >
+      <v-card height="100%" class="d-flex" flat rounded="lg">
+        <div class="d-flex flex-column">
+          <v-card-title
+            :color="item.color"
+            :style="{ color: item.color }"
+            style="font-weight: 700; font-size: 1.2rem"
+            >{{ item.region }}</v-card-title
+          >
+          <v-card-text style="font-weight: 450; font-size: 1rem">
+            {{ item.location }} <br />
+            <br />
+            {{ item.email }}
+          </v-card-text>
+        </div>
+        <v-divider inset vertical></v-divider> </v-card
+    ></v-col>
   </v-row>
 </template>
 
@@ -99,7 +101,6 @@ export default {
       } else {
         this.locationSize = '3'
       }
-      console.log(this.locationSize)
     },
   },
 }

@@ -1,26 +1,29 @@
 <template>
   <v-row class="d-flex justify-center" v-resize="onResize">
-    <template class="pa-0" v-for="(item, index) in items">
-      <v-col class="ma-8 pa-0" :cols="cardSize">
-        <v-card
-          height="100%"
-          class="ma-4 d-flex flex-column justify-center align-center"
-          flat
-          rounded="lg"
-        >
-          <v-img
-            max-width="100%"
-            contain
-            :src="require('../static/industries/' + item.image)"
-          ></v-img>
-          <v-card-title
-            class="justify-center"
-            style="font-weight: 600; font-size: 1.2rem"
-            >{{ item.text }}</v-card-title
-          >
-        </v-card></v-col
+    <v-col
+      v-for="item in items"
+      :key="item.image"
+      class="ma-8 pa-0"
+      :cols="cardSize"
+    >
+      <v-card
+        height="100%"
+        class="ma-4 d-flex flex-column justify-center align-center"
+        flat
+        rounded="lg"
       >
-    </template>
+        <v-img
+          max-width="100%"
+          contain
+          :src="require('../static/industries/' + item.image)"
+        ></v-img>
+        <v-card-title
+          class="justify-center"
+          style="font-weight: 600; font-size: 1.2rem"
+          >{{ item.text }}</v-card-title
+        >
+      </v-card></v-col
+    >
   </v-row>
 </template>
 

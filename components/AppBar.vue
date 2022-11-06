@@ -14,38 +14,46 @@
       </v-col>
 
       <v-col v-if="appBarSize" cols="9">
-        <v-card flat class="mx-auto" max-width="70vw">
+        <v-card text flat class="mx-auto" max-width="70vw">
           <v-slide-group style="background-color: #f5f5f5" multiple show-arrows>
             <v-slide-item
               v-for="item in items"
-              :key="item"
-              v-slot="{ active, toggle }"
+              :key="item.route"
+              v-slot="{ active }"
             >
               <v-btn
                 class="mx-2"
                 depressed
-                flat
+                text
                 small
                 :input-value="active"
                 active-class="purple white--text"
-                @click="toggle"
+                @click="routePage(item.route)"
               >
-                {{ item }}
+                {{ item.name }}
               </v-btn>
             </v-slide-item>
+            <v-btn color="#B1D234" small @click="routePage('contact_us')"
+              ><span style="color: white"> Contact Us</span></v-btn
+            >
           </v-slide-group>
         </v-card>
       </v-col>
 
       <v-col v-if="!appBarSize" cols="5" class="centerize" style="height: 100%">
-        <v-btn depressed flat small>Home</v-btn>
-        <v-btn depressed flat small>Services</v-btn>
-        <v-btn depressed flat small>Projects</v-btn>
-        <v-btn depressed flat small>About Us</v-btn>
-        <v-btn depressed flat small>Our Team</v-btn>
-        <v-btn depressed flat small>Industries</v-btn>
+        <v-btn
+          v-for="item in items"
+          :key="item.route"
+          depressed
+          text
+          small
+          @click="routePage(item.route)"
+          >{{ item.name }}</v-btn
+        >
         <v-divider class="mx-4" inset vertical></v-divider>
-        <v-btn color="yellow" flat small>Contact Us</v-btn>
+        <v-btn color="#B1D234" small @click="routePage('contact_us')"
+          ><span style="color: white"> Contact Us</span></v-btn
+        >
       </v-col>
     </v-row>
   </v-app-bar>
@@ -58,13 +66,12 @@ export default {
       model: null,
       appBarSize: false,
       items: [
-        'Home',
-        'Services',
-        'Projects',
-        'About Us',
-        'Our Team',
-        'Industries',
-        'Contact Us',
+        { name: 'Home', route: 'home' },
+        { name: 'Services', route: 'services' },
+        { name: 'Projects', route: 'projects' },
+        { name: 'About Us', route: 'about_us' },
+        { name: 'Our Team', route: 'our_team' },
+        { name: 'Industries', route: 'industries' },
       ],
     }
   },
@@ -75,12 +82,16 @@ export default {
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
     },
+
+    routePage(pageName) {
+      this.$emit('routePage', pageName)
+    },
   },
 }
 </script>
 
 <style scoped>
-/deep/ .v-toolbar__content {
+::v-deep .v-toolbar__content {
   padding: 0px !important;
   margin: 0px !important;
 }

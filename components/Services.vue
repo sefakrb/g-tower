@@ -1,24 +1,30 @@
 <template>
   <v-row v-resize="onResize" class="mx-5">
-    <template class="pa-0" v-for="item in items">
-      <v-col class="ma-0 pa-0" md="3" cols="12">
-        <v-card
-          class="ma-4 centerize flex-column"
-          color="#F9FBFD"
-          rounded="lg"
-          :height="appBarSize ? '45vh' : '65vh'"
+    <v-col
+      v-for="item in items"
+      :key="item.image"
+      class="ma-0 pa-0"
+      md="3"
+      cols="12"
+    >
+      <v-card
+        class="ma-4 centerize flex-column"
+        color="#F9FBFD"
+        rounded="lg"
+        :height="appBarSize ? '45vh' : '65vh'"
+      >
+        <v-img
+          max-height="50px"
+          contain
+          :src="require('../static/' + item.image)"
+        ></v-img>
+        <v-card-title
+          class="justify-center"
+          style="font-weight: 600; font-size: 1.2rem"
+          >{{ item.title }}</v-card-title
         >
-          <v-img
-            max-height="50px"
-            contain
-            :src="require('../static/' + item.image)"
-          ></v-img>
-          <v-card-title
-            class="justify-center"
-            style="font-weight: 600; font-size: 1.2rem"
-            >{{ item.title }}</v-card-title
-          >
-          <div class="d-flex flex-column align-center">
+        <div class="d-flex flex-column align-center">
+          <ul>
             <li
               class="ml-5"
               style="font-weight: 450; font-size: 1rem"
@@ -27,10 +33,10 @@
             >
               {{ detail }}
             </li>
-          </div>
-        </v-card></v-col
-      >
-    </template>
+          </ul>
+        </div>
+      </v-card></v-col
+    >
   </v-row>
 </template>
 
@@ -40,7 +46,7 @@ export default {
     return {
       items: [
         {
-          image: 'card1-4.png',
+          image: 'card1.png',
           title: 'ENGINEERING SERVICES',
           details: [
             'Transmission Line Design',
@@ -76,7 +82,7 @@ export default {
           ],
         },
         {
-          image: 'card1-4.png',
+          image: 'card4.png',
           title: 'CONSULTING SERVICES',
           details: [
             'Owner’s Engineer',
@@ -93,7 +99,6 @@ export default {
   },
   methods: {
     onResize() {
-      console.log(window.innerWidth)
       window.innerWidth < 960
         ? (this.appBarSize = true)
         : (this.appBarSize = false)

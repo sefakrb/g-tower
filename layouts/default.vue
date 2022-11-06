@@ -1,9 +1,6 @@
 <template>
   <v-app dark>
-    <AppBar></AppBar>
-    <v-main>
-      <Nuxt />
-    </v-main>
+    <Nuxt />
   </v-app>
 </template>
 
