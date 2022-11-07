@@ -1,10 +1,10 @@
 <template>
   <v-row class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
-      <v-card-title class="centerize font-weight-bold" style="font-size: 2rem"
+      <v-card-title class="centerize font-weight-bold" style="font-size: 2.5rem"
         >Stop Climate Change</v-card-title
       >
-      <v-card-text class="centerize" style="font-size: 1rem"
+      <v-card-text class="centerize" style="font-size: 1.2rem"
         >Cooperate with us and help the nature.</v-card-text
       >
       <v-btn
