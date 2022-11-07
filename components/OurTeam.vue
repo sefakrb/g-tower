@@ -108,6 +108,17 @@ export default {
           bio: 'Gunes has over 15 years of engineering and project management experience specializing in tower business including wind towers up to 6 MW, electric transmission & distribution towers up to 600 kV, telecommunication towers and lighting poles. Prior to start G-Tower, he worked for well-known tower manufacturers; Valmont Industries and Mitas Energy. He holds M.Sc. (Geotechnical) and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He is a currently licensed Professional Engineer in Colorado, Texas and New York; holding NCEES record. He enjoys travelling, cycling, swimming and hiking.',
         },
         {
+          image: 'uncac_saritas.png',
+          name: 'Ali Gulgeze, PENG',
+          title: 'Vice President',
+          contact_info: {
+            Phone: 'null',
+            email: 'null',
+            linkedin: 'null',
+          },
+          bio: 'null',
+        },
+        {
           image: 'mahir_ergin.png',
           name: 'Mahir Ergin',
           title: 'Regional Manager',
@@ -194,17 +205,6 @@ export default {
             linkedin: 'null',
           },
           bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling. ',
-        },
-        {
-          image: 'uncac_saritas.png',
-          name: 'Uncac Sarıtaş',
-          title: 'Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'null',
         },
         {
           image: 'giray_yilmaz.png',
