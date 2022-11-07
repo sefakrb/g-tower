@@ -119,17 +119,6 @@ export default {
           bio: 'null',
         },
         {
-          image: 'mahir_ergin.png',
-          name: 'Mahir Ergin',
-          title: 'Regional Manager',
-          contact_info: {
-            Phone: '+90-505-397-2316',
-            email: 'hmergin@g-tower.com',
-            linkedin: 'https://www.linkedin.com/in/gunes-demirbas-pe-06b67930/',
-          },
-          bio: 'After graduated from Istanbul Kabatas High School, Mahir studied Mathematics. He holds M.Sc. and B.Sc. degrees in Mathematics. Because of his passion and interest in wind energy, he decided to join G-Tower in 2018. He is based in Ankara, Turkey. He is responsible from quality control of all the manufactured tower and pole products within Turkey prior to ship overseas. In addition to that he supports business development activities in the Middle East. He enjoys watching soccer and spending time with his two children Can & Umut Efe.',
-        },
-        {
           image: 'sabrina_ageca.png',
           name: 'Sabrina Ageca',
           title: 'Quality Manager',
@@ -140,6 +129,18 @@ export default {
           },
           bio: 'Sabrina has 15+ years of experience as Project Manager and Weld Engineer in the energy sector. She is experienced in weld management systems (EN 1090-2/ISO 3834-2) and integrated quality/environmental/safety (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) management systems. Worked for reputable tower manufacturers Mitas, Valmont and Şa-ra in the past. She has B.Sc. in engineering from Dokuz Eylul University. Completed multiple certification programs in weld engineering at Middle East Technical University and European Welding Federation. She enjoys painting, ceramics, trekking and cycling.',
         },
+        {
+          image: 'mahir_ergin.png',
+          name: 'Mahir Ergin',
+          title: 'Regional Manager',
+          contact_info: {
+            Phone: '+90-505-397-2316',
+            email: 'hmergin@g-tower.com',
+            linkedin: 'https://www.linkedin.com/in/gunes-demirbas-pe-06b67930/',
+          },
+          bio: 'After graduated from Istanbul Kabatas High School, Mahir studied Mathematics. He holds M.Sc. and B.Sc. degrees in Mathematics. Because of his passion and interest in wind energy, he decided to join G-Tower in 2018. He is based in Ankara, Turkey. He is responsible from quality control of all the manufactured tower and pole products within Turkey prior to ship overseas. In addition to that he supports business development activities in the Middle East. He enjoys watching soccer and spending time with his two children Can & Umut Efe.',
+        },
+
         {
           image: 'selma_hacirafioglu.png',
           name: 'Selma Hacıraifoglu',
