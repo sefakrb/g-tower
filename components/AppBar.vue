@@ -9,7 +9,7 @@
           max-height="90%"
           max-width="90%"
           contain
-          :src="require('../static/main-logo.png')"
+          src="https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png"
         ></v-img>
       </v-col>
 

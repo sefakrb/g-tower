@@ -9,7 +9,7 @@
         align="center"
       >
         <v-col style="height: 100%" cols="12">
-          <Banner></Banner>
+          <Banner @routePage="routePage"></Banner>
           <v-main id="services">
             <div class="d-flex">
               <v-card-title
@@ -130,6 +130,9 @@ export default {
     },
     routePage(data) {
       this.$router.push('#' + data)
+      // this.$router.replace()
+      // const newData = '#' + data
+      // this.$route.newData
     },
   },
 }

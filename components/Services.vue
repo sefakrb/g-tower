@@ -11,7 +11,7 @@
         class="ma-4 centerize flex-column"
         color="#F9FBFD"
         rounded="lg"
-        :height="appBarSize ? '45vh' : '65vh'"
+        :height="appBarSize ? '50vh' : '65vh'"
       >
         <v-img
           max-height="50px"
@@ -91,6 +91,9 @@ export default {
             'Expert Witness',
             'Technical Advisory',
             'Project Management',
+            'Factory Audit',
+            ' Factory Acceptance Test',
+            'Attending Tower Testing',
           ],
         },
       ],

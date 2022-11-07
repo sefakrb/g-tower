@@ -8,7 +8,8 @@
     >
       <v-card
         height="100%"
-        class="ma-4 d-flex flex-column justify-center align-center"
+        class="ma-4 d-flex flex-column align-center"
+        style="justify-content: space-around"
         color="#EFFFEF"
         rounded="lg"
       >
@@ -30,23 +31,50 @@
         </div>
       </v-card></v-col
     >
-    <v-dialog v-model="dialog" width="70vw"
+    <v-dialog v-if="user.image" v-model="dialog" width="70vw"
       ><v-card
         rounded="xl"
         style="overflow-x: hidden"
         min-height="70vh"
         v-model="user"
       >
-        <v-row class="ma-0 pa-0" style="min-height: 70vh">
-          <v-col class="d-flex align-center justify-center" cols="4">
-            <v-card flat class="d-flex justify-center" rounded="lg">
+        <v-row class="ma-0 pa-0 d-flex justify-center" style="min-height: 70vh">
+          <v-col
+            :cols="cardSize === '10' ? '10' : '4'"
+            class="d-flex align-center justify-center"
+          >
+            <v-card
+              flat
+              class="d-flex flex-column justify-center align-center"
+              rounded="lg"
+            >
               <v-img
                 contain
                 :src="require('../static/employee/' + user.image)"
-              ></v-img
-            ></v-card>
+              ></v-img>
+
+              <v-card-title>Contact Info</v-card-title>
+
+              <div style="width: 100%" class="d-flex">
+                <v-icon color="green">mdi-phone</v-icon>
+                <v-card-text>{{ user.contact_info.Phone }}</v-card-text>
+              </div>
+
+              <div style="width: 100%" class="d-flex">
+                <v-icon color="blue">mdi-mail</v-icon>
+                <v-card-text>{{ user.contact_info.email }}</v-card-text>
+              </div>
+
+              <v-btn text :href="user.contact_info.linkedin" target="_blank"
+                ><v-icon color="blue">mdi-linkedin</v-icon></v-btn
+              >
+            </v-card>
           </v-col>
-          <v-col class="d-flex flex-column justify-center" cols="8">
+
+          <v-col
+            :cols="cardSize === '10' ? '10' : '6'"
+            class="d-flex flex-column justify-center"
+          >
             <v-card-title style="font-size: 2.2rem">{{
               user.name
             }}</v-card-title>
@@ -203,7 +231,7 @@ export default {
       ],
       cardSize: false,
       dialog: false,
-      user: '',
+      user: {},
     }
   },
 
@@ -219,9 +247,7 @@ export default {
     },
     bio(item) {
       this.dialog = true
-      console.log(item)
       this.user = item
-      console.log(this.user)
     },
   },
 }
