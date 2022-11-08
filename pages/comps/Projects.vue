@@ -12,7 +12,7 @@
           <v-img
             max-width="60%"
             contain
-            :src="require('../static/' + item.image)"
+            :src="require('../../static/' + item.image)"
           ></v-img>
           <v-card-title>{{ item.title }}</v-card-title>
           <v-card-text>{{ item.text }}</v-card-text>

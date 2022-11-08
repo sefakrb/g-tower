@@ -21,7 +21,7 @@
               contain
               max-width="10px"
               class="mr-3"
-              :src="require('../static/dot.png')"
+              :src="require('../../static/dot.png')"
             ></v-img
             >{{ item }}
           </div>

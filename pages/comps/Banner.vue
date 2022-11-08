@@ -20,17 +20,35 @@
         >Who We Are?</v-btn
       >
     </v-col>
-    <v-col cols="12" md="6" class="centerize ma-0 pa-0">
-      <!-- <video width="400" controls autoplay>
-        <source src="../static/mov_bbb.mp4" type="video/mp4" />
-        Your browser does not support HTML video.
-      </video> -->
-      <v-img
+    <v-col cols="12" md="6" class="centerize mt-10 ma-0 pa-0">
+      <v-card
+        max-height="50vh;"
+        max-width="50vw;"
+        class="d-flex justify-center align-center"
+        flat
+        rounded="xl"
+      >
+        <video
+          style="max-height: 90%; max-width: 90%; border-radius: 3%"
+          controls
+          autoplay
+          muted
+          loop
+        >
+          <source
+            src="https://g-tower.com/wp-content/uploads/2019/10/G-Tower.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support HTML video.
+        </video>
+      </v-card>
+
+      <!-- <v-img
         max-height="50vh"
         contain
         class="ma-0"
-        :src="require('../static/banner-image.png')"
-      ></v-img>
+        :src="require('../../static/banner-image.png')"
+      ></v-img> -->
     </v-col>
   </v-row>
 </template>
