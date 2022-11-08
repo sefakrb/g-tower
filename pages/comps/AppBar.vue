@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dark v-resize="onResize" app class="ma-0 pa-0">
+  <v-app-bar v-resize="onResize" app class="ma-0 pa-0">
     <v-row
       style="height: 100%; width: 100vw; justify-content: center !important"
       class="centerize"
