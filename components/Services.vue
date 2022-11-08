@@ -2,28 +2,38 @@
   <v-row v-resize="onResize" class="mx-5">
     <v-col
       v-for="item in items"
-      :key="item.image"
+      :key="item.title"
       class="ma-0 pa-0"
       md="3"
+      sm="6"
       cols="12"
     >
       <v-card
-        class="ma-4 centerize flex-column"
+        class="ma-4"
+        style="display: flex; flex-direction: column"
         color="#F9FBFD"
         rounded="lg"
-        :height="appBarSize ? '50vh' : '65vh'"
+        :height="appBarSize ? '55vh' : '75vh'"
       >
         <v-img
+          class="mt-5 mb-5"
           max-height="50px"
           contain
-          :src="require('../static/' + item.image)"
+          :src="item.image"
         ></v-img>
         <v-card-title
-          class="justify-center"
-          style="font-weight: 600; font-size: 1.2rem"
+          class="justify-center mb-5"
+          style="font-weight: 600; font-size: 1.2rem; white-space: pre-line"
           >{{ item.title }}</v-card-title
         >
-        <div class="d-flex flex-column align-center">
+        <div
+          style="
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            align-items: start !important;
+          "
+        >
           <ul>
             <li
               class="ml-5"
@@ -46,7 +56,7 @@ export default {
     return {
       items: [
         {
-          image: 'card1.png',
+          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon2.png',
           title: 'ENGINEERING SERVICES',
           details: [
             'Transmission Line Design',
@@ -58,8 +68,8 @@ export default {
           ],
         },
         {
-          image: 'card2.png',
-          title: 'OVERSEAS FABRICATION INSPECTION SERVICES',
+          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon3.png',
+          title: 'OVERSEAS FABRICATION \n INSPECTION SERVICES',
           details: [
             'Tower Testing Attendance',
             'Factory Audit',
@@ -70,7 +80,7 @@ export default {
           ],
         },
         {
-          image: 'card3.png',
+          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon1.png',
           title: 'SOURCHING SERVICES',
           details: [
             'Lattice Tower Supply',
@@ -82,7 +92,7 @@ export default {
           ],
         },
         {
-          image: 'card4.png',
+          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon2.png',
           title: 'CONSULTING SERVICES',
           details: [
             'Owner’s Engineer',

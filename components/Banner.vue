@@ -2,15 +2,20 @@
   <v-row class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
       <v-card-title class="centerize font-weight-bold" style="font-size: 2.5rem"
-        >Stop Climate Change</v-card-title
+        >Stop Climate
+      </v-card-title>
+      <v-card-title
+        class="centerize font-weight-bold pt-0"
+        style="font-size: 2.5rem"
+        >Change</v-card-title
       >
       <v-card-text class="centerize" style="font-size: 1.2rem"
         >Cooperate with us and help the nature.</v-card-text
       >
       <v-btn
         small
-        @click="routePage('about_us')"
         color="green"
+        @click="routePage('about_us')"
         style="text-transform: unset !important; color: white"
         >Who We Are?</v-btn
       >
@@ -32,6 +37,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      bannerImage:
+        'https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png',
+    }
+  },
   methods: {
     routePage(pageName) {
       this.$emit('routePage', pageName)

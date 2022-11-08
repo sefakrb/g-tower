@@ -9,12 +9,12 @@
         align="center"
       >
         <v-col style="height: 100%" cols="12">
-          <Banner @routePage="routePage"></Banner>
+          <Banner ref="target" @routePage="routePage"></Banner>
           <v-main id="services">
             <div class="d-flex">
               <v-card-title
                 style="font-weight: bold; font-size: 2rem"
-                class="ml-5 mr-2"
+                class="ma-5"
                 >Services</v-card-title
               ><v-img
                 contain
@@ -30,7 +30,7 @@
               <div class="d-flex">
                 <v-card-title
                   style="font-weight: bold; font-size: 2rem"
-                  class="ml-5 mr-2"
+                  class="ma-5"
                   >Projects</v-card-title
                 >
                 <v-img
@@ -43,11 +43,12 @@
               <Projects></Projects>
             </div>
           </v-main>
-          <v-main id="about_us">
-            <div id="about_us" class="d-flex">
+          <!-- <v-btn @click="deneme">s</v-btn> -->
+          <v-main data-aos="zoom-in" id="about_us">
+            <div class="d-flex">
               <v-card-title
                 style="font-weight: bold; font-size: 2rem"
-                class="ml-5 mr-2"
+                class="ma-5"
                 >About Us</v-card-title
               >
               <v-img
@@ -78,7 +79,7 @@
             <div class="d-flex">
               <v-card-title
                 style="font-weight: bold; font-size: 2rem"
-                class="ml-5 mr-2"
+                class="ma-5"
                 >Industries</v-card-title
               ><v-img
                 contain
@@ -92,7 +93,7 @@
             <div class="d-flex">
               <v-card-title
                 style="font-weight: bold; font-size: 2rem"
-                class="ml-5 mr-2"
+                class="ma-5"
                 >Contact Us</v-card-title
               ><v-img
                 contain
@@ -114,9 +115,14 @@ export default {
   data() {
     return {
       titleSize: null,
+      show: true,
     }
   },
   methods: {
+    deneme() {
+      console.log('LKADLKASJDLKASD')
+    },
+
     onResize() {
       if (window.innerWidth < 600) {
         this.titleSize = '15%'
@@ -138,9 +144,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.team {
-  background-image: url('../static/team-background.png');
-  background-repeat: no-repeat, no-repeat;
-}
-</style>
+<style scoped></style>

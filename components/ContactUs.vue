@@ -1,12 +1,8 @@
 <template>
   <v-row v-resize="onResize" class="d-flex mx-5">
     <v-col class="d-flex justify-center" cols="12">
-      <v-card width="60vw" flat class="d-flex justify-center">
-        <v-img
-          max-width="90%"
-          contain
-          :src="require('../static/map.png')"
-        ></v-img>
+      <v-card width="70vw" flat class="d-flex justify-center">
+        <v-img max-width="90%" contain :src="map"></v-img>
       </v-card>
     </v-col>
 
@@ -42,7 +38,7 @@
             style="font-weight: 700; font-size: 1.2rem"
             >{{ item.region }}</v-card-title
           >
-          <v-card-text style="font-weight: 450; font-size: 1rem">
+          <v-card-text style="font-size: 1rem">
             {{ item.location }} <br />
             <br />
             {{ item.email }}
@@ -90,12 +86,13 @@ export default {
         },
       ],
       locationSize: 0,
+      map: 'https://g-tower.com/wp-content/uploads/2022/08/G-Tower_Map.png',
     }
   },
   methods: {
     onResize() {
       if (window.innerWidth < 600) {
-        this.locationSize = '10'
+        this.locationSize = '7'
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
         this.locationSize = '4'
       } else {

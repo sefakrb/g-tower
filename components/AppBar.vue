@@ -1,16 +1,11 @@
 <template>
   <v-app-bar v-resize="onResize" app class="ma-0 pa-0">
     <v-row
-      style="height: 100%; justify-content: center !important"
+      style="height: 100%; width: 100vw; justify-content: center !important"
       class="centerize"
     >
       <v-col cols="1" style="height: 100%; width: 100%" class="centerize">
-        <v-img
-          max-height="90%"
-          max-width="90%"
-          contain
-          src="https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png"
-        ></v-img>
+        <v-img max-height="90%" max-width="90%" contain :src="mainLogo"></v-img>
       </v-col>
 
       <v-col v-if="appBarSize" cols="9">
@@ -63,6 +58,7 @@
 export default {
   data() {
     return {
+      mainLogo: 'https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png',
       model: null,
       appBarSize: false,
       items: [
