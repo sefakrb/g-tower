@@ -25,8 +25,20 @@
         color="#EFFFEF"
         rounded="lg"
       >
-        <v-card rounded="lg" flat class="d-fex justify-center">
-          <v-img contain :src="item.image"></v-img>
+        <v-card
+          rounded="lg"
+          flat
+          color="#EFFFEF"
+          height="70%"
+          width="100%"
+          class="d-flex justify-center"
+        >
+          <v-img
+            class="d-flex justify-center align-center"
+            height="90%"
+            width="90%"
+            :src="item.image"
+          ></v-img>
         </v-card>
         <v-card-title
           class="justify-center"
