@@ -30,7 +30,6 @@
       >
         <video
           style="max-height: 90%; max-width: 90%; border-radius: 3%"
-          controls
           autoplay
           muted
           loop

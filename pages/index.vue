@@ -5,7 +5,7 @@
       <v-row v-resize="onResize" class="ma-0 pa-0 justify-center align-center">
         <v-col style="height: 100%" cols="12">
           <Banner class="mt-5" id="home" @routePage="routePage"></Banner>
-          <v-main class="den" id="services">
+          <v-main id="services">
             <div data-aos="zoom-in">
               <div class="d-flex">
                 <v-card-title
@@ -23,7 +23,7 @@
             </div>
           </v-main>
 
-          <v-main class="den" id="projects">
+          <v-main id="projects">
             <div
               data-aos="zoom-in"
               class="pb-10"
@@ -46,7 +46,7 @@
             </div>
           </v-main>
 
-          <v-main class="den" id="about_us">
+          <v-main id="about_us">
             <div data-aos="zoom-in">
               <div class="d-flex">
                 <v-card-title
@@ -65,7 +65,7 @@
             </div>
           </v-main>
 
-          <v-main class="den" id="our_team">
+          <v-main id="our_team">
             <div data-aos="zoom-in" class="team">
               <div :style="{ 'padding-left': titleSize }" class="d-flex pt-5">
                 <v-card-title
@@ -81,7 +81,7 @@
             </div>
           </v-main>
 
-          <v-main class="den" id="industries">
+          <v-main id="industries">
             <div data-aos="zoom-in" class=" ">
               <div class="d-flex">
                 <v-card-title
@@ -98,7 +98,7 @@
             </div>
           </v-main>
 
-          <v-main class="den" id="contact_us">
+          <v-main id="contact_us">
             <div class=" " data-aos="zoom-in">
               <div class="d-flex">
                 <v-card-title
@@ -175,6 +175,7 @@ export default {
       document.getElementById(data).scrollIntoView({
         behavior: 'smooth',
       })
+      // this.$router.replace({ name: this.$route.name, hash: '#' + data })
     },
   },
 }
@@ -185,9 +186,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.den {
-  scroll-margin-top: 4rem;
-}
 .team {
   background-image: url('../static/team-background.png');
   background-repeat: no-repeat, no-repeat;
