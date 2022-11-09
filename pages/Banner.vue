@@ -15,7 +15,7 @@
       <v-btn
         small
         color="green"
-        @click="routePage('about_us')"
+        @click="routeHome('about_us')"
         style="text-transform: unset !important; color: white"
         >Who We Are?</v-btn
       >
@@ -46,7 +46,7 @@
         max-height="50vh"
         contain
         class="ma-0"
-        :src="require('../../static/banner-image.png')"
+        :src="require('../static/banner-image.png')"
       ></v-img> -->
     </v-col>
   </v-row>
@@ -61,8 +61,8 @@ export default {
     }
   },
   methods: {
-    routePage(pageName) {
-      this.$emit('routePage', pageName)
+    routeHome(pageName) {
+      this.$emit('routeHome', pageName)
     },
   },
 }

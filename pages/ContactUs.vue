@@ -1,5 +1,14 @@
 <template>
   <v-row v-resize="onResize" class="d-flex mx-5">
+    <v-col class="d-flex" cols="12">
+      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
+        >Contact Us</v-card-title
+      ><v-img
+        contain
+        max-width="20px"
+        :src="require('../static/header_dot.png')"
+      ></v-img>
+    </v-col>
     <v-col class="d-flex justify-center" cols="12">
       <v-card width="70vw" flat class="d-flex justify-center">
         <v-img max-width="90%" contain :src="map"></v-img>
@@ -91,6 +100,7 @@ export default {
   },
   methods: {
     onResize() {
+      this.show = true
       if (window.innerWidth < 600) {
         this.locationSize = '7'
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
@@ -103,4 +113,22 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+*/ .slide-fade-enter-active {
+  transition: all 1s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+</style>

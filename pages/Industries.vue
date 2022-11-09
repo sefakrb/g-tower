@@ -1,5 +1,16 @@
 <template>
-  <v-row class="d-flex justify-center" v-resize="onResize">
+  <v-row class="mx-5 d-flex justify-center" v-resize="onResize">
+    <v-col cols="12">
+      <div class="d-flex">
+        <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
+          >Industries</v-card-title
+        ><v-img
+          contain
+          max-width="20px"
+          :src="require('../static/header_dot.png')"
+        ></v-img>
+      </div>
+    </v-col>
     <v-col
       v-for="item in items"
       :key="item.image"

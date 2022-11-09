@@ -1,136 +1,52 @@
 <template>
-  <div>
-    <AppBar @routePage="routePage"></AppBar>
-    <v-main>
-      <v-row v-resize="onResize" class="ma-0 pa-0 justify-center align-center">
-        <v-col style="height: 100%" cols="12">
-          <Banner class="mt-5" id="home" @routePage="routePage"></Banner>
-          <v-main id="services">
-            <div data-aos="zoom-in">
-              <div class="d-flex">
-                <v-card-title
-                  style="font-weight: bold; font-size: 2rem"
-                  class="ma-5"
-                  >Services</v-card-title
-                ><v-img
-                  contain
-                  max-width="20px"
-                  class="mt-1"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <Services></Services>
-            </div>
-          </v-main>
+  <v-row v-resize="onResize" class="ma-0 pa-0 justify-center align-center">
+    <v-col style="height: 100%" cols="12">
+      <Banner data-aos="zoom-in" id="home" @routeHome="routeHome"></Banner>
 
-          <v-main id="projects">
-            <div
-              data-aos="zoom-in"
-              class="pb-10"
-              style="background-color: #e5f0ff"
-            >
-              <div class="d-flex">
-                <v-card-title
-                  style="font-weight: bold; font-size: 2rem"
-                  class="ma-5"
-                  >Projects</v-card-title
-                >
-                <v-img
-                  contain
-                  max-width="20px"
-                  class="mt-1"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <Projects></Projects>
-            </div>
-          </v-main>
+      <v-main data-aos="fade-up" id="services">
+        <Services></Services>
+      </v-main>
 
-          <v-main id="about_us">
-            <div data-aos="zoom-in">
-              <div class="d-flex">
-                <v-card-title
-                  style="font-weight: bold; font-size: 2rem"
-                  class="ma-5"
-                  >About Us</v-card-title
-                >
-                <v-img
-                  contain
-                  max-width="20px"
-                  class="mt-1"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <AboutUs></AboutUs>
-            </div>
-          </v-main>
+      <v-main
+        data-aos="fade-left"
+        class="pb-10"
+        style="background-color: #e5f0ff"
+        id="projects"
+      >
+        <Projects></Projects>
+      </v-main>
 
-          <v-main id="our_team">
-            <div data-aos="zoom-in" class="team">
-              <div :style="{ 'padding-left': titleSize }" class="d-flex pt-5">
-                <v-card-title
-                  style="color: white; font-weight: bold; font-size: 2rem"
-                  >Our Team</v-card-title
-                ><v-img
-                  contain
-                  max-width="20px"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <OurTeam></OurTeam>
-            </div>
-          </v-main>
+      <v-main data-aos="fade-right" id="aboutus">
+        <AboutUs></AboutUs>
+      </v-main>
 
-          <v-main id="industries">
-            <div data-aos="zoom-in" class=" ">
-              <div class="d-flex">
-                <v-card-title
-                  style="font-weight: bold; font-size: 2rem"
-                  class="ma-5"
-                  >Industries</v-card-title
-                ><v-img
-                  contain
-                  max-width="20px"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <Industries></Industries>
-            </div>
-          </v-main>
+      <v-main data-aos="fade-down" class="team" id="ourteam">
+        <OurTeam></OurTeam>
+      </v-main>
 
-          <v-main id="contact_us">
-            <div class=" " data-aos="zoom-in">
-              <div class="d-flex">
-                <v-card-title
-                  style="font-weight: bold; font-size: 2rem"
-                  class="ma-5"
-                  >Contact Us</v-card-title
-                ><v-img
-                  contain
-                  max-width="20px"
-                  :src="require('../static/header_dot.png')"
-                ></v-img>
-              </div>
-              <ContactUs></ContactUs>
-            </div>
-          </v-main>
-        </v-col>
-      </v-row>
-    </v-main>
-  </div>
+      <v-main data-aos="zoom-in" id="industries">
+        <Industries></Industries>
+      </v-main>
+
+      <v-main data-aos="zoom-in-up" id="contactus">
+        <ContactUs></ContactUs>
+      </v-main>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-import AppBar from './comps/AppBar.vue'
-import Banner from './comps/Banner.vue'
-import Services from './comps/Services.vue'
-import Projects from './comps/Projects.vue'
-import AboutUs from './comps/AboutUs.vue'
-import OurTeam from './comps/OurTeam.vue'
-import Industries from './comps/Industries.vue'
-import ContactUs from './comps/ContactUs.vue'
+import AppBar from './AppBar.vue'
+import Banner from './Banner.vue'
+import Services from './Services.vue'
+import Projects from './Projects.vue'
+import AboutUs from './AboutUs.vue'
+import OurTeam from './OurTeam.vue'
+import Industries from './Industries.vue'
+import ContactUs from './ContactUs.vue'
 
 export default {
+  name: 'IndexPage',
   components: {
     AppBar,
     Banner,
@@ -141,16 +57,9 @@ export default {
     Industries,
     ContactUs,
   },
-  name: 'IndexPage',
-  created() {
-    window.onload = (event) => {
-      console.log('page is fully loaded')
-    }
-  },
   data() {
     return {
       titleSize: null,
-      show: true,
     }
   },
   methods: {
@@ -165,27 +74,14 @@ export default {
         this.titleSize = '7%'
       }
     },
-    routePage(data) {
-      // const yOffset = -10
-      // const y =
-      //   document.getElementById(data).getBoundingClientRect().top +
-      //   window.pageYOffset +
-      //   yOffset
-      // window.scrollTo({ top: y, behavior: 'smooth' })
-      document.getElementById(data).scrollIntoView({
-        behavior: 'smooth',
-      })
-      // this.$router.replace({ name: this.$route.name, hash: '#' + data })
+    routeHome() {
+      this.$router.push('/aboutus')
     },
   },
 }
 </script>
 
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
+<style scoped>
 .team {
   background-image: url('../static/team-background.png');
   background-repeat: no-repeat, no-repeat;

@@ -28,7 +28,7 @@
                 {{ item.name }}
               </v-btn>
             </v-slide-item>
-            <v-btn color="#B1D234" small @click="routePage('contact_us')"
+            <v-btn color="#B1D234" small @click="routePage('contactus')"
               ><span style="color: white"> Contact Us</span></v-btn
             >
           </v-slide-group>
@@ -46,7 +46,7 @@
           >{{ item.name }}</v-btn
         >
         <v-divider class="mx-4" inset vertical></v-divider>
-        <v-btn color="#B1D234" small @click="routePage('contact_us')"
+        <v-btn color="#B1D234" small @click="routePage('contactus')"
           ><span style="color: white"> Contact Us</span></v-btn
         >
       </v-col>
@@ -62,11 +62,11 @@ export default {
       model: null,
       appBarSize: false,
       items: [
-        { name: 'Home', route: 'home' },
+        { name: 'Home', route: '/' },
         { name: 'Services', route: 'services' },
         { name: 'Projects', route: 'projects' },
-        { name: 'About Us', route: 'about_us' },
-        { name: 'Our Team', route: 'our_team' },
+        { name: 'About Us', route: 'aboutus' },
+        { name: 'Our Team', route: 'ourteam' },
         { name: 'Industries', route: 'industries' },
       ],
     }
@@ -80,7 +80,17 @@ export default {
     },
 
     routePage(pageName) {
-      this.$emit('routePage', pageName)
+      console.log('asdasd')
+      if (
+        (this.$route.name === '/' || this.$route.name === 'index') &&
+        pageName === '/'
+      ) {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        this.$router.push(pageName)
+        console.log('asdasd2')
+      }
+      console.log('asdasd3')
     },
   },
 }

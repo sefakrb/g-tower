@@ -1,5 +1,16 @@
 <template>
-  <v-row class="d-felx justify-center">
+  <v-row class="mx-5 d-flex justify-center">
+    <v-col cols="12" class="d-flex">
+      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
+        >About Us</v-card-title
+      >
+      <v-img
+        contain
+        max-width="20px"
+        class="mt-1"
+        :src="require('../static/header_dot.png')"
+      ></v-img>
+    </v-col>
     <v-card class="px-2" width="60vw" color="#F7FBFD">
       <v-card-text>
         <span style="color: #b1d234">G-Tower</span> is a global support
@@ -21,7 +32,7 @@
               contain
               max-width="10px"
               class="mr-3"
-              :src="require('../../static/dot.png')"
+              :src="require('../static/dot.png')"
             ></v-img
             >{{ item }}
           </div>

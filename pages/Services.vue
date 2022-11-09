@@ -1,5 +1,15 @@
 <template>
   <v-row v-resize="onResize" class="mx-5">
+    <v-col cols="12" class="d-flex">
+      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
+        >Services</v-card-title
+      ><v-img
+        contain
+        max-width="20px"
+        class="mt-1"
+        :src="require('../static/header_dot.png')"
+      ></v-img>
+    </v-col>
     <v-col
       v-for="item in items"
       :key="item.title"

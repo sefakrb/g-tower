@@ -1,5 +1,17 @@
 <template>
-  <v-row v-resize="onResize" class="d-flex justify-center">
+  <v-row v-resize="onResize" class="team d-flex justify-center">
+    <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
+      <v-card-title
+        style="color: white; font-weight: bold; font-size: 2rem"
+        class="ma-5"
+        >Our Team</v-card-title
+      ><v-img
+        contain
+        max-width="20px"
+        class="mt-1"
+        :src="require('../static/header_dot.png')"
+      ></v-img>
+    </v-col>
     <v-col
       v-for="item in items"
       :key="item.image"
@@ -226,6 +238,8 @@ export default {
         },
       ],
       cardSize: false,
+      titleSize: null,
+
       dialog: false,
       user: {},
     }
@@ -234,11 +248,17 @@ export default {
   methods: {
     onResize() {
       if (window.innerWidth < 600) {
+        this.titleSize = '15%'
         this.cardSize = '10'
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
+        this.titleSize = '15%'
         this.cardSize = '4'
+      } else if (window.innerWidth > 900 && window.innerWidth < 1200) {
+        this.cardSize = '4'
+        this.titleSize = '10%'
       } else {
         this.cardSize = '2'
+        this.titleSize = '7%'
       }
     },
     bio(item) {
@@ -249,4 +269,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.team {
+  background-image: url('../static/team-background.png');
+  background-repeat: no-repeat, no-repeat;
+}
+</style>

@@ -1,15 +1,20 @@
 <template>
   <v-app dark>
-    <Nuxt />
+    <AppBar></AppBar>
+    <v-main class="mt-10">
+      <Nuxt />
+    </v-main>
   </v-app>
 </template>
 
 <script>
+import AppBar from '~/pages/AppBar.vue'
 export default {
   name: 'DefaultLayout',
-  data() {
-    return {}
+  components: {
+    AppBar,
   },
+  methods: {},
 }
 </script>
 

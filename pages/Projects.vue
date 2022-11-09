@@ -1,5 +1,16 @@
 <template>
   <v-row class="mx-5 d-flex justify-center">
+    <v-col cols="12" class="d-flex">
+      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
+        >Projects</v-card-title
+      >
+      <v-img
+        contain
+        max-width="20px"
+        class="mt-1"
+        :src="require('../static/header_dot.png')"
+      ></v-img>
+    </v-col>
     <v-carousel hide-delimiters v-model="model" style="width: 60vw">
       <v-carousel-item v-for="item in items" :key="item.image">
         <v-card
@@ -12,7 +23,7 @@
           <v-img
             max-width="60%"
             contain
-            :src="require('../../static/' + item.image)"
+            :src="require('../static/' + item.image)"
           ></v-img>
           <v-card-title>{{ item.title }}</v-card-title>
           <v-card-text>{{ item.text }}</v-card-text>
