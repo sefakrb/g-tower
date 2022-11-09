@@ -33,12 +33,7 @@
           width="100%"
           class="d-flex justify-center"
         >
-          <v-img
-            class="d-flex justify-center align-center"
-            height="90%"
-            width="90%"
-            :src="item.image"
-          ></v-img>
+          <v-img height="90%" width="90%" :src="item.image"></v-img>
         </v-card>
         <v-card-title
           class="justify-center"
@@ -64,7 +59,7 @@
               class="d-flex flex-column justify-center align-center"
               rounded="lg"
             >
-              <v-img contain :src="user.image"></v-img>
+              <v-img height="80%" width="80%" :src="user.image"></v-img>
 
               <v-card-title>Contact Info</v-card-title>
 
