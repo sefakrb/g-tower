@@ -20,7 +20,7 @@
         <AboutUs></AboutUs>
       </v-main>
 
-      <v-main data-aos="fade-down" class="team" id="ourteam">
+      <v-main data-aos="fade-down" class="team pa-0" id="ourteam">
         <OurTeam></OurTeam>
       </v-main>
 
