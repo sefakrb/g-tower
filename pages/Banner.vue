@@ -2,19 +2,20 @@
   <v-row class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
       <v-card-title class="centerize font-weight-bold" style="font-size: 2.5rem"
-        >Stop Climate
+        >Supporting Good
       </v-card-title>
       <v-card-title
         class="centerize font-weight-bold pt-0"
         style="font-size: 2.5rem"
-        >Change</v-card-title
+        >Power</v-card-title
       >
-      <v-card-text class="centerize" style="font-size: 1.2rem"
+      <!-- <v-card-text class="centerize" style="font-size: 1.2rem"
         >Cooperate with us and help the nature.</v-card-text
-      >
+      > -->
       <v-btn
         small
         color="green"
+        class="mt-5"
         @click="routeHome('about_us')"
         style="text-transform: unset !important; color: white"
         >Who We Are?</v-btn
