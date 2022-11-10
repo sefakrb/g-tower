@@ -18,8 +18,14 @@
     <v-col class="pa-0 ma-0" :cols="locationSize">
       <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
         <v-card-title
+          class="pb-0"
           style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
-          >United States - Headquarter</v-card-title
+          >United States</v-card-title
+        >
+        <v-card-title
+          class="pt-0"
+          style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
+          >Headquarter</v-card-title
         >
         <v-card-text style="font-weight: 450; font-size: 1rem">
           4571 Broadway St, Boulder, CO 80304 <br />
