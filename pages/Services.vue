@@ -7,7 +7,7 @@
         contain
         max-width="20px"
         class="mt-1"
-        :src="require('../static/header_dot.png')"
+        :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
     <v-col
@@ -25,36 +25,47 @@
         rounded="lg"
         :height="appBarSize ? '55vh' : '75vh'"
       >
-        <v-img
-          class="mt-5 mb-5"
-          max-height="50px"
-          contain
-          :src="item.image"
-        ></v-img>
-        <v-card-title
-          class="justify-center mb-5"
-          style="font-weight: 600; font-size: 1.2rem; white-space: pre-line"
-          >{{ item.title }}</v-card-title
+        <v-card color="#F9FBFD" flat>
+          <v-img
+            class="mt-5 mb-5"
+            max-height="50px"
+            contain
+            :src="require('../static/services-logo.png')"
+          ></v-img
+        ></v-card>
+        <v-card
+          color="#F9FBFD"
+          flat
+          class="d-flex justify-center align-center"
+          min-height="30%"
         >
-        <div
-          style="
-            display: flex;
-            width: 100%;
-            justify-content: start;
-            align-items: start !important;
-          "
+          <v-card-title
+            class="justify-center mb-5"
+            style="font-weight: 600; font-size: 1.2rem; white-space: pre-line"
+            >{{ item.title }}</v-card-title
+          ></v-card
         >
-          <ul>
-            <li
-              class="ml-5"
-              style="font-weight: 450; font-size: 1rem"
-              v-for="detail in item.details"
-              :key="detail"
-            >
-              {{ detail }}
-            </li>
-          </ul>
-        </div>
+        <v-card color="#F9FBFD" flat>
+          <div
+            style="
+              display: flex;
+              width: 100%;
+              justify-content: start;
+              align-items: start !important;
+            "
+          >
+            <ul>
+              <li
+                class="ml-5"
+                style="font-weight: 450; font-size: 1rem"
+                v-for="detail in item.details"
+                :key="detail"
+              >
+                {{ detail }}
+              </li>
+            </ul>
+          </div></v-card
+        >
       </v-card></v-col
     >
   </v-row>
@@ -66,19 +77,17 @@ export default {
     return {
       items: [
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon2.png',
           title: 'ENGINEERING SERVICES',
           details: [
             'Transmission Line Design',
-            'Lattice tower design',
-            'Tubular pole design',
-            'Foundation design',
-            'Drafting $ detailing',
-            'Cost estimates',
+            'Lattice Tower Design',
+            'Tubular Pole Design',
+            'Foundation Design',
+            'Drafting $ Detailing',
+            'Cost Estimates',
           ],
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon3.png',
           title: 'OVERSEAS FABRICATION \n INSPECTION SERVICES',
           details: [
             'Tower Testing Attendance',
@@ -90,19 +99,17 @@ export default {
           ],
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon1.png',
-          title: 'SOURCHING SERVICES',
+          title: 'SOURCING SERVICES',
           details: [
             'Lattice Tower Supply',
             'Tubular Pole Supply',
-            'Tower And Pole Accessories Supply',
+            'Tower Accessories Supply',
             'Composite Member Supply',
-            'After Sales Services Design',
+            'After Sales Services',
             'Project Supply Management',
           ],
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/03/icon2.png',
           title: 'CONSULTING SERVICES',
           details: [
             'Owner’s Engineer',
@@ -111,9 +118,6 @@ export default {
             'Expert Witness',
             'Technical Advisory',
             'Project Management',
-            'Factory Audit',
-            ' Factory Acceptance Test',
-            'Attending Tower Testing',
           ],
         },
       ],

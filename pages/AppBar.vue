@@ -5,7 +5,12 @@
       class="centerize"
     >
       <v-col cols="1" style="height: 100%; width: 100%" class="centerize">
-        <v-img max-height="90%" max-width="90%" contain :src="mainLogo"></v-img>
+        <v-img
+          max-height="90%"
+          max-width="90%"
+          contain
+          :src="require('../static/main-logo.png')"
+        ></v-img>
       </v-col>
 
       <v-col v-if="appBarSize" cols="9">
@@ -58,7 +63,6 @@
 export default {
   data() {
     return {
-      mainLogo: 'https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png',
       model: null,
       appBarSize: false,
       items: [
@@ -80,7 +84,6 @@ export default {
     },
 
     routePage(pageName) {
-      console.log('asdasd')
       if (
         (this.$route.name === '/' || this.$route.name === 'index') &&
         pageName === '/'
@@ -88,9 +91,7 @@ export default {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else {
         this.$router.push(pageName)
-        console.log('asdasd2')
       }
-      console.log('asdasd3')
     },
   },
 }

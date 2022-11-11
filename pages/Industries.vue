@@ -1,5 +1,5 @@
 <template>
-  <v-row class="mx-5 d-flex justify-center" v-resize="onResize">
+  <v-row class="ma-5 d-flex justify-center" v-resize="onResize">
     <v-col cols="12">
       <div class="d-flex">
         <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
@@ -7,7 +7,7 @@
         ><v-img
           contain
           max-width="20px"
-          :src="require('../static/header_dot.png')"
+          :src="require('../static/header-dot.png')"
         ></v-img>
       </div>
     </v-col>
@@ -23,7 +23,11 @@
         flat
         rounded="lg"
       >
-        <v-img max-width="100%" contain :src="item.image"></v-img>
+        <v-img
+          max-width="100%"
+          contain
+          :src="require('../static/industries/' + item.image)"
+        ></v-img>
         <v-card-title
           class="justify-center"
           style="font-weight: 600; font-size: 1.2rem"
@@ -40,48 +44,35 @@ export default {
     return {
       items: [
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_3.png',
+          image: 'transmission.png',
           text: 'Transmission',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_8.png',
+          image: 'distrubition.png',
           text: 'Distrubition',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_9.png',
+          image: 'substation.png',
           text: 'Substation',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_1.png',
+          image: 'utility_scale_wind.png',
           text: 'Utility Scale Wind',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_2.png',
-          text: 'Small Wind',
-        },
-        {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_4.png',
+          image: 'offshore_wind.png',
           text: 'Offshore Wind',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_7.png',
+          image: 'solar.png',
           text: 'Solar',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_5.png',
+          image: 'telecom.png',
           text: 'Telecom',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/10/Vectors_reduced_6.png',
+          image: 'lighting.png',
           text: 'Lighting',
         },
       ],
@@ -92,7 +83,7 @@ export default {
     onResize() {
       if (window.innerWidth < 600) {
         this.cardSize = '10'
-      } else if (window.innerWidth > 600 && window.innerWidth < '1000') {
+      } else if (window.innerWidth > 600 && window.innerWidth < 1000) {
         this.cardSize = '4'
       } else {
         this.cardSize = '2'

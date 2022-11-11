@@ -1,17 +1,23 @@
 <template>
   <v-row class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
-      <v-card-title class="centerize font-weight-bold" style="font-size: 2.5rem"
-        >Supporting Good
-      </v-card-title>
       <v-card-title
+        class="centerize font-weight-bold text-center"
+        style="font-size: 2.5rem"
+        >Supporting Good Power
+      </v-card-title>
+      <!-- <v-card-title
         class="centerize font-weight-bold pt-0"
         style="font-size: 2.5rem"
-        >Power</v-card-title
-      >
-      <!-- <v-card-text class="centerize" style="font-size: 1.2rem"
-        >Cooperate with us and help the nature.</v-card-text
+        ></v-card-title
       > -->
+      <v-card-text
+        class="mt-5 font-weight-medium centerize text-center"
+        style="font-size: 1rem"
+        >Solution Partner for your Renewable Energy Infra-Structure Projects.
+        <br />
+        an Independent Tower Solutions Company.</v-card-text
+      >
       <v-btn
         small
         color="green"
@@ -36,19 +42,12 @@
           loop
         >
           <source
-            src="https://g-tower.com/wp-content/uploads/2019/10/G-Tower.mp4"
+            :src="require('../static/banner-video.mp4')"
             type="video/mp4"
           />
           Your browser does not support HTML video.
         </video>
       </v-card>
-
-      <!-- <v-img
-        max-height="50vh"
-        contain
-        class="ma-0"
-        :src="require('../static/banner-image.png')"
-      ></v-img> -->
     </v-col>
   </v-row>
 </template>
@@ -56,10 +55,7 @@
 <script>
 export default {
   data() {
-    return {
-      bannerImage:
-        'https://g-tower.com/wp-content/uploads/2019/05/400dpiLogo.png',
-    }
+    return {}
   },
   methods: {
     routeHome(pageName) {

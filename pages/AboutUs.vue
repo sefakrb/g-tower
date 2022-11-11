@@ -1,5 +1,5 @@
 <template>
-  <v-row class="mx-5 d-flex justify-center">
+  <v-row class="ma-5 d-flex justify-center">
     <v-col cols="12" class="d-flex">
       <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
         >About Us</v-card-title
@@ -8,18 +8,17 @@
         contain
         max-width="20px"
         class="mt-1"
-        :src="require('../static/header_dot.png')"
+        :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
     <v-card class="px-2" width="60vw" color="#F7FBFD">
       <v-card-text>
         <span style="color: #b1d234">G-Tower</span> is a global support
-        structure (tower & pole) solutions company.<br />
+        structure solutions company.<br />
         <br />
         G-Tower provides tower engineering, inspection, procurement and project
-        management services to the utility scale wind, small wind, power
-        transmission & distribution, lighting, solar, offshore wind and wireless
-        industries.
+        management services to Power Transmission & Distribution, Wind Energy,
+        Solar Energy, Lighting and Telecom industries.
       </v-card-text>
       <v-card-text>
         <ul
@@ -39,8 +38,8 @@
         </ul>
       </v-card-text>
       <v-card-text>
-        G-Tower’s mission is to be a reliable partner in order to enhance and
-        add value to the projects of its customer.
+        G-Tower’s mission is to be a reliable partner and add value to the
+        projects of its customer.
       </v-card-text>
     </v-card>
   </v-row>
@@ -56,7 +55,7 @@ export default {
         'Strives to provide quality engineering.',
         'Commits delivering reliable, comprehensive services to meet the needs of its customers.',
         'Supports clean energy.',
-        'Offers sound advice and timely cost-effective solutions to technical issues.',
+        'Proposes cost-effective solutions to technical issues.',
         'Supports local businesses.',
       ],
     }

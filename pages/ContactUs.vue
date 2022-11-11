@@ -1,17 +1,21 @@
 <template>
-  <v-row v-resize="onResize" class="d-flex mx-5">
+  <v-row v-resize="onResize" class="d-flex ma-5">
     <v-col class="d-flex" cols="12">
       <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
         >Contact Us</v-card-title
       ><v-img
         contain
         max-width="20px"
-        :src="require('../static/header_dot.png')"
+        :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
     <v-col class="d-flex justify-center" cols="12">
       <v-card width="70vw" flat class="d-flex justify-center">
-        <v-img max-width="90%" contain :src="map"></v-img>
+        <v-img
+          max-width="90%"
+          contain
+          :src="require('../static/map.png')"
+        ></v-img>
       </v-card>
     </v-col>
 
@@ -69,12 +73,6 @@ export default {
   data() {
     return {
       items: [
-        // {
-        //   region: 'United States - Headquarter',
-        //   color: '#5AAE61',
-        //   location: '4571 Broadway St, Boulder, CO 80304',
-        //   email: 'contact.us@g-tower.com',
-        // },
         {
           region: 'Canada',
           color: '#FF7F00',
@@ -99,9 +97,14 @@ export default {
           location: 'Kolkata Office',
           email: 'contact.in@g-tower.com',
         },
+        {
+          region: 'Australia',
+          color: '#084081',
+          location: 'Sydney Office',
+          email: 'contact.au@g-tower.com',
+        },
       ],
       locationSize: 0,
-      map: 'https://g-tower.com/wp-content/uploads/2022/08/G-Tower_Map.png',
     }
   },
   methods: {

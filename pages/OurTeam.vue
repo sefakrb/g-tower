@@ -1,5 +1,5 @@
 <template>
-  <v-row v-resize="onResize" class="team d-flex justify-center">
+  <v-row v-resize="onResize" class="mt-5 mb-5 team d-flex justify-center">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
       <v-card-title
         style="color: white; font-weight: bold; font-size: 2rem"
@@ -9,7 +9,7 @@
         contain
         max-width="20px"
         class="mt-1"
-        :src="require('../static/header_dot.png')"
+        :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
     <v-col
@@ -33,12 +33,21 @@
           width="100%"
           class="d-flex justify-center"
         >
-          <v-img height="90%" width="90%" :src="item.image"></v-img>
+          <v-img
+            height="90%"
+            width="90%"
+            :src="require('../static/employee/' + item.image)"
+          ></v-img>
         </v-card>
         <v-card-title
-          class="justify-center"
+          class="justify-center pb-0"
           style="font-weight: 600; font-size: 1.2rem"
           >{{ item.name }}</v-card-title
+        >
+        <v-card-title
+          class="justify-center pt-0"
+          style="font-weight: 600; font-size: 1.2rem"
+          >{{ item.surname }}</v-card-title
         >
         <div style="width: 100%" class="d-flex justify-end">
           <v-btn small text depressed @click="bio(item)"
@@ -47,46 +56,38 @@
         </div>
       </v-card></v-col
     >
-    <v-dialog v-if="user.image" v-model="dialog" width="70vw"
+    <v-dialog
+      @click:outside="resetScroll()"
+      id="tos_dialog"
+      v-if="user.image"
+      v-model="dialog"
+      width="70vw"
       ><v-card style="overflow-x: hidden" min-height="70vh" v-model="user">
         <v-row class="ma-0 pa-0 d-flex justify-center" style="min-height: 70vh">
           <v-col
-            :cols="cardSize === '10' ? '10' : '4'"
+            :cols="cardSize !== '2' ? '10' : '4'"
             class="d-flex align-center justify-center"
           >
-            <v-card
-              flat
-              class="d-flex flex-column justify-center align-center"
-              rounded="lg"
-            >
-              <v-img height="80%" width="80%" :src="user.image"></v-img>
-
-              <v-card-title>Contact Info</v-card-title>
-
-              <div style="width: 100%" class="d-flex">
-                <v-icon color="green">mdi-phone</v-icon>
-                <v-card-text>{{ user.contact_info.Phone }}</v-card-text>
-              </div>
-
-              <div style="width: 100%" class="d-flex">
-                <v-icon color="blue">mdi-mail</v-icon>
-                <v-card-text>{{ user.contact_info.email }}</v-card-text>
-              </div>
-
-              <v-btn text :href="user.contact_info.linkedin" target="_blank"
-                ><v-icon color="blue">mdi-linkedin</v-icon></v-btn
-              >
+            <v-card flat class="d-flex justify-center" rounded="lg">
+              <v-img
+                max-width="75%"
+                :src="require('../static/employee/' + user.image)"
+              ></v-img>
             </v-card>
           </v-col>
 
           <v-col
-            :cols="cardSize === '10' ? '10' : '6'"
+            :cols="cardSize !== '2' ? '10' : '8'"
             class="d-flex flex-column justify-center"
           >
-            <v-card-title style="font-size: 2.2rem">{{
+            <v-card-title style="font-size: 2.2rem" class="pb-0">{{
               user.name
             }}</v-card-title>
+            <v-card-title style="font-size: 2.2rem">{{
+              user.surname
+            }}</v-card-title>
             <v-card-text
+              id="den"
               class="mb-5"
               style="font-size: 1.2rem; color: #b1d234"
               >{{ user.title }}</v-card-text
@@ -105,143 +106,93 @@ export default {
     return {
       items: [
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/07/gunes_demirbas1.jpg',
-          name: 'Günes Demirbas, PE',
+          image: 'gunes_demirbas.jpg',
+          name: 'Günes',
+          surname: 'Demirbas, PE',
           title: 'President',
-          contact_info: {
-            Phone: '+1-205-616-4905',
-            email: 'gdemirbas@g-tower.com',
-            linkedin: 'https://www.linkedin.com/in/gunes-demirbas-pe-06b67930/',
-          },
-          bio: 'Gunes has over 15 years of engineering and project management experience specializing in tower business including wind towers up to 6 MW, electric transmission & distribution towers up to 600 kV, telecommunication towers and lighting poles. Prior to start G-Tower, he worked for well-known tower manufacturers; Valmont Industries and Mitas Energy. He holds M.Sc. (Geotechnical) and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He is a currently licensed Professional Engineer in Colorado, Texas and New York; holding NCEES record. He enjoys travelling, cycling, swimming and hiking.',
+          bio: 'Gunes has almost 20 years of engineering and project management experience specializing in tower business including wind towers up to 6MW, electric transmission & distribution towers up to 600kV, telecommunication towers and lighting poles. Before founding G-Tower, he worked for well-known tower manufacturers; Valmont Industries and Mitas Energy. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He is a currently licensed Professional Engineer in Colorado, Texas and New York; holding NCEES record. He enjoys travelling, cycling, swimming and hiking.',
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/07/IMG_8913.jpg',
-          name: 'Uncac Saritas',
+          image: 'ali_gulgeze.jpg',
+          name: 'Ali',
+          surname: 'Gulgeze, PEng',
           title: 'Vice President',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'null',
+          bio: 'Ali is experienced in the structural design of a diverse range of structural systems and has experience in contract administration and cost estimating studies on a variety of projects. Ali has been involved in projects of different scales and has interpreted his technical knowledge to formulate new design concepts with economical and functional solutions. Currently managing large transmission line projects and overseas staff for company’s international work. Ali is a Professional Engineer registered in Ontario, Manitoba, Alberta and Saskatchewan, Canada and holds a M.Eng. degree from University of Western Ontario. He enjoys coding, loves discovering new technology and sailing.',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/06/Ageca-e1565148244110.jpg',
-          name: 'Sabrina Ageca',
+          image: 'sabrina_ageca.jpg',
+          name: 'Sabrina',
+          surname: 'Ageca, CWB',
           title: 'Quality Manager',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Sabrina has 15+ years of experience as Project Manager and Weld Engineer in the energy sector. She is experienced in weld management systems (EN 1090-2/ISO 3834-2) and integrated quality/environmental/safety (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) management systems. Worked for reputable tower manufacturers Mitas, Valmont and Şa-ra in the past. She has B.Sc. in engineering from Dokuz Eylul University. Completed multiple certification programs in weld engineering at Middle East Technical University and European Welding Federation. She enjoys painting, ceramics, trekking and cycling.',
+          bio: 'Sabrina has almost 20 years of experience as Project Manager and Weld Engineer in the energy sector. She is a Level I Weld Inspector certified by CWB (Canadian Welding Bureau). She is experienced in weld management systems (EN 1090-2/ISO 3834-2) and integrated quality/environmental/safety (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) management systems. Worked for reputable tower manufacturers Mitas, Valmont and Şa-Ra in the past. She has B.Sc. in Engineering from Dokuz Eylul University. Completed multiple certification programs in Weld Engineering at Middle East Technical University and European Welding Federation. She enjoys painting, ceramics, trekking and cycling.',
         },
+
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/10/4.jpg',
-          name: 'Mahir Ergin',
+          image: 'mahir_ergin.jpg',
+          name: 'Mahir',
+          surname: 'Ergin',
           title: 'Regional Manager',
-          contact_info: {
-            Phone: '+90-505-397-2316',
-            email: 'hmergin@g-tower.com',
-            linkedin: 'https://www.linkedin.com/in/gunes-demirbas-pe-06b67930/',
-          },
           bio: 'After graduated from Istanbul Kabatas High School, Mahir studied Mathematics. He holds M.Sc. and B.Sc. degrees in Mathematics. Because of his passion and interest in wind energy, he decided to join G-Tower in 2018. He is based in Ankara, Turkey. He is responsible from quality control of all the manufactured tower and pole products within Turkey prior to ship overseas. In addition to that he supports business development activities in the Middle East. He enjoys watching soccer and spending time with his two children Can & Umut Efe.',
         },
 
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2020/09/IMG_E4415-600x800.jpg',
-          name: 'Selma Hacıraifoglu',
+          image: 'selma_haciraifoglu.jpg',
+          name: 'Selma',
+          surname: 'Hacıraifoglu',
           title: 'Commercial Manager',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Selma has dynamic and outstanding management professional offering over 12 years of experience as İmport-Export and Logistics Specialist as well as in Project Management in the sector of Energy, Telecommunication and Lighting.Worked for Tower and Poles manufacturer MITAS, Mitas-Valmont JV and construction company Emta.She has BBA from Hacettepe University. Completed certification programs in foreign trade, finance, managing supply chain and logistics, contract management and so on…Proven ability to interact effectively with people of different nationalities and comfortable working in a multicultural setting.She loves skiing and enjoys travelling.',
+          bio: 'Selma has dynamic and outstanding management professional offering over 20 years of experience as Import-Export and Logistics Specialist as well as in Project Management in the sector of Energy, Telecommunication and Lighting. Worked for tower and pole manufacturer Mitas, Mitas-Valmont JV and construction company Emta. She has BBA from Hacettepe University. Completed certification programs in foreign trade, finance, managing supply chain and logistics, contract management and so on. Proven ability to interact effectively with people of different nationalities and comfortable working in a multicultural setting. She loves skiing and enjoys travelling.',
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/10/6.jpg',
-          name: 'Alper Yavuzer',
-          title: 'Quality Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Alper is Quality Engineer at G-Tower, with mechanical engineering background. He has 10+ years of construction, steel and quality control experience. He joined G-Tower in 2019 and he is responsible from manufacturing inspection and quality control process for the utility projects. Alper likes travelling and discovering different cultures. He enjoys fishing in his hometown Zonguldak on the Blacksea Coast.',
+          image: 'alper_yavuzer.jpg',
+          name: 'Alper',
+          surname: 'Yavuzer',
+          title: 'Senior Quality Engineer',
+          bio: 'Alper is Senior Quality Engineer at G-Tower, with mechanical engineering background. He has 15+ years of construction, steel and quality control experience. He joined G-Tower in 2019 and he is responsible from manufacturing inspection and quality control process for the utility projects. He leads and manages lattice tower factory audit work of G-Tower in overseas. Alper likes travelling and discovering different cultures. He enjoys fishing in his hometown Zonguldak on the Black Sea Coast.',
         },
+
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/07/Profil-cropped-2-600x800.jpg',
-          name: 'Ensar Duran',
+          image: 'ensar_duran.jpg',
+          name: 'Ensar',
+          surname: 'Duran',
           title: 'Project Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Ensar is a project engineer at G-Tower. He has a Civil Engineering degree from Abdullah Gül University (AGU), Turkey. He earned an English Language certificate from a learning institution in Michigan, MI. He has involved in various international projects and has experience in engineering design and analysis of power transmission lines and telecommunication structures. Ensar is a professional snowboarder and he represented his university at various national tournaments. He also has an interest in other outdoor sports such as trekking, climbing, and camping.',
+          bio: 'Ensar is a Project Engineer at G-Tower. He has a Civil Engineering degree from Abdullah Gül University (AGU), Turkey. He earned an English Language certificate from a learning institution in Michigan, MI. He has involved in various international projects and has experience in engineering design and analysis of power transmission lines and telecommunication structures. He leads G-Tower’s business development efforts in Santiago, Chile for the South American Market. Ensar is a professional snowboarder and he represented his university at various national tournaments. He also has an interest in other outdoor sports such as trekking, climbing, and camping.',
         },
+
         {
-          image: 'https://g-tower.com/wp-content/uploads/2020/12/nazife.jpg',
-          name: 'Nazife Nur Iscan',
+          image: 'nazife_nur_iscan.jpg',
+          name: 'Nazife Nur',
+          surname: 'Iscan',
           title: 'Project Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Nazife is an engineering intern at G-Tower. She graduated from Süleyman Demirel University, Civil Engineering Department in 2020. She is also studied at Cracow University of Technology for a term as part of the Erasmus+ project in 2019. During the Erasmus+ project, She visited 11 countries and experienced different cultures. She developed her organization and communication skills by participating in volunteer and social activities in student clubs. She enjoys doing pilates, travelling, and hiking.',
+          bio: 'Nazife is a Project Engineering at G-Tower. She graduated from Süleyman Demirel University, Civil Engineering Department in 2020. She is also studied at Cracow University of Technology for certain amount of period as part of the Erasmus Project in 2019. During the Erasmus Project, She visited 11 countries and experienced different cultures. She developed her organization and communication skills by participating in volunteer and social activities in student clubs. Nazife uses PLS-CADD, PLS-Tower and PLS-Pole. She designs transmission lines and support structures including lattice towers and tubular poles. From time to time, she visits tower factories to support G-Tower’s prototype and fabrication inspection projects. She enjoys travelling and hiking.',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2019/03/Didem-600x800.jpg',
-          name: 'Didem Ergin, PE',
-          title: 'Environmental Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
+          image: 'didem_ergin.jpg',
+          name: 'Didem',
+          surname: 'Ergin, PE',
+          title: 'Consultant, Environmental Engineer',
           bio: 'Didem is an environmental engineer with over 10 years of diverse technical and project management experience. Her expertise includes managing the environmental aspects throughout the life cycle of a wide range of large capital projects, including site selection and alternative analysis; schedule and budgeting; impact assessments; federal, state, and local permitting and regulatory compliance; environmental plan preparation; and auditing, reporting, and agency negotiations. Didem is a licensed P.E. in Texas. Didem has worked for top-notch environmental consultancy and engineering firms throughout her career.',
         },
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/10/5.jpg',
-          name: 'Matt Rogers, PE',
-          title: 'Consultant - Engineer',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling. ',
+          image: 'matt_rogers.jpg',
+          name: 'Matt',
+          surname: 'Rogers, PE',
+          title: 'Consultant, Geotechnical Engineer',
+          bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling.',
         },
+
         {
-          image: 'https://g-tower.com/wp-content/uploads/2019/10/2.jpg',
-          name: 'Mehmet Gurdin',
+          image: 'mehmet_gurdin.jpg',
+          name: 'Mehmet',
+          surname: 'Gurdin',
           title: 'Strategic Partner',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'null',
+          bio: 'Mehmet is the owner of IMG Energy based in Konya, Turkey. IMG Energy is G-Tower’s arm in the EMEA (Europe – Middle East – Africa) Market. Mehmet has almost 25 years of experience in the management, supply and engineering of tower/pole part of energy, telecom and lighting infra-structure projects in the EMEA Market. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He enjoys playing and watching basketball.',
         },
         {
-          image:
-            'https://g-tower.com/wp-content/uploads/2020/10/Vani-600x800.jpeg',
-          name: 'Jerry Vaninetti',
-          title: 'Senior Advisor',
-          contact_info: {
-            Phone: 'null',
-            email: 'null',
-            linkedin: 'null',
-          },
-          bio: 'null',
+          image: 'akin_veske.jpg',
+          name: 'Akin',
+          surname: 'Veske',
+          title: 'Quality Inspector',
+          bio: 'Akin is Civil Engineering student at Middle East Technical University. He supports G-Tower’s inspection services including tower prototyping, mass production, pre-shipment and factory acceptance test. In addition to that Akin attends tower testing of our clients in Turkey. His youth and dynamism bring lots of positive energy to G-Tower Team. Although his gentle nature, he is big fan of Marshall arts. The Karate Kid is one his favorite movie series. His dream is to move to Africa and start G-Tower’s entity to expand our business in Africa.',
         },
       ],
       cardSize: false,
@@ -272,6 +223,13 @@ export default {
       this.dialog = true
       this.user = item
     },
+    resetScroll() {
+      if (
+        document.getElementsByClassName('v-dialog--active')[0] !== undefined
+      ) {
+        document.getElementsByClassName('v-dialog--active')[0].scrollTop = 0
+      }
+    },
   },
 }
 </script>
@@ -280,5 +238,9 @@ export default {
 .team {
   background-image: url('../static/team-background.png');
   background-repeat: no-repeat, no-repeat;
+}
+
+.go-top {
+  scroll-margin-top: 0;
 }
 </style>
