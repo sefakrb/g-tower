@@ -1,5 +1,5 @@
 <template>
-  <v-row v-resize="onResize" class="mt-5 mb-5 centerize">
+  <v-row v-resize="onResize" class="mt-5 mb-5 team centerize">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
       <v-card-title class="mainTitle">Our Team</v-card-title
       ><v-img
@@ -51,7 +51,12 @@
       ><v-card style="overflow-x: hidden" min-height="70vh" v-model="user">
         <v-row class="ma-0 pa-0 centerize" style="min-height: 70vh">
           <v-col :cols="cardSize !== '2' ? '10' : '4'" class="centerize">
-            <v-card flat class="centerize" rounded="lg">
+            <v-card
+              style="border: 2px solid red"
+              flat
+              class="centerize"
+              rounded="lg"
+            >
               <v-img
                 max-width="75%"
                 :src="require('../static/employee/' + user.image)"
@@ -211,6 +216,10 @@ export default {
 </script>
 
 <style scoped>
+.team {
+  background-image: url('../static/team-background.png');
+  background-repeat: no-repeat, no-repeat;
+}
 .go-top {
   scroll-margin-top: 0;
 }
