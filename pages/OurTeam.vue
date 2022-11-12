@@ -50,7 +50,10 @@
       width="70vw"
       ><v-card style="overflow-x: hidden" min-height="70vh" v-model="user">
         <v-row class="ma-0 pa-0 centerize" style="min-height: 70vh">
-          <v-col :cols="cardSize !== '2' ? '10' : '4'" class="centerize">
+          <v-col
+            :cols="cardSize !== '2' ? '10' : '4'"
+            class="centerize align-center"
+          >
             <v-card
               style="border: 2px solid red"
               flat
