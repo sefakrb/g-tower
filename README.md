@@ -1,68 +1,100 @@
-# g-tower
+# G-Tower
 
-## Build Setup
+<!-- PROJECT LOGO -->
+<div name="readme-top"  align="center">
+    <img style="width:20%;height:20%" src="static/main-logo.png" alt="Logo">
+</div>
 
-```bash
-# install dependencies
-$ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+<br />
+<br />
 
-# build for production and launch server
-$ npm run build
-$ npm run start
 
-# generate static project
-$ npm run generate
-```
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+        <a href="#built-with">Built With</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#pages">Pages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## About The Project
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+  This website is for G-Tower which is a global support structure solutions company.
 
-### `assets`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+### Built With
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+* [![Vue][Vue.js]][Vue-url]
+* [![Nuxt][Nuxt]][Nuxt-url]
 
-### `components`
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+## Getting Started
 
-### `layouts`
+### Prerequisites
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+### Installation
 
-### `pages`
+1. Clone the repo
+   ```sh
+   git clone https://github.com/sefakrb/g-tower.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Build Setup 
+   * Run on development mode
+     ```sh
+     npm run dev
+     ```
+   * Build for production and launch server
+      ```sh
+      npm run build
+      npm run start
+      ```
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+<!-- ## Pages
+#### Home
 
-### `plugins`
+![gif](https://github.com/sefakrb/g-tower/blob/master/static/g-tower-gif.gif)
+<img src="https://github.com/sefakrb/g-tower/blob/master/static/g-tower-gif.gif" width="700" height="450"/> -->
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
 
-### `static`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+## Contact
+Sefa Karabaş - sefa799@gmail.com
+Project Link: [https://github.com/sefakrb/incikent-gayrimenkul](https://github.com/sefakrb/incikent-gayrimenkul-frontend)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Nuxt]: https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82
+[Nuxt-url]: https://nuxtjs.org/
