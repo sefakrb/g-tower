@@ -1,9 +1,7 @@
 <template>
-  <v-row class="ma-5 d-flex justify-center">
+  <v-row class="centerize">
     <v-col cols="12" class="d-flex">
-      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
-        >About Us</v-card-title
-      >
+      <v-card-title>About Us</v-card-title>
       <v-img
         contain
         max-width="20px"
@@ -21,11 +19,7 @@
         Solar Energy, Lighting and Telecom industries.
       </v-card-text>
       <v-card-text>
-        <ul
-          style="color: #b1d234; -webkit-text-fill-color: rgba(0, 0, 0, 0.6)"
-          v-for="item in items"
-          :key="item"
-        >
+        <ul v-for="item in items" :key="item">
           <div class="d-flex">
             <v-img
               contain
@@ -63,4 +57,17 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.centerize {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.v-card__title {
+  margin: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+}
+</style>

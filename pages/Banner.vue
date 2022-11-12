@@ -1,23 +1,11 @@
 <template>
   <v-row class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
-      <v-card-title
-        class="centerize font-weight-bold text-center"
-        style="font-size: 2.5rem"
-        >Supporting Good Power
-      </v-card-title>
-      <!-- <v-card-title
-        class="centerize font-weight-bold pt-0"
-        style="font-size: 2.5rem"
-        ></v-card-title
-      > -->
-      <v-card-text
-        class="mt-5 font-weight-medium centerize text-center"
-        style="font-size: 1rem"
+      <v-card-title>Supporting Good Power</v-card-title>
+
+      <v-card-text class="pb-0"
         >Solution Partner for your Renewable Energy Infra-Structure Projects.
-        <br />
-        an Independent Tower Solutions Company.</v-card-text
-      >
+      </v-card-text>
       <v-btn
         small
         color="green"
@@ -26,21 +14,20 @@
         style="text-transform: unset !important; color: white"
         >Who We Are?</v-btn
       >
+      <v-card-text class="pt-0">
+        an Independent Tower Solutions Company.</v-card-text
+      >
     </v-col>
-    <v-col cols="12" md="6" class="centerize mt-10 ma-0 pa-0">
+
+    <v-col cols="12" md="6" class="centerize mt-10">
       <v-card
         max-height="50vh;"
         max-width="50vw;"
-        class="d-flex justify-center align-center"
+        class="centerize"
         flat
         rounded="xl"
       >
-        <video
-          style="max-height: 90%; max-width: 90%; border-radius: 3%"
-          autoplay
-          muted
-          loop
-        >
+        <video class="videoStyle" autoplay playsinline muted loop>
           <source
             :src="require('../static/banner-video.mp4')"
             type="video/mp4"
@@ -70,5 +57,23 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.v-card__text {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.v-card__title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.videoStyle {
+  max-height: 90%;
+  max-width: 90%;
+  border-radius: 3% !important;
 }
 </style>

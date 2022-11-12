@@ -1,8 +1,7 @@
 <template>
   <v-row v-resize="onResize" class="mx-5">
     <v-col cols="12" class="d-flex">
-      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
-        >Services</v-card-title
+      <v-card-title class="mainTitle">Services</v-card-title
       ><v-img
         contain
         max-width="20px"
@@ -19,8 +18,7 @@
       cols="12"
     >
       <v-card
-        class="ma-4"
-        style="display: flex; flex-direction: column"
+        class="cardStyle"
         color="#F9FBFD"
         rounded="lg"
         :height="appBarSize ? '55vh' : '75vh'"
@@ -33,38 +31,17 @@
             :src="require('../static/services-logo.png')"
           ></v-img
         ></v-card>
-        <v-card
-          color="#F9FBFD"
-          flat
-          class="d-flex justify-center align-center"
-          min-height="30%"
-        >
-          <v-card-title
-            class="justify-center mb-5"
-            style="font-weight: 600; font-size: 1.2rem; white-space: pre-line"
-            >{{ item.title }}</v-card-title
-          ></v-card
+        <v-card color="#F9FBFD" flat class="centerize" min-height="30%">
+          <v-card-title class="itemTitle" style="">{{
+            item.title
+          }}</v-card-title></v-card
         >
         <v-card color="#F9FBFD" flat>
-          <div
-            style="
-              display: flex;
-              width: 100%;
-              justify-content: start;
-              align-items: start !important;
-            "
-          >
-            <ul>
-              <li
-                class="ml-5"
-                style="font-weight: 450; font-size: 1rem"
-                v-for="detail in item.details"
-                :key="detail"
-              >
-                {{ detail }}
-              </li>
-            </ul>
-          </div></v-card
+          <ul>
+            <li class="itemDetail" v-for="detail in item.details" :key="detail">
+              {{ detail }}
+            </li>
+          </ul></v-card
         >
       </v-card></v-col
     >
@@ -140,5 +117,30 @@ export default {
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.mainTitle {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.cardStyle {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.itemDetail {
+  font-weight: 450;
+  font-size: 1rem;
+  margin-left: 20px;
 }
 </style>

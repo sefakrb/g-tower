@@ -1,34 +1,29 @@
 <template>
-  <v-row v-resize="onResize" class="ma-0 pa-0 justify-center align-center">
+  <v-row v-resize="onResize" class="mainRow">
     <v-col style="height: 100%" cols="12">
-      <Banner data-aos="zoom-in" id="home" @routeHome="routeHome"></Banner>
+      <Banner data-aos="zoom-in" @routeHome="routeHome"></Banner>
 
-      <v-main data-aos="fade-up" id="services">
+      <v-main data-aos="fade-up">
         <Services></Services>
       </v-main>
 
-      <v-main
-        data-aos="fade-left"
-        class="pb-10"
-        style="background-color: #e5f0ff"
-        id="projects"
-      >
+      <v-main data-aos="fade-down" class="projectStyle">
         <Projects></Projects>
       </v-main>
 
-      <v-main data-aos="fade-right" id="aboutus">
+      <v-main data-aos="fade-right">
         <AboutUs></AboutUs>
       </v-main>
 
-      <v-main data-aos="fade-down" class="team pa-0" id="ourteam">
+      <v-main data-aos="fade-down" class="team pa-0">
         <OurTeam></OurTeam>
       </v-main>
 
-      <v-main data-aos="zoom-in" id="industries">
+      <v-main data-aos="zoom-in">
         <Industries></Industries>
       </v-main>
 
-      <v-main data-aos="zoom-in-up" id="contactus">
+      <v-main data-aos="zoom-in-up">
         <ContactUs></ContactUs>
       </v-main>
     </v-col>
@@ -82,6 +77,19 @@ export default {
 </script>
 
 <style scoped>
+.mainRow {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.projectStyle {
+  background-color: #e5f0ff;
+  padding: 0 !important;
+  padding-bottom: 50px !important;
+}
 .team {
   background-image: url('../static/team-background.png');
   background-repeat: no-repeat, no-repeat;

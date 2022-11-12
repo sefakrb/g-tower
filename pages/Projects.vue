@@ -1,9 +1,7 @@
 <template>
-  <v-row style="background-color: #e5f0ff" class="ma-5 d-flex justify-center">
+  <v-row class="mainRow centerize">
     <v-col cols="12" class="d-flex pb-0">
-      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
-        >Projects</v-card-title
-      >
+      <v-card-title class="mainTitle">Projects</v-card-title>
       <v-img
         contain
         max-width="20px"
@@ -18,13 +16,7 @@
       height="70vh"
     >
       <v-carousel-item v-for="item in items" :key="item.image">
-        <v-card
-          flat
-          class="d-flex flex-column justify-center align-center"
-          width="100%"
-          height="100%"
-          rounded="lg"
-        >
+        <v-card flat class="cardStyle" width="100%" height="100%" rounded="lg">
           <v-img
             max-height="60%"
             contain
@@ -111,4 +103,31 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.v-card__title {
+  text-align: center;
+}
+
+.centerize {
+  display: flex;
+  justify-content: center;
+}
+
+.mainRow {
+  margin: 20px;
+  background-color: #e5f0ff;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.cardStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>

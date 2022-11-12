@@ -1,10 +1,7 @@
 <template>
-  <v-app-bar v-resize="onResize" app class="ma-0 pa-0">
-    <v-row
-      style="height: 100%; width: 100vw; justify-content: center !important"
-      class="centerize"
-    >
-      <v-col cols="1" style="height: 100%; width: 100%" class="centerize">
+  <v-app-bar width="100vw" v-resize="onResize" app class="ma-0 pa-0">
+    <v-row class="mainRow">
+      <v-col cols="1" class="centerize imageSize">
         <v-img
           max-height="90%"
           max-width="90%"
@@ -13,7 +10,7 @@
         ></v-img>
       </v-col>
 
-      <v-col v-if="appBarSize" cols="9">
+      <v-col v-if="appBarSize" class="centerize" cols="8">
         <v-card text flat class="mx-auto" max-width="70vw">
           <v-slide-group style="background-color: #f5f5f5" multiple show-arrows>
             <v-slide-item
@@ -40,7 +37,7 @@
         </v-card>
       </v-col>
 
-      <v-col v-if="!appBarSize" cols="5" class="centerize" style="height: 100%">
+      <v-col v-if="!appBarSize" cols="6" class="centerize">
         <v-btn
           v-for="item in items"
           :key="item.route"
@@ -78,7 +75,7 @@ export default {
 
   methods: {
     onResize() {
-      window.innerWidth < 1000
+      window.innerWidth < 950
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
     },
@@ -102,11 +99,21 @@ export default {
   padding: 0px !important;
   margin: 0px !important;
 }
+.mainRow {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
 .centerize {
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: start !important;
-  align-items: center !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.imageSize {
+  height: 100%;
+  width: 100%;
 }
 </style>

@@ -1,36 +1,26 @@
 <template>
-  <v-row v-resize="onResize" class="d-flex ma-5">
+  <v-row v-resize="onResize" class="ma-5">
     <v-col class="d-flex" cols="12">
-      <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
-        >Contact Us</v-card-title
+      <v-card-title class="mainTitle">Contact Us</v-card-title
       ><v-img
         contain
         max-width="20px"
         :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
-    <v-col class="d-flex justify-center" cols="12">
-      <v-card width="70vw" flat class="d-flex justify-center">
+    <v-col class="centerize" cols="12">
+      <v-card width="70vw" flat class="centerize">
         <v-img
           max-width="90%"
           contain
-          :src="require('../static/map.png')"
+          :src="require('../static/map.jpg')"
         ></v-img>
       </v-card>
     </v-col>
 
-    <v-col class="pa-0 ma-0" :cols="locationSize">
+    <v-col :cols="locationSize">
       <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
-        <v-card-title
-          class="pb-0"
-          style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
-          >United States</v-card-title
-        >
-        <v-card-title
-          class="pt-0"
-          style="font-weight: 700; font-size: 1.2rem; color: #5aae61"
-          >Headquarter</v-card-title
-        >
+        <v-card-title class="country">United States Headquarter</v-card-title>
         <v-card-text style="font-weight: 450; font-size: 1rem">
           4571 Broadway St, Boulder, CO 80304 <br />
           <br />
@@ -39,32 +29,22 @@
       </v-card></v-col
     >
     <v-col cols="12"></v-col>
-    <!-- :style="{
-        'flex-direction': locationSize > '4' ? 'row' : 'column',
-        'align-items': locationSize > '4' ? 'center' : 'start',
-      }" -->
-    <v-col
-      v-for="item in items"
-      :key="item.region"
-      class="pa-0 ma-0"
-      :cols="locationSize"
-    >
-      <v-card height="100%" class="d-flex" flat rounded="lg">
-        <div class="d-flex flex-column">
-          <v-card-title
-            :color="item.color"
-            :style="{ color: item.color }"
-            style="font-weight: 700; font-size: 1.2rem"
-            >{{ item.region }}</v-card-title
-          >
+
+    <v-col v-for="item in items" :key="item.region" :cols="locationSize">
+      <v-card class="cardContext" flat rounded="lg">
+        <div>
+          <v-card-title :style="{ color: item.color }" class="country">{{
+            item.region
+          }}</v-card-title>
           <v-card-text style="font-size: 1rem">
             {{ item.location }} <br />
             <br />
             {{ item.email }}
           </v-card-text>
         </div>
-        <v-divider inset vertical></v-divider> </v-card
-    ></v-col>
+        <v-divider inset vertical></v-divider>
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 
@@ -99,7 +79,7 @@ export default {
         },
         {
           region: 'Australia',
-          color: '#084081',
+          color: 'rgb(136, 65, 157)',
           location: 'Sydney Office',
           email: 'contact.au@g-tower.com',
         },
@@ -115,29 +95,36 @@ export default {
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
         this.locationSize = '4'
       } else {
-        this.locationSize = '3'
+        this.locationSize = '2'
       }
     },
   },
 }
 </script>
 
-<style>
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-*/ .slide-fade-enter-active {
-  transition: all 1s ease-out;
+<style scoped>
+.col {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.centerize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainTitle {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px;
+}
+.country {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #5aae61;
 }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+.cardContext {
+  display: flex;
+  height: 100%;
 }
 </style>

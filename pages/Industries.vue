@@ -1,9 +1,8 @@
 <template>
-  <v-row class="ma-5 d-flex justify-center" v-resize="onResize">
+  <v-row class="ma-5 centerize" v-resize="onResize">
     <v-col cols="12">
       <div class="d-flex">
-        <v-card-title style="font-weight: bold; font-size: 2rem" class="ma-5"
-          >Industries</v-card-title
+        <v-card-title class="mainTitle">Industries</v-card-title
         ><v-img
           contain
           max-width="20px"
@@ -19,7 +18,7 @@
     >
       <v-card
         height="100%"
-        class="ma-4 d-flex flex-column justify-center align-center"
+        class="ma-4 centerize flex-column"
         flat
         rounded="lg"
       >
@@ -57,7 +56,7 @@ export default {
         },
         {
           image: 'utility_scale_wind.png',
-          text: 'Utility Scale Wind',
+          text: 'Onshore Wind',
         },
         {
           image: 'offshore_wind.png',
@@ -93,4 +92,16 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.centerize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px;
+}
+</style>

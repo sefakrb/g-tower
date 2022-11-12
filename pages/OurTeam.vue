@@ -1,10 +1,7 @@
 <template>
-  <v-row v-resize="onResize" class="mt-5 mb-5 team d-flex justify-center">
+  <v-row v-resize="onResize" class="mt-5 mb-5 centerize">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
-      <v-card-title
-        style="color: white; font-weight: bold; font-size: 2rem"
-        class="ma-5"
-        >Our Team</v-card-title
+      <v-card-title class="mainTitle">Our Team</v-card-title
       ><v-img
         contain
         max-width="20px"
@@ -18,13 +15,7 @@
       class="ma-8 pa-0"
       :cols="cardSize"
     >
-      <v-card
-        height="100%"
-        class="ma-4 d-flex flex-column align-center"
-        style="justify-content: space-around"
-        color="#EFFFEF"
-        rounded="lg"
-      >
+      <v-card height="100%" class="cardStyle" color="#EFFFEF" rounded="lg">
         <v-card
           rounded="lg"
           flat
@@ -39,17 +30,13 @@
             :src="require('../static/employee/' + item.image)"
           ></v-img>
         </v-card>
-        <v-card-title
-          class="justify-center pb-0"
-          style="font-weight: 600; font-size: 1.2rem"
-          >{{ item.name }}</v-card-title
-        >
-        <v-card-title
-          class="justify-center pt-0"
-          style="font-weight: 600; font-size: 1.2rem"
-          >{{ item.surname }}</v-card-title
-        >
-        <div style="width: 100%" class="d-flex justify-end">
+        <v-card-title class="centerize nameTitle pb-0">{{
+          item.name
+        }}</v-card-title>
+        <v-card-title class="centerize nameTitle pt-0">{{
+          item.surname
+        }}</v-card-title>
+        <div class="buttonStyle">
           <v-btn small text depressed @click="bio(item)"
             >More<v-icon>mdi-arrow-right-thin</v-icon></v-btn
           >
@@ -58,17 +45,13 @@
     >
     <v-dialog
       @click:outside="resetScroll()"
-      id="tos_dialog"
       v-if="user.image"
       v-model="dialog"
       width="70vw"
       ><v-card style="overflow-x: hidden" min-height="70vh" v-model="user">
-        <v-row class="ma-0 pa-0 d-flex justify-center" style="min-height: 70vh">
-          <v-col
-            :cols="cardSize !== '2' ? '10' : '4'"
-            class="d-flex align-center justify-center"
-          >
-            <v-card flat class="d-flex justify-center" rounded="lg">
+        <v-row class="ma-0 pa-0 centerize" style="min-height: 70vh">
+          <v-col :cols="cardSize !== '2' ? '10' : '4'" class="centerize">
+            <v-card flat class="centerize" rounded="lg">
               <v-img
                 max-width="75%"
                 :src="require('../static/employee/' + user.image)"
@@ -78,20 +61,13 @@
 
           <v-col
             :cols="cardSize !== '2' ? '10' : '8'"
-            class="d-flex flex-column justify-center"
+            class="centerize flex-column"
           >
-            <v-card-title style="font-size: 2.2rem" class="pb-0">{{
+            <v-card-title class="dialogTitle pb-0">{{
               user.name
             }}</v-card-title>
-            <v-card-title style="font-size: 2.2rem">{{
-              user.surname
-            }}</v-card-title>
-            <v-card-text
-              id="den"
-              class="mb-5"
-              style="font-size: 1.2rem; color: #b1d234"
-              >{{ user.title }}</v-card-text
-            >
+            <v-card-title class="dialogTitle">{{ user.surname }}</v-card-title>
+            <v-card-text class="dialogText">{{ user.title }}</v-card-text>
             <v-card-text>{{ user.bio }}</v-card-text>
           </v-col>
         </v-row>
@@ -235,12 +211,47 @@ export default {
 </script>
 
 <style scoped>
-.team {
-  background-image: url('../static/team-background.png');
-  background-repeat: no-repeat, no-repeat;
-}
-
 .go-top {
   scroll-margin-top: 0;
+}
+
+.centerize {
+  display: flex;
+  justify-content: center;
+}
+
+.mainTitle {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.cardStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 16px;
+}
+
+.nameTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.buttonStyle {
+  display: flex;
+  justify-content: end;
+}
+
+.dialogTitle {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.dialogText {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #b1d234;
 }
 </style>

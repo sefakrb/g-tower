@@ -23,4 +23,10 @@ html {
   overflow: auto;
   overflow-x: hidden;
 }
+.v-card__text,
+.v-card__title {
+  word-break: break-word;
+}
+.v-card__title {
+}
 </style>
