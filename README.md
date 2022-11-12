@@ -88,7 +88,7 @@
 
 ## Contact
 Sefa Karabaş - sefa799@gmail.com
-Project Link: [https://github.com/sefakrb/incikent-gayrimenkul](https://github.com/sefakrb/incikent-gayrimenkul-frontend)
+Project Link: [https://github.com/sefakrb/g-tower](https://github.com/sefakrb/g-tower.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
