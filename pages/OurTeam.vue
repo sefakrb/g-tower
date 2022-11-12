@@ -54,12 +54,7 @@
             :cols="cardSize !== '2' ? '10' : '4'"
             class="centerize align-center"
           >
-            <v-card
-              style="border: 2px solid red"
-              flat
-              class="centerize"
-              rounded="lg"
-            >
+            <v-card flat class="centerize" rounded="lg">
               <v-img
                 max-width="75%"
                 :src="require('../static/employee/' + user.image)"

@@ -15,7 +15,7 @@
         <AboutUs></AboutUs>
       </v-main>
 
-      <v-main data-aos="fade-down" class="team pa-0">
+      <v-main data-aos="fade-down" class="pa-0">
         <OurTeam></OurTeam>
       </v-main>
 
@@ -89,9 +89,5 @@ export default {
   background-color: #e5f0ff;
   padding: 0 !important;
   padding-bottom: 50px !important;
-}
-.team {
-  background-image: url('../static/team-background.png');
-  background-repeat: no-repeat, no-repeat;
 }
 </style>
