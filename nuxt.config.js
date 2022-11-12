@@ -4,8 +4,7 @@ export default {
   ssr:false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - g-tower',
-    title: 'g-tower',
+    title: 'G-Tower',
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/main-logo.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
