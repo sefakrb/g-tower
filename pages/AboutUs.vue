@@ -9,7 +9,7 @@
         :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
-    <v-card class="px-2" width="60vw" color="#F7FBFD">
+    <v-card class="px-2" width="80vw" color="#F7FBFD">
       <v-card-text>
         <span style="color: #b1d234">G-Tower</span> is a global support
         structure solutions company.<br />

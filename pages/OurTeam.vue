@@ -1,5 +1,5 @@
 <template>
-  <v-row v-resize="onResize" class="mt-5 mb-5 team centerize">
+  <v-row v-resize="onResize" class="ma-0 mt-5 mb-5 team centerize">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
       <v-card-title class="mainTitle">Our Team</v-card-title
       ><v-img
@@ -12,10 +12,16 @@
     <v-col
       v-for="item in items"
       :key="item.image"
-      class="ma-8 pa-0"
+      class="pa-0"
+      :class="cardSize === '5' ? 'ma-2' : 'ma-8'"
       :cols="cardSize"
     >
-      <v-card height="100%" class="cardStyle" color="#EFFFEF" rounded="lg">
+      <v-card
+        height="100%"
+        class="ma-0 pa-0 cardStyle"
+        color="#EFFFEF"
+        rounded="lg"
+      >
         <v-card
           rounded="lg"
           flat
@@ -30,13 +36,17 @@
             :src="require('../static/employee/' + item.image)"
           ></v-img>
         </v-card>
-        <v-card-title class="centerize nameTitle pb-0">{{
-          item.name
-        }}</v-card-title>
-        <v-card-title class="centerize nameTitle pt-0">{{
-          item.surname
-        }}</v-card-title>
-        <div class="buttonStyle">
+        <v-card-title
+          class="centerize nameTitle pb-0"
+          :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'"
+          >{{ item.name }}</v-card-title
+        >
+        <v-card-title
+          class="centerize nameTitle pt-0"
+          :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'"
+          >{{ item.surname }}</v-card-title
+        >
+        <div class="buttonStyle" style="width: 100%">
           <v-btn small text depressed @click="bio(item)"
             >More<v-icon>mdi-arrow-right-thin</v-icon></v-btn
           >
@@ -47,9 +57,20 @@
       @click:outside="resetScroll()"
       v-if="user.image"
       v-model="dialog"
-      width="70vw"
-      ><v-card style="overflow-x: hidden" min-height="70vh" v-model="user">
-        <v-row class="ma-0 pa-0 centerize" style="min-height: 70vh">
+      width="80vw"
+    >
+      <v-card style="overflow-x: hidden" min-height="60vh" v-model="user">
+        <v-row class="ma-0 pa-0 centerize">
+          <!-- <v-col
+            cols="12"
+            style="border: 2px solid red; height: 2%"
+            class="pa-0 pa-2 d-flex justify-end"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-col> -->
+          <div style="width: 100%; height: 2%" class="d-flex justify-end pa-2">
+            <v-icon @click=";(dialog = false), resetScroll()">mdi-close</v-icon>
+          </div>
           <v-col
             :cols="cardSize !== '2' ? '10' : '4'"
             class="centerize align-center"
@@ -74,8 +95,8 @@
             <v-card-text>{{ user.bio }}</v-card-text>
           </v-col>
         </v-row>
-      </v-card></v-dialog
-    >
+      </v-card>
+    </v-dialog>
   </v-row>
 </template>
 
@@ -185,13 +206,13 @@ export default {
   methods: {
     onResize() {
       if (window.innerWidth < 600) {
+        this.cardSize = '5'
         this.titleSize = '15%'
-        this.cardSize = '10'
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
+        this.cardSize = '3'
         this.titleSize = '15%'
-        this.cardSize = '4'
       } else if (window.innerWidth > 900 && window.innerWidth < 1200) {
-        this.cardSize = '4'
+        this.cardSize = '3'
         this.titleSize = '10%'
       } else {
         this.cardSize = '2'
@@ -238,12 +259,18 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   margin: 16px;
 }
 
 .nameTitle {
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.nameTitlePhone {
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .buttonStyle {

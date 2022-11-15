@@ -31,7 +31,7 @@
     <v-col cols="12"></v-col>
 
     <v-col v-for="item in items" :key="item.region" :cols="locationSize">
-      <v-card class="cardContext" flat rounded="lg">
+      <v-card class="cardContext mr-2" flat rounded="lg">
         <div>
           <v-card-title :style="{ color: item.color }" class="country">{{
             item.region
@@ -90,8 +90,10 @@ export default {
   methods: {
     onResize() {
       this.show = true
-      if (window.innerWidth < 600) {
-        this.locationSize = '7'
+      if (window.innerWidth < 300) {
+        this.locationSize = '12'
+      } else if (window.innerWidth < 600) {
+        this.locationSize = '6'
       } else if (window.innerWidth > 600 && window.innerWidth < 900) {
         this.locationSize = '4'
       } else {

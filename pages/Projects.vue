@@ -12,7 +12,7 @@
     <v-carousel
       hide-delimiters
       v-model="model"
-      style="width: 60vw; scroll-behavior: auto"
+      style="width: 80vw; scroll-behavior: auto"
       height="70vh"
     >
       <v-carousel-item v-for="item in items" :key="item.image">
