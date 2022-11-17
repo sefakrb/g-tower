@@ -13,7 +13,8 @@
     <v-col
       v-for="item in items"
       :key="item.image"
-      class="ma-8 pa-0"
+      class="ma-0 pa-0"
+      :class="cardSize === '6' ? 'ma-0' : 'ma-8'"
       :cols="cardSize"
     >
       <v-card
@@ -29,7 +30,8 @@
         ></v-img>
         <v-card-title
           class="justify-center"
-          style="font-weight: 600; font-size: 1.2rem"
+          style=""
+          :class="cardSize === '6' ? 'cardTitlePhone' : 'cardTitle'"
           >{{ item.text }}</v-card-title
         >
       </v-card></v-col
@@ -81,9 +83,11 @@ export default {
   methods: {
     onResize() {
       if (window.innerWidth < 600) {
-        this.cardSize = '10'
+        this.cardSize = '6'
       } else if (window.innerWidth > 600 && window.innerWidth < 1000) {
         this.cardSize = '4'
+      } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
+        this.cardSize = '5'
       } else {
         this.cardSize = '2'
       }
@@ -103,5 +107,15 @@ export default {
   font-weight: 700;
   font-size: 2rem;
   margin: 20px;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.cardTitlePhone {
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 </style>

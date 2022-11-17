@@ -21,7 +21,10 @@
     <v-col :cols="locationSize">
       <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
         <v-card-title class="country">United States Headquarter</v-card-title>
-        <v-card-text style="font-weight: 450; font-size: 1rem">
+        <v-card-text
+          :class="locationSize === '6' ? 'contextMobile' : 'context'"
+          style="font-weight: 450"
+        >
           4571 Broadway St, Boulder, CO 80304 <br />
           <br />
           contact.us@g-tower.com
@@ -36,7 +39,9 @@
           <v-card-title :style="{ color: item.color }" class="country">{{
             item.region
           }}</v-card-title>
-          <v-card-text style="font-size: 1rem">
+          <v-card-text
+            :class="locationSize === '6' ? 'contextMobile' : 'context'"
+          >
             {{ item.location }} <br />
             <br />
             {{ item.email }}
@@ -128,5 +133,12 @@ export default {
 .cardContext {
   display: flex;
   height: 100%;
+}
+
+.context {
+  font-size: 1rem;
+}
+.contextMobile {
+  font-size: 0.8rem;
 }
 </style>

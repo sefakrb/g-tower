@@ -30,7 +30,7 @@
                 {{ item.name }}
               </v-btn>
             </v-slide-item>
-            <v-btn color="#B1D234" small @click="routePage('contactus')"
+            <v-btn color="#B1D234" small @click="routePage('contactUs')"
               ><span style="color: white"> Contact Us</span></v-btn
             >
           </v-slide-group>
@@ -48,7 +48,7 @@
           >{{ item.name }}</v-btn
         >
         <v-divider class="mx-4" inset vertical></v-divider>
-        <v-btn color="#B1D234" small @click="routePage('contactus')"
+        <v-btn color="#B1D234" small @click="routePage('contactUs')"
           ><span style="color: white"> Contact Us</span></v-btn
         >
       </v-col>
@@ -63,11 +63,11 @@ export default {
       model: null,
       appBarSize: false,
       items: [
-        { name: 'Home', route: '/' },
+        { name: 'Home', route: 'home' },
         { name: 'Services', route: 'services' },
         { name: 'Projects', route: 'projects' },
-        { name: 'About Us', route: 'aboutus' },
-        { name: 'Our Team', route: 'ourteam' },
+        { name: 'About Us', route: 'aboutUs' },
+        { name: 'Our Team', route: 'ourTeam' },
         { name: 'Industries', route: 'industries' },
       ],
     }
@@ -81,13 +81,19 @@ export default {
     },
 
     routePage(pageName) {
-      if (
-        (this.$route.name === '/' || this.$route.name === 'index') &&
-        pageName === '/'
-      ) {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+      if (pageName === 'industries') {
+        document.getElementById('industries').scrollIntoView({ block: 'start' })
+      } else if (pageName === 'contactUs') {
+        document.getElementById('contactUs').scrollIntoView({ block: 'start' })
+        setTimeout(function () {
+          document
+            .getElementById('contactUs')
+            .scrollIntoView({ block: 'start', behavior: 'smooth' })
+        }, 150)
       } else {
-        this.$router.push(pageName)
+        document
+          .getElementById(pageName)
+          .scrollIntoView({ block: 'start', behavior: 'smooth' })
       }
     },
   },

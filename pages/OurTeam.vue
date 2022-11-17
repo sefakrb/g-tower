@@ -270,7 +270,7 @@ export default {
 
 .nameTitlePhone {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .buttonStyle {

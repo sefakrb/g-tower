@@ -1,7 +1,7 @@
 <template>
-  <v-app dark>
+  <v-app id="home" dark>
     <AppBar></AppBar>
-    <v-main class="mt-10">
+    <v-main>
       <Nuxt />
     </v-main>
   </v-app>

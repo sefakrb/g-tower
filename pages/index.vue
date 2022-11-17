@@ -1,29 +1,29 @@
 <template>
   <v-row v-resize="onResize" class="mainRow">
-    <v-col style="height: 100%" cols="12">
+    <v-col style="height: 100%" class="" cols="12">
       <Banner data-aos="zoom-in" @routeHome="routeHome"></Banner>
 
-      <v-main data-aos="fade-up">
+      <v-main id="services" data-aos="fade-up">
         <Services></Services>
       </v-main>
 
-      <v-main data-aos="fade-down" class="projectStyle">
+      <v-main id="projects" data-aos="fade-down" class="projectStyle">
         <Projects></Projects>
       </v-main>
 
-      <v-main data-aos="fade-right">
+      <v-main id="aboutUs" data-aos="fade-right">
         <AboutUs></AboutUs>
       </v-main>
 
-      <v-main data-aos="fade-down" class="pa-0">
+      <v-main id="ourTeam" data-aos="fade-down" class="pa-0">
         <OurTeam></OurTeam>
       </v-main>
 
-      <v-main data-aos="zoom-in">
+      <v-main id="industries">
         <Industries></Industries>
       </v-main>
 
-      <v-main data-aos="zoom-in-up">
+      <v-main id="contactUs">
         <ContactUs></ContactUs>
       </v-main>
     </v-col>
@@ -70,7 +70,9 @@ export default {
       }
     },
     routeHome() {
-      this.$router.push('/aboutus')
+      document
+        .getElementById('aboutUs')
+        .scrollIntoView({ block: 'start', behavior: 'smooth' })
     },
   },
 }
