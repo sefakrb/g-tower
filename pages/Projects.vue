@@ -19,7 +19,7 @@
       <v-carousel-item v-for="item in items" :key="item.image">
         <v-card flat class="cardStyle" width="100%" height="100%" rounded="lg">
           <v-progress-circular
-            v-if="item.loading"
+            v-if="true"
             indeterminate
             color="rgba(0, 0, 0, 0.6)"
             style="z-index: 2; position: absolute"
