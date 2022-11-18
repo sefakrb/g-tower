@@ -4,7 +4,7 @@
       <v-card-title>Supporting Good Power</v-card-title>
 
       <v-card-text class="pb-0"
-        >Solution Partner for your Renewable Energy Infra-Structure Projects.
+        >Solution Partner for your Renewable Energy Infra-Structure Projects
       </v-card-text>
       <v-btn
         small
@@ -15,7 +15,7 @@
         >Who We Are?</v-btn
       >
       <v-card-text class="pt-0">
-        an Independent Tower Solutions Company.</v-card-text
+        Independent Tower Solutions Company</v-card-text
       >
     </v-col>
 
