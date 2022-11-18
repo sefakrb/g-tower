@@ -22,13 +22,11 @@
             v-if="item.loading"
             indeterminate
             color="rgba(0, 0, 0, 0.6)"
-            style="z-index: 2; position: absolute"
           ></v-progress-linear>
           <v-img
             max-height="60%"
             contain
             :src="require('../static/projects/' + item.image)"
-            style="z-index: 1"
             @load="item.loading = false"
           >
           </v-img>
