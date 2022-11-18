@@ -21,7 +21,7 @@
           <v-progress-linear
             v-if="item.loading"
             indeterminate
-            color="rgba(0, 0, 0, 0.6)"
+            color="rgb(177, 210, 52)"
           ></v-progress-linear>
           <v-img
             max-height="60%"
