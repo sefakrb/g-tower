@@ -34,6 +34,15 @@
             height="90%"
             width="90%"
             :src="require('../static/employee/' + item.image)"
+            :lazy-src="require('../static/employee/' + item.image)"
+          >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="black"
+                ></v-progress-circular>
+              </v-row> </template
           ></v-img>
         </v-card>
         <v-card-title

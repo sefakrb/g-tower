@@ -21,7 +21,17 @@
             max-height="60%"
             contain
             :src="require('../static/projects/' + item.image)"
-          ></v-img>
+            :lazy-src="require('../static/projects/' + item.image)"
+          >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="black"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
           <v-card-title>{{ item.title }}</v-card-title>
           <v-card-text style="overflow: auto">{{ item.text }}</v-card-text>
         </v-card>
