@@ -7,9 +7,8 @@
         >Solution Partner for your Renewable Energy Infra-Structure Projects
       </v-card-text>
       <v-btn
-        small
         color="green"
-        class="mt-5"
+        class="mt-6"
         @click="routeHome('about_us')"
         style="text-transform: unset !important; color: white"
         >Who We Are?</v-btn
@@ -59,16 +58,16 @@ export default {
   align-items: center;
 }
 .v-card__text {
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
-  margin-top: 20px;
-  font-size: 1rem;
+  margin-top: 30px;
+  font-size: 1.4rem;
 }
 
 .v-card__title {
   font-weight: 700;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 }
 
 .videoStyle {
