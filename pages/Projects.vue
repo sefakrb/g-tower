@@ -22,7 +22,7 @@
             v-if="item.loading"
             indeterminate
             color="rgba(0, 0, 0, 0.6)"
-            style="z-index: 2; position: absolute; margin-bottom: 70%"
+            style="z-index: 2; position: absolute"
           ></v-progress-circular>
           <v-img
             max-height="60%"
@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import { isTSEntityName } from '@babel/types'
+
 export default {
   data() {
     return {
