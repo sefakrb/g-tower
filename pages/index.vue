@@ -1,9 +1,13 @@
 <template>
   <v-row v-resize="onResize" class="mainRow">
-    <v-col style="height: 100%" class="" cols="12">
-      <Banner data-aos="zoom-in" @routeHome="routeHome"></Banner>
+    <v-col style="height: 100%" cols="12">
+      <Banner
+        class="bannerStyle ma-0 pb-6"
+        data-aos="zoom-in"
+        @routeHome="routeHome"
+      ></Banner>
 
-      <v-main id="services" data-aos="fade-up">
+      <v-main class="" id="services" data-aos="fade-up">
         <Services></Services>
       </v-main>
 
@@ -11,19 +15,19 @@
         <Projects></Projects>
       </v-main>
 
-      <v-main id="aboutUs" data-aos="fade-right">
+      <v-main class="" id="aboutUs" data-aos="fade-right">
         <AboutUs></AboutUs>
       </v-main>
 
-      <v-main id="ourTeam" data-aos="fade-down" class="pa-0">
+      <v-main id="ourTeam" data-aos="fade-down" class="">
         <OurTeam></OurTeam>
       </v-main>
 
-      <v-main id="industries">
+      <v-main class="" id="industries">
         <Industries></Industries>
       </v-main>
 
-      <v-main id="contactUs">
+      <v-main class="" id="contactUs">
         <ContactUs></ContactUs>
       </v-main>
     </v-col>
@@ -89,7 +93,10 @@ export default {
 
 .projectStyle {
   background-color: #e5f0ff;
-  padding: 0 !important;
   padding-bottom: 50px !important;
+}
+
+.bannerStyle {
+  background-color: #e5f0ff;
 }
 </style>

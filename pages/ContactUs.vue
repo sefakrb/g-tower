@@ -1,6 +1,6 @@
 <template>
-  <v-row v-resize="onResize" class="ma-5">
-    <v-col class="d-flex" cols="12">
+  <v-row class="ma-0" v-resize="onResize">
+    <v-col style="padding: 12 !improtant" class="d-flex" cols="12">
       <v-card-title class="mainTitle">Contact Us</v-card-title
       ><v-img
         contain
@@ -18,22 +18,30 @@
       </v-card>
     </v-col>
 
-    <v-col :cols="locationSize">
-      <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
-        <v-card-title class="country">United States Headquarter</v-card-title>
-        <v-card-text
-          :class="locationSize === '6' ? 'contextMobile' : 'context'"
-          style="font-weight: 450"
-        >
-          4571 Broadway St, Boulder, CO 80304 <br />
-          <br />
-          contact.us@g-tower.com
-        </v-card-text>
-      </v-card></v-col
-    >
+    <div style="width: 100%">
+      <v-col :cols="locationSize">
+        <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
+          <v-card-title class="country">United States Headquarter</v-card-title>
+          <v-card-text
+            :class="locationSize === '6' ? 'contextMobile' : 'context'"
+            style="font-weight: 450"
+          >
+            4571 Broadway St, Boulder, CO 80304 <br />
+            <br />
+            contact.us@g-tower.com
+          </v-card-text>
+        </v-card></v-col
+      >
+    </div>
     <v-col cols="12"></v-col>
 
-    <v-col v-for="item in items" :key="item.region" :cols="locationSize">
+    <v-col
+      :style="locationSize === '2' ? { margin: '1%' } : ''"
+      v-for="item in items"
+      :key="item.region"
+      :cols="locationSize"
+      class="pa-0"
+    >
       <v-card class="cardContext mr-2" flat rounded="lg">
         <div>
           <v-card-title :style="{ color: item.color }" class="country">{{
@@ -42,9 +50,19 @@
           <v-card-text
             :class="locationSize === '6' ? 'contextMobile' : 'context'"
           >
-            {{ item.location }} <br />
-            <br />
-            {{ item.email }}
+            {{ item.location }}
+          </v-card-text>
+          <v-card-text
+            :class="locationSize === '6' ? 'contextMobile' : 'context'"
+            class="pt-0"
+            @click="mailTo(item)"
+          >
+            <a
+              style="text-decoration: none; color: rgba(0, 0, 0, 0.6)"
+              :href="'mailto:' + item.email + '?subject=Info%20Request'"
+            >
+              {{ item.email }}
+            </a>
           </v-card-text>
         </div>
         <v-divider inset vertical></v-divider>
@@ -93,6 +111,9 @@ export default {
     }
   },
   methods: {
+    mailTo(item) {
+      console.log(item)
+    },
     onResize() {
       this.show = true
       if (window.innerWidth < 300) {
@@ -110,17 +131,17 @@ export default {
 </script>
 
 <style scoped>
-.col {
+/* .col {
   margin: 0 !important;
   padding: 0 !important;
-}
+} */
 .centerize {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .mainTitle {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 2rem;
   margin: 20px;
 }

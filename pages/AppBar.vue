@@ -37,7 +37,11 @@
         </v-card>
       </v-col>
 
-      <v-col v-if="!appBarSize" cols="6" class="centerize">
+      <v-col
+        v-if="!appBarSize"
+        cols="6"
+        :class="largeScreen ? 'largeScreen' : 'centerize'"
+      >
         <v-btn
           v-for="item in items"
           :key="item.route"
@@ -62,6 +66,7 @@ export default {
     return {
       model: null,
       appBarSize: false,
+      largeScreen: false,
       items: [
         { name: 'Home', route: 'home' },
         { name: 'Services', route: 'services' },
@@ -78,6 +83,9 @@ export default {
       window.innerWidth < 950
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
+      window.innerWidth > 1200
+        ? (this.largeScreen = true)
+        : (this.largeScreen = false)
     },
 
     routePage(pageName) {
@@ -115,6 +123,14 @@ export default {
   padding: 0;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.largeScreen {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 

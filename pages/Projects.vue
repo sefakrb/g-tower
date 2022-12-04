@@ -1,11 +1,10 @@
 <template>
-  <v-row class="mainRow centerize">
+  <v-row class="ma-0 mainRow centerize">
     <v-col cols="12" class="d-flex pb-0">
       <v-card-title class="mainTitle">Projects</v-card-title>
       <v-img
         contain
         max-width="20px"
-        class="mt-1"
         :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
@@ -14,7 +13,7 @@
       hide-delimiters
       v-model="model"
       style="width: 80vw; scroll-behavior: auto"
-      height="70vh"
+      height="85vh"
     >
       <v-carousel-item v-for="item in items" :key="item.image">
         <v-card flat class="cardStyle" width="100%" height="100%" rounded="lg">
@@ -30,8 +29,12 @@
             @load="item.loading = false"
           >
           </v-img>
-          <v-card-title>{{ item.title }}</v-card-title>
-          <v-card-text style="overflow: auto">{{ item.text }}</v-card-text>
+          <v-card-title style="font-size: 1.6rem">{{
+            item.title
+          }}</v-card-title>
+          <v-card-text style="overflow: auto; font-size: 1.2rem">{{
+            item.text
+          }}</v-card-text>
         </v-card>
       </v-carousel-item>
     </v-carousel>
@@ -136,7 +139,6 @@ export default {
 }
 
 .mainRow {
-  margin: 20px;
   background-color: #e5f0ff;
 }
 

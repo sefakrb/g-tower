@@ -1,25 +1,23 @@
 <template>
-  <v-row class="ma-5 centerize" v-resize="onResize">
-    <v-col cols="12">
-      <div class="d-flex">
-        <v-card-title class="mainTitle">Industries</v-card-title
-        ><v-img
-          contain
-          max-width="20px"
-          :src="require('../static/header-dot.png')"
-        ></v-img>
-      </div>
+  <v-row class="ma-0 centerize" v-resize="onResize">
+    <v-col class="d-flex" cols="12">
+      <v-card-title class="mainTitle">Industries</v-card-title
+      ><v-img
+        contain
+        max-width="20px"
+        :src="require('../static/header-dot.png')"
+      ></v-img>
     </v-col>
     <v-col
       v-for="item in items"
       :key="item.image"
       class="ma-0 pa-0"
-      :class="cardSize === '6' ? 'ma-0' : 'ma-8'"
+      :class="cardSize === '6' ? 'ma-0 pa-3' : 'ma-8'"
       :cols="cardSize"
     >
       <v-card
         height="100%"
-        class="ma-4 centerize flex-column"
+        class="ma-0 centerize flex-column"
         flat
         rounded="lg"
       >
@@ -50,7 +48,7 @@ export default {
         },
         {
           image: 'distrubition.png',
-          text: 'Distrubition',
+          text: 'Distribution',
         },
         {
           image: 'substation.png',

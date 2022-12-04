@@ -25,6 +25,7 @@
         class="centerize"
         flat
         rounded="xl"
+        color="transparent"
       >
         <video class="videoStyle" autoplay playsinline muted loop>
           <source

@@ -1,11 +1,10 @@
 <template>
-  <v-row v-resize="onResize" class="mx-5">
+  <v-row class="ma-0" v-resize="onResize">
     <v-col cols="12" class="d-flex">
       <v-card-title class="mainTitle">Services</v-card-title
       ><v-img
         contain
         max-width="20px"
-        class="mt-1"
         :src="require('../static/header-dot.png')"
       ></v-img>
     </v-col>
@@ -21,7 +20,8 @@
         class="cardStyle"
         color="#F9FBFD"
         rounded="lg"
-        :height="appBarSize ? '55vh' : '75vh'"
+        :width="isLarge ? '80%' : ''"
+        :height="!appBarSize && isLarge ? '40vh' : appBarSize ? '55vh' : '60vh'"
       >
         <v-card color="#F9FBFD" flat>
           <v-img
@@ -54,18 +54,18 @@ export default {
     return {
       items: [
         {
-          title: 'ENGINEERING SERVICES',
+          title: 'ENGINEERING',
           details: [
             'Transmission Line Design',
             'Lattice Tower Design',
             'Tubular Pole Design',
             'Foundation Design',
-            'Drafting $ Detailing',
+            'Drafting & Detailing',
             'Cost Estimates',
           ],
         },
         {
-          title: 'OVERSEAS FABRICATION \n INSPECTION SERVICES',
+          title: 'OVERSEAS FABRICATION \n INSPECTION',
           details: [
             'Tower Testing Attendance',
             'Factory Audit',
@@ -76,18 +76,7 @@ export default {
           ],
         },
         {
-          title: 'SOURCING SERVICES',
-          details: [
-            'Lattice Tower Supply',
-            'Tubular Pole Supply',
-            'Tower Accessories Supply',
-            'Composite Member Supply',
-            'After Sales Services',
-            'Project Supply Management',
-          ],
-        },
-        {
-          title: 'CONSULTING SERVICES',
+          title: 'CONSULTING',
           details: [
             'Owner’s Engineer',
             'Investor’s Engineer',
@@ -97,8 +86,20 @@ export default {
             'Project Management',
           ],
         },
+        {
+          title: 'SOURCING',
+          details: [
+            'Lattice Tower Supply',
+            'Tubular Pole Supply',
+            'Tower Accessories Supply',
+            'Composite Member Supply',
+            'After Sales Services',
+            'Project Supply Management',
+          ],
+        },
       ],
       appBarSize: false,
+      isLarge: false,
     }
   },
   methods: {
@@ -106,6 +107,8 @@ export default {
       window.innerWidth < 960
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
+
+      window.innerWidth > 1500 ? (this.isLarge = true) : (this.isLarge = false)
     },
   },
 }
