@@ -125,7 +125,7 @@ export default {
           surname: 'Demirbas, PE',
           title: 'President',
           bio: 'Gunes has almost 20 years of engineering and project management experience specializing in tower business including wind towers up to 6MW, electric transmission & distribution towers up to 600kV, telecommunication towers and lighting poles. Before founding G-Tower, he worked for well-known tower manufacturers; Valmont Industries and Mitas Energy. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He is a currently licensed Professional Engineer in Colorado, Texas and New York; holding NCEES record. He enjoys travelling, cycling, swimming and hiking.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/gunes-demirbas-pe-06b67930/',
         },
         {
           image: 'ali_gulgeze.jpg',
@@ -133,7 +133,7 @@ export default {
           surname: 'Gulgeze, PEng',
           title: 'Vice President',
           bio: 'Ali is experienced in the structural design of a diverse range of structural systems and has experience in contract administration and cost estimating studies on a variety of projects. Ali has been involved in projects of different scales and has interpreted his technical knowledge to formulate new design concepts with economical and functional solutions. Currently managing large transmission line projects and overseas staff for company’s international work. Ali is a Professional Engineer registered in Ontario, Manitoba, Alberta and Saskatchewan, Canada and holds a M.Eng. degree from University of Western Ontario. He enjoys coding, loves discovering new technology and sailing.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/ali-gulgeze/',
         },
         {
           image: 'sabrina_ageca.jpg',
@@ -141,7 +141,7 @@ export default {
           surname: 'Ageca, CWB',
           title: 'Quality Manager',
           bio: 'Sabrina has almost 20 years of experience as Project Manager and Weld Engineer in the energy sector. She is a Level I Weld Inspector certified by CWB (Canadian Welding Bureau). She is experienced in weld management systems (EN 1090-2/ISO 3834-2) and integrated quality/environmental/safety (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) management systems. Worked for reputable tower manufacturers Mitas, Valmont and Şa-Ra in the past. She has B.Sc. in Engineering from Dokuz Eylul University. Completed multiple certification programs in Weld Engineering at Middle East Technical University and European Welding Federation. She enjoys painting, ceramics, trekking and cycling.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/sabrina-ageca-b1908b175/',
         },
 
         {
@@ -150,7 +150,7 @@ export default {
           surname: 'Ergin',
           title: 'Regional Manager',
           bio: 'After graduated from Istanbul Kabatas High School, Mahir studied Mathematics. He holds M.Sc. and B.Sc. degrees in Mathematics. Because of his passion and interest in wind energy, he decided to join G-Tower in 2018. He is based in Ankara, Turkey. He is responsible from quality control of all the manufactured tower and pole products within Turkey prior to ship overseas. In addition to that he supports business development activities in the Middle East. He enjoys watching soccer and spending time with his two children Can & Umut Efe.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/hasip-mahir-ergin-ba80a710a/',
         },
 
         {
@@ -159,7 +159,7 @@ export default {
           surname: 'Haciraifoglu',
           title: 'Commercial Manager',
           bio: 'Selma has dynamic and outstanding management professional offering over 20 years of experience as Import-Export and Logistics Specialist as well as in Project Management in the sector of Energy, Telecommunication and Lighting. Worked for tower and pole manufacturer Mitas, Mitas-Valmont JV and construction company Emta. She has BBA from Hacettepe University. Completed certification programs in foreign trade, finance, managing supply chain and logistics, contract management and so on. Proven ability to interact effectively with people of different nationalities and comfortable working in a multicultural setting. She loves skiing and enjoys travelling.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/selma-kaldzija-hac%C4%B1raifo%C4%9Flu-80417113b/',
         },
         {
           image: 'alper_yavuzer.jpg',
@@ -167,7 +167,7 @@ export default {
           surname: 'Yavuzer',
           title: 'Senior Quality Engineer',
           bio: 'Alper is Senior Quality Engineer at G-Tower, with mechanical engineering background. He has 15+ years of construction, steel and quality control experience. He joined G-Tower in 2019 and he is responsible from manufacturing inspection and quality control process for the utility projects. He leads and manages lattice tower factory audit work of G-Tower in overseas. Alper likes travelling and discovering different cultures. He enjoys fishing in his hometown Zonguldak on the Black Sea Coast.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/alper-yavuzer-379263161/',
         },
 
         {
@@ -176,7 +176,7 @@ export default {
           surname: 'Duran',
           title: 'Project Engineer',
           bio: 'Ensar is a Project Engineer at G-Tower. He has a Civil Engineering degree from Abdullah Gül University (AGU), Turkey. He earned an English Language certificate from a learning institution in Michigan, MI. He has involved in various international projects and has experience in engineering design and analysis of power transmission lines and telecommunication structures. He leads G-Tower’s business development efforts in Santiago, Chile for the South American Market. Ensar is a professional snowboarder and he represented his university at various national tournaments. He also has an interest in other outdoor sports such as trekking, climbing, and camping.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/ensar-duran-487548142/',
         },
 
         {
@@ -185,7 +185,7 @@ export default {
           surname: 'Iscan',
           title: 'Project Engineer',
           bio: 'Nazife is a Project Engineering at G-Tower. She graduated from Süleyman Demirel University, Civil Engineering Department in 2020. She is also studied at Cracow University of Technology for certain amount of period as part of the Erasmus Project in 2019. During the Erasmus Project, She visited 11 countries and experienced different cultures. She developed her organization and communication skills by participating in volunteer and social activities in student clubs. Nazife uses PLS-CADD, PLS-Tower and PLS-Pole. She designs transmission lines and support structures including lattice towers and tubular poles. From time to time, she visits tower factories to support G-Tower’s prototype and fabrication inspection projects. She enjoys travelling and hiking.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/nazife-nur-i%C5%9Fcan-356278133/',
         },
         {
           image: 'didem_ergin.jpg',
@@ -193,7 +193,7 @@ export default {
           surname: 'Ergin, PE',
           title: 'Consultant, Environmental Engineer',
           bio: 'Didem is an environmental engineer with over 10 years of diverse technical and project management experience. Her expertise includes managing the environmental aspects throughout the life cycle of a wide range of large capital projects, including site selection and alternative analysis; schedule and budgeting; impact assessments; federal, state, and local permitting and regulatory compliance; environmental plan preparation; and auditing, reporting, and agency negotiations. Didem is a licensed P.E. in Texas. Didem has worked for top-notch environmental consultancy and engineering firms throughout her career.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/didem-ergin/',
         },
         {
           image: 'matt_rogers.jpg',
@@ -201,7 +201,7 @@ export default {
           surname: 'Rogers, PE',
           title: 'Consultant, Geotechnical Engineer',
           bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/matt-rogers-p-e-79283467/',
         },
 
         {
@@ -210,7 +210,7 @@ export default {
           surname: 'Gurdin',
           title: 'Strategic Partner',
           bio: 'Mehmet is the owner of IMG Energy based in Konya, Turkey. IMG Energy is G-Tower’s arm in the EMEA (Europe – Middle East – Africa) Market. Mehmet has almost 25 years of experience in the management, supply and engineering of tower/pole part of energy, telecom and lighting infra-structure projects in the EMEA Market. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He enjoys playing and watching basketball.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/mehmet-emin-gurdin-62ba0210/',
         },
         {
           image: 'akin_veske.jpg',
@@ -218,7 +218,7 @@ export default {
           surname: 'Veske',
           title: 'Quality Inspector',
           bio: 'Akin is Civil Engineering student at Middle East Technical University. He supports G-Tower’s inspection services including tower prototyping, mass production, pre-shipment and factory acceptance test. In addition to that Akin attends tower testing of our clients in Turkey. His youth and dynamism bring lots of positive energy to G-Tower Team. Although his gentle nature, he is big fan of Marshall arts. The Karate Kid is one his favorite movie series. His dream is to move to Africa and start G-Tower’s entity to expand our business in Africa.',
-          linkedin: 'in/sefa-karabas/',
+          linkedin: '/in/ak%C4%B1n-veske-635b56190/',
         },
       ],
       cardSize: false,
