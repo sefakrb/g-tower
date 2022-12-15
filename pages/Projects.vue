@@ -55,6 +55,7 @@
 
               <div style="font-weight: bold" v-if="item.owner">
                 Owner:<span
+                  style="white-space: pre; font-weight: normal"
                   :style="
                     width < 400
                       ? { 'white-space': 'normal' }
