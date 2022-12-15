@@ -1,6 +1,6 @@
 <template>
   <v-app id="home" dark>
-    <AppBar></AppBar>
+    <AppBar v-if="this.$route.path === '/'"></AppBar>
     <v-main>
       <Nuxt />
     </v-main>
@@ -14,7 +14,6 @@ export default {
   components: {
     AppBar,
   },
-  methods: {},
 }
 </script>
 

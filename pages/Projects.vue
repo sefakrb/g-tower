@@ -1,5 +1,5 @@
 <template>
-  <v-row class="ma-0 mainRow centerize">
+  <v-row v-resize="onResize" class="ma-0 mainRow centerize">
     <v-col cols="12" class="d-flex pb-0">
       <v-card-title class="mainTitle">Projects</v-card-title>
       <v-img
@@ -29,12 +29,66 @@
             @load="item.loading = false"
           >
           </v-img>
-          <v-card-title style="font-size: 1.6rem">{{
+          <v-card-title style="font-size: 1.6rem; justify-content: center">{{
             item.title
           }}</v-card-title>
-          <v-card-text style="overflow: auto; font-size: 1.2rem">{{
-            item.text
-          }}</v-card-text>
+          <div style="overflow: auto" class="d-flex">
+            <v-card-text
+              style="
+                overflow: auto;
+                font-size: 1.2rem;
+                white-space: pre-line;
+                margin-bottom: 2%;
+              "
+            >
+              <div style="font-weight: bold" v-if="item.client">
+                Client:<span
+                  style="white-space: pre; font-weight: normal"
+                  :style="
+                    width < 400
+                      ? { 'white-space': 'normal' }
+                      : { 'white-space': 'pre' }
+                  "
+                  >{{ item.client }}</span
+                >
+              </div>
+
+              <div style="font-weight: bold" v-if="item.owner">
+                Owner:<span
+                  :style="
+                    width < 400
+                      ? { 'white-space': 'normal' }
+                      : { 'white-space': 'pre' }
+                  "
+                  >{{ item.owner }}</span
+                >
+              </div>
+
+              <div style="font-weight: bold" v-if="item.info">
+                Project Info:<span
+                  style="white-space: pre; font-weight: normal"
+                  :style="
+                    width < 400
+                      ? { 'white-space': 'normal' }
+                      : { 'white-space': 'pre' }
+                  "
+                  >{{ item.info }}</span
+                >
+              </div>
+
+              <div style="font-weight: bold">
+                Our Scope:<span
+                  style="white-space: pre; font-weight: normal"
+                  :style="
+                    width < 400
+                      ? { 'white-space': 'normal' }
+                      : { 'white-space': 'pre' }
+                  "
+                  >{{ item.scope }}</span
+                >
+              </div>
+            </v-card-text>
+          </div>
         </v-card>
       </v-carousel-item>
     </v-carousel>
@@ -42,8 +96,6 @@
 </template>
 
 <script>
-import { isTSEntityName } from '@babel/types'
-
 export default {
   data() {
     return {
@@ -51,79 +103,118 @@ export default {
       items: [
         {
           image: 'wataynikaneyap.png',
-          title: 'WATAYNIKANEYAP POWER PROJECT of FORTIS',
-          text: 'G-Tower provided transmission line engineering consultancy services and prepared 30% preliminary Plan & Profile drawings for Phase-1 which is 300km long 230kV S/C transmission line in Ontario.',
+          title: 'WATAYNIKANEYAP POWER PROJECT',
+          client: '                Fortis Ontario',
+          info: '     300 km (186 miles) – 230kV S/C \n                           1500 km (930 miles) – 115/44/25kV S/C',
+          scope:
+            '       Transmission Line Engineering & Consultancy Service\n                           on the preparation of 30% Preliminary Plan & Profile Drawings.',
           loading: true,
         },
         {
           image: 'east_west_tie_transmission.jpg',
-          title: 'EAST-WEST TIE TRANSMISSION LINE PROJECT of NEXTERA',
-          text: 'G-Tower has been Engineer of Record for the lattice towers in this 450km long 230kV D/C transmission line project in Ontario. G-Tower performed overseas fabrication inspection of 20000 metric tons of lattice steel in Turkey.',
+          title: 'EAST-WEST TIE TRANSMISSION LINE PROJECT',
+          owner: '               NextBridge (NextEra & EnBridge Joint Venture)',
+          info: '     450 km (280 miles) – 230kV D/C \n                           Quantity of the project is 20,000 tons (~44,000,000 lbs).',
+          scope:
+            '       Engineer of Record for the lattice tower structures.\n                           Inspection of overseas fabrication of the lattice tower structures in Turkey.',
           loading: true,
         },
         {
           image: 'samson.jpg',
-          title: 'SAMSON 345kV TRANSMISSION LINE PROJECT of RES AMERICAS',
-          text: 'G-Tower has been Engineer of Record for the lattice towers. G-Tower engineered all the lattice structures up to 100% IFC Level including drafting and detailing. G-Tower assisted its client in sourcing these towers from overseas. G-Tower performed prototype and mass production inspection of lattice steel in Turkey.',
+          title: 'SAMSON 345kV TRANSMISSION LINE PROJECT',
+          client: '                RES Americas',
+          info: '     Conversion of tubular poles to lattice towers due to site conditions \n                           29 towers – 345kV D/C \n                           Quantity of project 500 tons (~1,100,000 lbs).',
+          scope:
+            '       100% IFC level drawing preparation and acted as Engineer of Record for the lattice tower structures.\n                           Inspection of overseas fabrication of the lattice tower structures in Turkey. \n                           Prototype fitting inspections of the lattice tower structures in Turkey.',
           loading: true,
         },
         {
           image: 'overland_transmission.png',
-          title: 'OVERLAND TRANSMISSION LINE PROJECT of NRS',
-          text: 'G-Tower provides transmission line engineering consultancy to this 80 miles long 345kV transmission line project in Colorado. G-Tower prepares 30% preliminary level Plan and Profile drawings.',
+          title: 'PAWNEE EXPRESS TRANSMISSION LINE PROJECT',
+          owner:
+            '               A Renewable Energy Project Developer from U.S.A',
+          info: '     128 km (80 miles) – 345kV S/C & D/C',
+          scope:
+            '       Transmission Line Engineering & Consultancy Service\n                           on the preparation of 30% Preliminary Plan & Profile Drawings.',
           loading: true,
         },
         {
           image: 'centella.jpg',
-          title: 'CENTELLA 220kV TRANSMISSION LINE PROJECT of FERROVIAL',
-          text: 'G-Tower provided prototype and fabrication inspection services in Turkey for this transmission line project in Chile. G-Tower inspected over 8000 metric tons of lattice steel.',
+          title: 'CENTELLA TRANSMISSION LINE PROJECT',
+          client: '                Ferrovial S.A.',
+          info: '     250 km (155 miles) – 230kV D/C	\n                           Quantity of the project is 8,000 tons (~17,637,000 lbs).',
+          scope:
+            '       Inspection of overseas fabrication of the lattice tower structures in Turkey. \n                           Prototype fitting inspections of the lattice tower structures in Turkey.',
           loading: true,
         },
-
         {
           image: 'steel_pole.png',
-          title: '144kV & 240kV STEEL POLE OVERSEAS SUPPLY PROJECT of ATCO',
-          text: 'G-Tower provided fabrication inspection of over 500 tons of tubular steel in India for various ATCO Projects in Alberta.',
+          title: '144kV & 240kV STEEL POLE SUPPLY PROJECT',
+          owner: '               Alberta Transmission Company (ATCO)',
+          info: '     Total of 90 tubular pole structures. \n                           Quantity of the project is 500 tons (~1,100,000 lbs).',
+          scope:
+            '       Inspection of overseas fabrication of tubular pole structures in India. \n                           Prototype fitting inspections of the tubular pole structures in India.',
           loading: true,
         },
         {
           image: 'expert_witness.jpg',
-          title: 'EXPERT WITNESS PROJECT of STITES & HARBISON ',
-          text: 'G-Tower attended to the Court as Expert Witness and provided engineering consultancy regarding to a transmission line project in Kentucky.',
+          title: 'EXPERT WITNESS PROJECT',
+          client: '                Stites & Harbison PLLC',
+          info: '     Expert witness for a proposed transmission line in Kentucky.',
+          scope:
+            '       Engineering consultancy and expert witness services on behalf of the landowners.',
           loading: true,
         },
         {
           image: 'solar_racking.png',
-          title: 'SOLAR RACKING STRUCTURES SUPPLY PROJECT of INTERPLUS',
-          text: 'G-Tower inspected fabrication of approximately 2400 metric tons of galvanized steel racking structures in Turkey for a utility scale solar farm project in the Middle East.',
+          title: 'SOLAR RACKING STRUCTURES SUPPLY PROJECT',
+          client: '                InterPlus',
+          info: '     Fixed solar racking structures for a solar farm in the Middle East. \n                           Quantity of the project is 2,400 tons (~5,300,000 lbs).',
+          scope:
+            '       Inspection of fabricated galvanized steel racking structures in Turkey.',
           loading: true,
         },
         {
           image: 'north_america_solar.png',
           title: 'NORTH AMERICA SOLAR LIGHTING',
-          text: 'G-Tower engineered and supplied smart off-grid structures including lighting poles, solar framing, structural base cabinet, light arms and accessories for various projects in the U.S and Canada.',
+          info: '     Completed 1000+ sites within Canada and the US.',
+          scope:
+            '       Supply of engineered lighting poles, solar framing, structural base cabinet, light arms, and accessories.',
           loading: true,
         },
         {
           image: 'nigeria.png',
-          title: 'NIGERIA SOLAR TELECOM SITES',
-          text: 'G-Tower engineered and supplied solar telecom structures including monopole, solar racking structures, fence, battery cabinets and accessories for 400 rural sites in Nigeria.',
+          title: 'NIGERIA SOLAR TELECOM PROJECTS',
+          info: '     400 Rural Telecommunication tower structures in Nigeria.',
+          scope:
+            '       Supply of engineered telecom poles, solar support framing, battery cabinet and accessories.',
           loading: true,
         },
         {
           image: 'steel_moduler_wind.png',
-          title: 'STEEL MODULAR WIND TOWER ENGINEERING WORK of NORTHSTAR WIND',
-          text: 'G-Tower provided engineering consultancy and assisted Northstar with technology transfer of its Intellectual Property of Steel Modular Wind Tower Concept from U.S.A to Brazil.',
+          title: 'STEEL MODULAR WIND TOWER ENGINEERING WORK',
+          client: '                NorthStar Wind',
+          info: '     Concept design of modular steel wind tower in the US.',
+          scope:
+            '       Engineering consultancy and assistance on technology and knowhow transfer between companies.',
           loading: true,
         },
         {
           image: 'wind_tower1.png',
-          title: 'WIND TOWER AND FOUNDATION DESIGN for DISTRIBUTED WIND ',
-          text: 'G-Tower provided tower engineering services, foundation design services, existing structure assessment, retrofit projects consultancy, platform and climbing accessories design to 10+ distributed wind turbine manufacturers in the US. ',
+          title: 'WIND TOWER AND FOUNDATION DESIGN',
+          client: '                Various global client portfolios.',
+          scope:
+            '       Engineering consultancy on foundation design, tower design, existing structure assessment, \n                           retrofit projects, platform and climbing accessories.',
           loading: true,
         },
       ],
+      width: '',
     }
+  },
+  methods: {
+    onResize() {
+      this.width = window.innerWidth
+    },
   },
 }
 </script>
@@ -151,7 +242,11 @@ export default {
 .cardStyle {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.den {
+  font-family: inherit;
+  font-weight: normal;
+  margin-left: 2%;
 }
 </style>

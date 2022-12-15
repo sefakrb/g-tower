@@ -18,8 +18,8 @@
       </v-card>
     </v-col>
 
-    <div style="width: 100%">
-      <v-col :cols="locationSize">
+    <div class="d-flex justify-center" style="width: 100%">
+      <v-col cols="6" class="d-flex justify-center">
         <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
           <v-card-title class="country">United States Headquarter</v-card-title>
           <v-card-text
@@ -35,39 +35,45 @@
     </div>
     <v-col cols="12"></v-col>
 
-    <v-col
-      :style="locationSize === '2' ? { margin: '1%' } : ''"
-      v-for="item in items"
-      :key="item.region"
-      :cols="locationSize"
-      class="pa-0"
-    >
-      <v-card class="cardContext mr-2" flat rounded="lg">
-        <div>
-          <v-card-title :style="{ color: item.color }" class="country">{{
-            item.region
-          }}</v-card-title>
-          <v-card-text
-            :class="locationSize === '6' ? 'contextMobile' : 'context'"
-          >
-            {{ item.location }}
-          </v-card-text>
-          <v-card-text
-            :class="locationSize === '6' ? 'contextMobile' : 'context'"
-            class="pt-0"
-            @click="mailTo(item)"
-          >
-            <a
-              style="text-decoration: none; color: rgba(0, 0, 0, 0.6)"
-              :href="'mailto:' + item.email + '?subject=Info%20Request'"
+    <v-row class="ma-0 pa-0 d-flex justify-center">
+      <v-col
+        :style="locationSize === '2' ? { margin: '1%' } : ''"
+        v-for="item in items"
+        :key="item.region"
+        :cols="locationSize"
+        class="pa-0 d-flex justify-center"
+      >
+        <v-card class="cardContext mr-2" flat rounded="lg">
+          <div>
+            <v-card-title :style="{ color: item.color }" class="country">{{
+              item.region
+            }}</v-card-title>
+            <v-card-text
+              :class="locationSize === '6' ? 'contextMobile' : 'context'"
             >
-              {{ item.email }}
-            </a>
-          </v-card-text>
-        </div>
-        <v-divider inset vertical></v-divider>
-      </v-card>
-    </v-col>
+              {{ item.location }}
+            </v-card-text>
+            <v-card-text
+              :class="locationSize === '6' ? 'contextMobile' : 'context'"
+              class="pt-0"
+              @click="mailTo(item)"
+            >
+              <a
+                style="text-decoration: none; color: rgba(0, 0, 0, 0.6)"
+                :href="'mailto:' + item.email + '?subject=Info%20Request'"
+              >
+                {{ item.email }}
+              </a>
+            </v-card-text>
+          </div>
+          <v-divider
+            v-if="item.region !== 'Australia'"
+            inset
+            vertical
+          ></v-divider>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-row>
 </template>
 
