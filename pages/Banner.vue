@@ -1,7 +1,9 @@
 <template>
-  <v-row class="centerize">
+  <v-row v-resize="onResize" class="centerize">
     <v-col class="centerize flex-column" cols="12" md="6">
-      <v-card-title>Supporting Good Power</v-card-title>
+      <v-card-title :style="width < 420 ? { 'font-size': '2.2rem' } : ''"
+        >Supporting Good Power</v-card-title
+      >
 
       <v-card-text class="pb-0"
         >Solution Partner for your Renewable Energy Infra-Structure Projects
@@ -42,11 +44,16 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      width: window.innerWidth,
+    }
   },
   methods: {
     routeHome(pageName) {
       this.$emit('routeHome', pageName)
+    },
+    onResize() {
+      this.width = window.innerWidth
     },
   },
 }
