@@ -45,21 +45,29 @@
       >
         <v-card class="cardContext mr-2" flat rounded="lg">
           <div>
-            <v-card-title :style="{ color: item.color }" class="country">{{
-              item.region
-            }}</v-card-title>
+            <v-card-title
+              :style="{ color: item.color }"
+              class="country d-flex justify-center"
+              >{{ item.region }}</v-card-title
+            >
             <v-card-text
               :class="locationSize === '6' ? 'contextMobile' : 'context'"
+              class="d-flex justify-center"
             >
               {{ item.location }}
             </v-card-text>
             <v-card-text
               :class="locationSize === '6' ? 'contextMobile' : 'context'"
-              class="pt-0"
+              class="pt-0 d-flex justify-center"
               @click="mailTo(item)"
             >
               <a
-                style="text-decoration: none; color: rgba(0, 0, 0, 0.6)"
+                class="text-center"
+                style="
+                  text-decoration: none;
+                  color: rgba(0, 0, 0, 0.6);
+                  width: 100%;
+                "
                 :href="'mailto:' + item.email + '?subject=Info%20Request'"
               >
                 {{ item.email }}
