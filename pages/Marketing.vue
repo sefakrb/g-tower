@@ -31,14 +31,12 @@
         style="margin-top: 5% !important"
       >
         <v-col class="d-flex flex-column align-center" :cols="colSize">
-          <v-card-text class="d-flex justify-center">PROJE ADI</v-card-text>
           <v-img
             :max-width="currentWidth < 600 ? '50vw' : '30vw'"
             contain
             class=""
             :src="require('../static/marketing/first-image.png')"
           ></v-img>
-          <v-card-text class="d-flex justify-center">PROJE YILI</v-card-text>
         </v-col>
 
         <v-col style="margin-top: 3%" :cols="colSize">
@@ -307,7 +305,11 @@
             >
               <v-icon color="white">mdi-linkedin</v-icon>
             </a>
-            <a href="" target="_blank" style="text-decoration: none">
+            <a
+              href="https://www.youtube.com/@g-tower6904"
+              target="_blank"
+              style="text-decoration: none"
+            >
               <v-icon color="white">mdi-youtube</v-icon>
             </a>
           </v-col>
@@ -415,6 +417,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sideBar:hover {
+  cursor: pointer;
 }
 
 .contentPart {
