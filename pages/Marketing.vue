@@ -192,14 +192,10 @@
           <v-card-title class="titleStyle"
             >WHY WORK WITH G-TOWER AS YOUR QA/QC PARTNER</v-card-title
           >
-          <v-card-text class="contentStyle"
-            >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-            dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-            amet</v-card-text
-          >
+
           <a
             class="redirectButton"
-            href="https://g-tower.com/wp-content/uploads/2022/08/Why_Work_G-Tower.pdf"
+            href="https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf"
             target="_blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -219,8 +215,7 @@
           >
           <a
             class="redirectButton"
-            href="
-            https://g-tower.com/wp-content/uploads/2022/09/G-Tower-Engineering-Services-Flyer.jpg"
+            href="https://g-tower.com/wp-content/uploads/2022/09/G-Tower-Engineering-Services-Flyer.jpg"
             target="_blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -232,7 +227,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
-            :src="require('../static/marketing/fourth-image.png')"
+            :src="require('../static/marketing/fourth-image.jpg')"
           ></v-img>
         </v-col>
       </v-row>
@@ -243,21 +238,16 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
-            :src="require('../static/marketing/fifth-image.png')"
+            :src="require('../static/marketing/fifth-image.jpg')"
           ></v-img>
         </v-col>
         <v-col :cols="colSize">
           <v-card-title class="titleStyle"
             >OVERSEAS FABRICATION INSPECTION SERVICES</v-card-title
           >
-          <v-card-text class="contentStyle"
-            >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-            dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-            amet</v-card-text
-          >
           <a
             class="redirectButton"
-            href="https://g-tower.com/wp-content/uploads/2022/08/Why_Work_G-Tower.pdf"
+            href="https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf"
             target="blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -287,7 +277,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
-            :src="require('../static/marketing/sixth-image.png')"
+            :src="require('../static/marketing/sixth-image.jpg')"
           ></v-img>
         </v-col>
       </v-row>
@@ -339,7 +329,7 @@ export default {
         {
           image: 'Why_Work_G-Tower-300x169.png',
           text: 'Why work with G-Tower',
-          link: 'https://g-tower.com/wp-content/uploads/2022/08/Why_Work_G-Tower.pdf',
+          link: 'https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf',
         },
         {
           image: 'G-Tower_Engineering_Services-300x169.png',
@@ -349,7 +339,7 @@ export default {
         {
           image: 'G-Tower_Inspection_Services-300x169.png',
           text: 'Inspection Services Presentation',
-          link: 'https://g-tower.com/wp-content/uploads/2022/08/Why_Work_G-Tower.pdf',
+          link: 'https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf',
         },
         {
           image: 'G-Tower_Engineering_Services-300x169.png',
