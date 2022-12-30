@@ -15,10 +15,9 @@
           class="mt-7"
           :src="require('../static/main-logo.png')"
         ></v-img>
+        <v-divider class="mt-10"></v-divider>
+
         <div class="sideBar" @click="pushPage('/contactUs')">Contact Us</div>
-        <div class="sideBar">References</div>
-        <div class="sideBar">Presentation</div>
-        <v-divider></v-divider>
         <div class="sideBar" @click="pushPage('/')">Home</div>
       </v-card>
     </v-col>
@@ -32,9 +31,9 @@
       >
         <v-col class="d-flex flex-column align-center" :cols="colSize">
           <v-img
-            :max-width="currentWidth < 600 ? '50vw' : '30vw'"
-            contain
+            :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             class=""
+            style="border-radius: 15px"
             :src="require('../static/marketing/first-image.jpg')"
           ></v-img>
         </v-col>
@@ -171,10 +170,11 @@
 
         <v-col class="centerize" :cols="colSize">
           <v-img
-            :max-width="currentWidth < 600 ? '20vw' : '10vw'"
+            :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
-            :src="require('../static/main-logo.png')"
+            style="border-radius: 15px"
+            :src="require('../static/marketing/second-image.png')"
           ></v-img>
         </v-col>
       </v-row>
@@ -225,6 +225,7 @@
         <v-col :cols="colSize" class="d-flex justify-center">
           <v-img
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
+            style="border-radius: 15px"
             contain
             class=""
             :src="require('../static/marketing/fourth-image.jpg')"
@@ -238,6 +239,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
+            style="border-radius: 15px"
             :src="require('../static/marketing/fifth-image.jpg')"
           ></v-img>
         </v-col>
@@ -247,7 +249,7 @@
           >
           <a
             class="redirectButton"
-            href="https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf"
+            href="https://g-tower.com/wp-content/uploads/2022/09/G-Tower_Inspection_Services.pdf"
             target="blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -277,6 +279,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
+            style="border-radius: 15px"
             :src="require('../static/marketing/sixth-image.jpg')"
           ></v-img>
         </v-col>
