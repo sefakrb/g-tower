@@ -35,7 +35,7 @@
             :max-width="currentWidth < 600 ? '50vw' : '30vw'"
             contain
             class=""
-            :src="require('../static/marketing/first-image.png')"
+            :src="require('../static/marketing/first-image.jpg')"
           ></v-img>
         </v-col>
 
