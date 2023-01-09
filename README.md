@@ -32,7 +32,7 @@
 
 ## About The Project
 
-  This website is for G-Tower which is a global support structure solutions company.
+  This website is for <a href='https://g-tower-sefakrb.vercel.app/'>G-tower</a> which is a global support structure solutions company.
 
 
 ### Built With
