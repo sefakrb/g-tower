@@ -33,6 +33,47 @@
         <ContactUs></ContactUs>
       </v-main>
     </v-col>
+    <v-col class="ma-0 pa-0" cols="12">
+      <v-footer
+        color="#181818"
+        padless
+        style="display: flex; justify-content: center"
+      >
+        <v-row class="ma-0 pa-0" style="max-width: 90%">
+          <v-col cols="2">
+            <a
+              style="text-decoration: none"
+              target="_blank"
+              href="https://www.linkedin.com/company/g-tower/"
+              class="mr-3"
+            >
+              <v-icon color="white">mdi-linkedin</v-icon>
+            </a>
+            <a
+              style="text-decoration: none"
+              target="_blank"
+              href="https://www.youtube.com/@g-tower6904"
+            >
+              <v-icon color="white">mdi-youtube</v-icon>
+            </a>
+          </v-col>
+          <v-col cols="10" style="display: flex; justify-content: flex-end">
+            <span
+              style="
+                font-weight: 450;
+                font-size: 1rem;
+                line-height: 25px;
+                display: flex;
+                align-items: center;
+
+                color: #cecece;
+              "
+              >[© 2022] G-Tower, All Rights Reserved.</span
+            >
+          </v-col>
+        </v-row>
+      </v-footer>
+    </v-col>
   </v-row>
 </template>
 
