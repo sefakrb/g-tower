@@ -1,19 +1,19 @@
 <template>
   <v-row class="ma-0" v-resize="onResize">
     <v-col style="padding: 12 !improtant" class="d-flex" cols="12">
-      <v-card-title class="mainTitle">Contact Us</v-card-title
-      ><v-img
+      <v-card-title class="mainTitle">Contact Us</v-card-title>
+      <!-- <v-img
         contain
         max-width="20px"
         :src="require('../static/header-dot.png')"
-      ></v-img>
+      ></v-img> -->
     </v-col>
     <v-col class="centerize" cols="12">
-      <v-card width="70vw" flat class="centerize">
+      <v-card width="85vw" flat class="centerize">
         <v-img
           max-width="90%"
           contain
-          :src="require('../static/map.jpg')"
+          :src="require('../static/map.png')"
         ></v-img>
       </v-card>
     </v-col>
@@ -74,11 +74,11 @@
               </a>
             </v-card-text>
           </div>
-          <v-divider
+          <!-- <v-divider
             v-if="item.region !== 'Australia'"
             inset
             vertical
-          ></v-divider>
+          ></v-divider> -->
         </v-card>
       </v-col>
     </v-row>
@@ -145,10 +145,6 @@ export default {
 </script>
 
 <style scoped>
-/* .col {
-  margin: 0 !important;
-  padding: 0 !important;
-} */
 .centerize {
   display: flex;
   justify-content: center;

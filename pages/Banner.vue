@@ -1,15 +1,16 @@
 <template>
   <v-row v-resize="onResize" class="centerize">
-    <v-col class="centerize flex-column" cols="12" md="6">
+    <v-col class="centerize flex-column" cols="12" md="5">
       <v-card-title :style="width < 420 ? { 'font-size': '2.2rem' } : ''"
-        >Supporting Good Power</v-card-title
-      >
+        >Supporting Future Energy
+      </v-card-title>
 
       <v-card-text class="pb-0"
-        >Solution Partner for your Renewable Energy Infra-Structure Projects
+        >Solution Partner for Renewable Energy <br />
+        Infra-Structures
       </v-card-text>
       <v-btn
-        color="green"
+        color="#43D000"
         class="mt-6"
         @click="routeHome('about_us')"
         style="text-transform: unset !important; color: white"
@@ -20,7 +21,7 @@
       >
     </v-col>
 
-    <v-col cols="12" md="6" class="centerize mt-10">
+    <v-col cols="12" md="7" class="centerize mt-10">
       <v-card
         max-height="50vh;"
         max-width="50vw;"
@@ -75,7 +76,7 @@ export default {
 .v-card__title {
   font-weight: 700;
   text-align: center;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 }
 
 .videoStyle {

@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+#home {
+  font-family: 'Open Sans', sans-serif;
+}
 html {
   overflow: auto;
   overflow-x: hidden;

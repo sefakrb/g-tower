@@ -1,18 +1,19 @@
 <template>
   <v-row v-resize="onResize" class="ma-0 team centerize">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
-      <v-card-title class="mainTitle">Our Team</v-card-title
-      ><v-img
+      <v-card-title class="mainTitle">Our Team</v-card-title>
+      <!-- <v-img
         contain
         max-width="20px"
         :src="require('../static/header-dot.png')"
-      ></v-img>
+      ></v-img> -->
     </v-col>
+
     <v-col
       v-for="item in items"
       :key="item.image"
       class="pa-0"
-      :class="cardSize === '5' ? 'ma-2' : 'ma-8'"
+      :class="cardSize === '5' ? 'ma-2' : 'ma-10'"
       :cols="cardSize"
     >
       <v-card
@@ -45,14 +46,14 @@
           ></v-img>
         </v-card>
         <v-card-title
-          class="centerize nameTitle pb-0"
+          class="nameTitle pb-0"
           :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'"
-          >{{ item.name }}</v-card-title
+          >{{ item.name }} {{ item.surname }}</v-card-title
         >
         <v-card-title
-          class="centerize nameTitle pt-0"
-          :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'"
-          >{{ item.surname }}</v-card-title
+          class="role pt-0"
+          :class="cardSize === '5' ? 'rolePhone' : 'role'"
+          >{{ item.title }}</v-card-title
         >
         <div class="buttonStyle" style="width: 100%">
           <v-btn small text depressed @click="bio(item)"
@@ -191,7 +192,7 @@ export default {
           image: 'didem_ergin.jpg',
           name: 'Didem',
           surname: 'Ergin, PE',
-          title: 'Consultant, Environmental Engineer',
+          title: 'Consultant, Engineer',
           bio: 'Didem is an environmental engineer with over 10 years of diverse technical and project management experience. Her expertise includes managing the environmental aspects throughout the life cycle of a wide range of large capital projects, including site selection and alternative analysis; schedule and budgeting; impact assessments; federal, state, and local permitting and regulatory compliance; environmental plan preparation; and auditing, reporting, and agency negotiations. Didem is a licensed P.E. in Texas. Didem has worked for top-notch environmental consultancy and engineering firms throughout her career.',
           linkedin: '/in/didem-ergin/',
         },
@@ -199,7 +200,7 @@ export default {
           image: 'matt_rogers.jpg',
           name: 'Matt',
           surname: 'Rogers, PE',
-          title: 'Consultant, Geotechnical Engineer',
+          title: 'Consultant, Engineer',
           bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling.',
           linkedin: '/in/matt-rogers-p-e-79283467/',
         },
@@ -285,7 +286,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   margin: 16px;
 }
 
@@ -296,7 +297,17 @@ export default {
 
 .nameTitlePhone {
   font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.role {
+  font-weight: 400;
   font-size: 0.9rem;
+}
+
+.rolePhone {
+  font-weight: 400;
+  font-size: 0.7rem;
 }
 
 .buttonStyle {

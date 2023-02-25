@@ -19,7 +19,7 @@
               v-slot="{ active }"
             >
               <v-btn
-                class="mx-2"
+                class="mx-2 buttonFont"
                 depressed
                 text
                 small
@@ -30,7 +30,11 @@
                 {{ item.name }}
               </v-btn>
             </v-slide-item>
-            <v-btn color="#B1D234" small @click="routePage('contactUs')"
+            <v-btn
+              color="#43D000"
+              class="buttonFont"
+              small
+              @click="routePage('contactUs')"
               ><span style="color: white"> Contact Us</span></v-btn
             >
           </v-slide-group>
@@ -48,11 +52,17 @@
           depressed
           text
           small
+          class="buttonFont"
           @click="routePage(item.route)"
           >{{ item.name }}</v-btn
         >
         <v-divider class="mx-4" inset vertical></v-divider>
-        <v-btn color="#B1D234" small @click="routePage('contactUs')"
+        <v-btn
+          color="#43D000
+"
+          class="buttonFont"
+          small
+          @click="routePage('contactUs')"
           ><span style="color: white"> Contact Us</span></v-btn
         >
       </v-col>
@@ -61,6 +71,10 @@
 </template>
 
 <script>
+import vue from 'vue'
+const VueScrollTo = require('vue-scrollto')
+vue.use(VueScrollTo)
+
 export default {
   data() {
     return {
@@ -89,15 +103,37 @@ export default {
     },
 
     routePage(pageName) {
+      const options = {
+        // container: '#container',
+        easing: 'ease-in',
+        lazy: false,
+        offset: 0,
+        force: true,
+        cancelable: true,
+        onStart: function (element) {
+          // scrolling started
+        },
+        onDone: function (element) {
+          // scrolling is done
+        },
+        onCancel: function () {
+          // scrolling has been interrupted
+        },
+        x: false,
+        y: true,
+      }
       if (pageName === 'industries') {
-        document.getElementById('industries').scrollIntoView({ block: 'start' })
+        VueScrollTo.scrollTo(
+          document.getElementById('industries'),
+          1100,
+          options
+        )
       } else if (pageName === 'contactUs') {
-        document.getElementById('contactUs').scrollIntoView({ block: 'start' })
-        setTimeout(function () {
-          document
-            .getElementById('contactUs')
-            .scrollIntoView({ block: 'start', behavior: 'smooth' })
-        }, 150)
+        VueScrollTo.scrollTo(
+          document.getElementById('contactUs'),
+          1100,
+          options
+        )
       } else {
         document
           .getElementById(pageName)
@@ -116,7 +152,7 @@ export default {
 .mainRow {
   height: 100%;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
 }
 .centerize {
   margin: 0;
@@ -137,5 +173,9 @@ export default {
 .imageSize {
   height: 100%;
   width: 100%;
+}
+
+.buttonFont {
+  font-weight: 600;
 }
 </style>

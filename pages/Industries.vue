@@ -1,18 +1,18 @@
 <template>
   <v-row class="ma-0 centerize" v-resize="onResize">
     <v-col class="d-flex" cols="12">
-      <v-card-title class="mainTitle">Industries</v-card-title
-      ><v-img
+      <v-card-title class="mainTitle">Industries</v-card-title>
+      <!-- <v-img
         contain
         max-width="20px"
         :src="require('../static/header-dot.png')"
-      ></v-img>
+      ></v-img> -->
     </v-col>
     <v-col
       v-for="item in items"
       :key="item.image"
       class="ma-0 pa-0"
-      :class="cardSize === '6' ? 'ma-0 pa-3' : 'ma-8'"
+      :class="cardSize === '6' ? 'ma-0 pa-3' : 'ma-10'"
       :cols="cardSize"
     >
       <v-card

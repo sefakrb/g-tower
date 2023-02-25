@@ -2,37 +2,39 @@
   <v-row class="centerize ma-0 pa-0">
     <v-col cols="12" class="d-flex">
       <v-card-title>About Us</v-card-title>
-      <v-img
+      <!-- <v-img
         contain
         max-width="20px"
         :src="require('../static/header-dot.png')"
-      ></v-img>
+      ></v-img> -->
     </v-col>
-    <v-card class="px-5 pb-10 pt-10" width="80vw" color="#F7FBFD">
-      <v-card-text style="font-size: 1.2rem">
-        <span style="color: #b1d234">G-Tower</span> is a global support
-        structure solutions company.<br />
+    <v-card class="px-5 pb-10 pt-10" width="95vw" color="#F7FBFD">
+      <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
+        <span style="color: #43d000; font-weight: 500">G-Tower</span> is a
+        global support structure solutions company.<br />
         <br />
-        G-Tower provides tower engineering, inspection, procurement and project
-        management services to Power Transmission & Distribution, Wind Energy,
-        Solar Energy, Lighting and Telecom industries.
+        G-Tower’s <span style="font-weight: bold">mission</span> is to be a
+        reliable partner to enhance and add value to the customers’ projects. In
+        line with its mission, G-Tower:
       </v-card-text>
       <v-card-text style="font-size: 1.2rem">
-        <ul v-for="item in items" :key="item">
+        <ul v-for="item in items" :key="item" style="margin-bottom: 0.3rem">
           <div class="d-flex">
             <v-img
               contain
               max-width="10px"
               class="mr-3"
               :src="require('../static/dot.png')"
-            ></v-img
-            >{{ item }}
+            ></v-img>
+            <span style="font-weight: 500; font-size: 1rem; color: #0e0e0e">
+              {{ item }}
+            </span>
           </div>
         </ul>
       </v-card-text>
-      <v-card-text style="font-size: 1.2rem">
-        G-Tower’s mission is to be a reliable partner and add value to the
-        projects of its customer.
+      <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
+        G-Tower’s <span style="font-weight: bold">vision</span> is to create a
+        world that is environmentally sustainable and economically viable.
       </v-card-text>
     </v-card>
   </v-row>
