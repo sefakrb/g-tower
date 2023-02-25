@@ -53,7 +53,6 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    'vue-ssr-carousel/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
