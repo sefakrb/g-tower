@@ -17,20 +17,14 @@
       selected
       active-class="activeClassStyle"
       @click:next="nextSlide()"
+      @click:prev="previousSlide()"
     >
       <v-slide-item
         v-for="item in items"
         :key="item.image"
         class="passiveClassStyle"
-        v-slot="{ active, toggle }"
       >
-        <v-card
-          flat
-          class="cardStyle"
-          :width="cardWidth"
-          rounded="lg"
-          @click="toggle"
-        >
+        <v-card flat class="cardStyle" :width="cardWidth" rounded="lg">
           <!-- loading image -->
           <v-progress-linear
             v-if="item.loading"
@@ -319,6 +313,10 @@ export default {
     }
   },
   methods: {
+    previousSlide() {
+      this.model -= 1
+    },
+
     nextSlide() {
       this.model += 1
     },
@@ -346,12 +344,14 @@ export default {
 <style scoped>
 .passiveClassStyle {
   margin: 40px;
-  opacity: 0.5;
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(0.02rem);
+  opacity: 0.9;
+  background: rgba(240, 240, 240);
+  filter: blur(0.03rem);
 }
 .activeClassStyle {
   opacity: 1 !important;
+  background: white;
+
   filter: blur(0px) !important;
 }
 
@@ -391,10 +391,6 @@ export default {
 
 ::v-deep .v-icon.v-icon {
   font-size: 2.5rem;
-}
-
-::v-deep .v-slide-item--active {
-  border: 2px solid red;
 }
 
 .contentStyle {
