@@ -7,11 +7,10 @@
         @routeHome="routeHome"
       ></Banner>
 
+      <v-main class="" id="services" data-aos="fade-up">
+        <Services></Services>
+      </v-main>
       <div id="concat" class="ma-0 pa-0">
-        <v-main class="" id="services" data-aos="fade-up">
-          <Services></Services>
-        </v-main>
-
         <v-main id="projects" data-aos="fade-down" class="projectStyle">
           <Projects></Projects>
         </v-main>
