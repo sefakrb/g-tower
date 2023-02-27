@@ -21,8 +21,7 @@
       <v-slide-item
         v-for="item in items"
         :key="item.image"
-        class="ma-10"
-        style="opacity: 0.5"
+        class="passiveClassStyle"
         v-slot="{ active, toggle }"
       >
         <v-card
@@ -345,8 +344,15 @@ export default {
 </script>
 
 <style scoped>
+.passiveClassStyle {
+  margin: 40px;
+  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(0.02rem);
+}
 .activeClassStyle {
   opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 
 .v-card__title {
