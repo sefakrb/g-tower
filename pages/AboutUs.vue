@@ -10,7 +10,7 @@
     </v-col>
     <v-card class="px-5 pb-10 pt-10" width="95vw" color="#F7FBFD">
       <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
-        <span style="color: #43d000; font-weight: 500">G-Tower</span> is a
+        <span style="color: #43d000; font-weight: 900">G-Tower</span> is a
         global support structure solutions company.<br />
         <br />
         G-Tower’s <span style="font-weight: bold">mission</span> is to be a

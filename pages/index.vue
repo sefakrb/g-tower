@@ -1,12 +1,15 @@
 <template>
   <v-row v-resize="onResize" class="mainRow">
-    <v-col style="height: 100%" class="ma-0 pa-0" cols="12">
+    <v-col
+      style="height: 100%; margin: 0; margin-top: 2rem !important"
+      class="pa-0"
+      cols="12"
+    >
       <Banner
         class="bannerStyle ma-0 pb-6"
         data-aos="zoom-in"
         @routeHome="routeHome"
       ></Banner>
-
       <v-main class="" id="services" data-aos="fade-up">
         <Services></Services>
       </v-main>
@@ -16,7 +19,7 @@
         </v-main>
       </div>
 
-      <v-main class="" id="aboutUs" data-aos="fade-right">
+      <v-main class="" id="aboutUs" data-aos="fade-down">
         <AboutUs></AboutUs>
       </v-main>
 
@@ -36,7 +39,7 @@
       <v-footer
         color="#181818"
         padless
-        style="display: flex; justify-content: center"
+        style="display: flex; justify-content: center; margin-top: 8rem"
       >
         <v-row class="ma-0 pa-0" style="max-width: 90%">
           <v-col cols="2">
@@ -67,7 +70,7 @@
 
                 color: #cecece;
               "
-              >[© 2022] G-Tower, All Rights Reserved.</span
+              >[© 2023] G-Tower, All Rights Reserved.</span
             >
           </v-col>
         </v-row>

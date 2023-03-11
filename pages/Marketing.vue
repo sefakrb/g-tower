@@ -1,7 +1,8 @@
 <template>
   <v-row class="mainLayout" v-resize="onResize">
+    <app-bar :marketing="true"></app-bar>
     <!-- sidebar -->
-    <v-col class="sideBarLayout" cols="1">
+    <!-- <v-col class="sideBarLayout" cols="1">
       <v-card
         height="100%"
         rounded="0"
@@ -13,17 +14,17 @@
           max-height="72px"
           contain
           class="mt-7"
-          :src="require('../static/main-logo.png')"
+          :src="require('../static/main-logo.svg')"
         ></v-img>
         <v-divider class="mt-10"></v-divider>
 
         <div class="sideBar" @click="pushPage('/contactUs')">Contact Us</div>
         <div class="sideBar" @click="pushPage('/')">Home</div>
       </v-card>
-    </v-col>
+    </v-col> -->
 
     <!-- content -->
-    <v-col class="contentPart" cols="11">
+    <v-col class="contentPart" cols="12">
       <v-row
         id="first-project"
         class="ma-0 pa-0"
@@ -148,9 +149,9 @@
           </v-row>
         </v-col>
 
-        <v-col cols="12" class="pa-10">
+        <!-- <v-col class="ma-0 pa-0" style="margin-top: 2rem !important" cols="12">
           <v-divider></v-divider>
-        </v-col>
+        </v-col> -->
       </v-row>
 
       <v-row style="width: 100%" class="projectStyle" id="second-project">
@@ -289,7 +290,7 @@
     <!-- footer -->
     <v-row class="ma-0 pa-0">
       <v-col cols="12" class="ma-0 pa-0">
-        <v-footer color="#181818">
+        <v-footer color="#181818" style="margin-top: 8rem">
           <v-col cols="2">
             <a
               href="https://www.linkedin.com/company/g-tower/"
@@ -309,7 +310,7 @@
           <v-col cols="10">
             <v-card-text
               style="display: flex; justify-content: flex-end; color: white"
-              >[© 2022] G-Tower, All Rights Reserved.</v-card-text
+              >[© 2023] G-Tower, All Rights Reserved.</v-card-text
             >
           </v-col>
         </v-footer>
@@ -319,7 +320,9 @@
 </template>
 
 <script>
+import AppBar from './AppBar.vue'
 export default {
+  components: { AppBar },
   data() {
     return {
       colSize: '',
@@ -422,6 +425,7 @@ export default {
   align-content: center;
   margin: 0;
   padding: 0;
+  margin-top: 2rem;
 }
 
 .projectStyle {
@@ -431,7 +435,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  margin-top: 5% !important;
+  margin-top: 4% !important;
 }
 
 .mainTitle {

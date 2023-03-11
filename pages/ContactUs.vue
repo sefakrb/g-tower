@@ -25,9 +25,15 @@
           <v-card-text
             :class="locationSize === '6' ? 'contextMobile' : 'context'"
             style="font-weight: 450"
+            class="pb-0"
           >
-            4571 Broadway St, Boulder, CO 80304 <br />
-            <br />
+            4571 Broadway St, Boulder, CO 80304
+          </v-card-text>
+          <v-card-text
+            :class="locationSize === '6' ? 'contextMobile' : 'context'"
+            style="font-weight: 450"
+            class="pt-0 text-center"
+          >
             contact.us@g-tower.com
           </v-card-text>
         </v-card></v-col
@@ -47,12 +53,12 @@
           <div>
             <v-card-title
               :style="{ color: item.color }"
-              class="country d-flex justify-center"
+              class="pb-2 country d-flex justify-center"
               >{{ item.region }}</v-card-title
             >
             <v-card-text
               :class="locationSize === '6' ? 'contextMobile' : 'context'"
-              class="d-flex justify-center"
+              class="pb-0 d-flex justify-center"
             >
               {{ item.location }}
             </v-card-text>
@@ -125,9 +131,7 @@ export default {
     }
   },
   methods: {
-    mailTo(item) {
-      console.log(item)
-    },
+    mailTo(item) {},
     onResize() {
       this.show = true
       if (window.innerWidth < 300) {
@@ -159,6 +163,8 @@ export default {
   font-weight: 700;
   font-size: 1.2rem;
   color: #5aae61;
+  display: flex;
+  justify-content: center;
 }
 
 .cardContext {

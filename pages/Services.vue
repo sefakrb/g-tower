@@ -19,6 +19,7 @@
         display: flex;
         padding-right: 2rem;
         padding-left: 2rem;
+        margin: 0;
       "
     >
       <v-col
@@ -174,10 +175,10 @@ export default {
   font-size: 1rem;
   line-height: 1.7rem;
   margin-left: 20px;
-  color: #1a1a1a;
+  color: #000000;
 }
 
 ul li::marker {
-  color: #5f5f5f;
+  color: #797979;
 }
 </style>

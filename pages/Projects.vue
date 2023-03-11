@@ -8,7 +8,6 @@
         :src="require('../static/header-dot.png')"
       ></v-img> -->
     </v-col>
-
     <v-slide-group
       style="padding: 1rem"
       v-model="model"
@@ -16,6 +15,7 @@
       show-arrows
       selected
       active-class="activeClassStyle"
+      mandatory
       @click:next="nextSlide()"
       @click:prev="previousSlide()"
     >
@@ -67,32 +67,22 @@
                 style="font-weight: 700; font-size: 1.1rem"
                 v-if="item.client"
               >
-                Client:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  class="contentStyle"
-                  >{{ item.client }}</span
-                >
+                Client:<span class="contentStyle">{{ item.client }}</span>
               </div>
 
               <div
                 style="font-weight: 700; font-size: 1.1rem"
                 v-if="item.owner"
               >
-                Owner:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  class="contentStyle"
-                  >{{ item.owner }}</span
-                >
+                Owner:<span class="contentStyle">{{ item.owner }}</span>
               </div>
 
               <div style="font-weight: 700; font-size: 1.1rem" v-if="item.info">
-                Project Info:&nbsp;&nbsp;<span class="contentStyle">{{
-                  item.info
-                }}</span>
+                Project Info:<span class="contentStyle">{{ item.info }}</span>
               </div>
 
               <div style="font-weight: 700; font-size: 1.1rem">
-                Our Scope:&nbsp;&nbsp;&nbsp;<span class="contentStyle">{{
-                  item.scope
-                }}</span>
+                Our Scope:<span class="contentStyle">{{ item.scope }}</span>
               </div>
             </v-card-text>
           </div>
@@ -319,6 +309,10 @@ export default {
 
     nextSlide() {
       this.model += 1
+      setTimeout(() => {
+        this.model += 1
+        this.model -= 1
+      }, 200)
     },
 
     onResize() {
@@ -336,6 +330,20 @@ export default {
         this.model = 1
         this.cardWidth = '25vw'
       }
+    },
+  },
+
+  watch: {
+    model: {
+      handler(n, o) {
+        if (n === 11) {
+          this.model = 1
+          setTimeout(() => {
+            this.nextSlide()
+            this.model = 1
+          }, 200)
+        }
+      },
     },
   },
 }
@@ -397,5 +405,6 @@ export default {
   font-weight: normal;
   font-size: 1rem;
   color: #2e2e2e;
+  margin-left: 4px;
 }
 </style>

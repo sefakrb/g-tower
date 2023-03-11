@@ -1,15 +1,22 @@
 <template>
-  <v-app-bar width="100vw" v-resize="onResize" app class="ma-0 pa-0">
+  <v-app-bar
+    min-height="12vh"
+    width="100vw"
+    v-resize="onResize"
+    app
+    class="ma-0 pa-0"
+  >
     <v-row class="mainRow">
       <v-col cols="1" class="centerize imageSize">
         <v-img
           max-height="90%"
           max-width="90%"
           contain
-          :src="require('../static/main-logo.png')"
+          :src="require('../static/main-logo.svg')"
         ></v-img>
       </v-col>
 
+      <!-- mobile -->
       <v-col v-if="appBarSize" class="centerize" cols="8">
         <v-card text flat class="mx-auto" max-width="70vw">
           <v-slide-group style="background-color: #f5f5f5" multiple show-arrows>
@@ -41,9 +48,10 @@
         </v-card>
       </v-col>
 
+      <!-- large screen -->
       <v-col
         v-if="!appBarSize"
-        cols="6"
+        cols="8"
         :class="largeScreen ? 'largeScreen' : 'centerize'"
       >
         <v-btn
@@ -56,15 +64,38 @@
           @click="routePage(item.route)"
           >{{ item.name }}</v-btn
         >
-        <v-divider class="mx-4" inset vertical></v-divider>
         <v-btn
-          color="#43D000
-"
+          color="#43D000"
           class="buttonFont"
           small
           @click="routePage('contactUs')"
           ><span style="color: white"> Contact Us</span></v-btn
         >
+        <div class="ma-0 pa-0">
+          <v-divider
+            class="mx-4"
+            style="color: #0a1551 !important"
+            inset
+            vertical
+          ></v-divider>
+        </div>
+
+        <a
+          style="text-decoration: none"
+          target="_blank"
+          href="https://www.linkedin.com/company/g-tower/"
+        >
+          <v-icon class="mr-4" large style="color: #0a1551"
+            >mdi-linkedin</v-icon
+          >
+        </a>
+        <a
+          style="text-decoration: none"
+          target="_blank"
+          href="https://www.youtube.com/@g-tower6904"
+        >
+          <v-icon large style="color: #0a1551">mdi-youtube</v-icon>
+        </a>
       </v-col>
     </v-row>
   </v-app-bar>
@@ -76,6 +107,9 @@ const VueScrollTo = require('vue-scrollto')
 vue.use(VueScrollTo)
 
 export default {
+  props: {
+    marketing: Boolean,
+  },
   data() {
     return {
       model: null,
@@ -91,13 +125,19 @@ export default {
       ],
     }
   },
-
+  mounted() {
+    if (!this.marketing && this.$route.params.scroll) {
+      setTimeout(() => {
+        this.routePage(this.$route.params.scroll)
+      }, 500)
+    }
+  },
   methods: {
     onResize() {
-      window.innerWidth < 950
+      window.innerWidth < 970
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
-      window.innerWidth > 1200
+      window.innerWidth > 970
         ? (this.largeScreen = true)
         : (this.largeScreen = false)
     },
@@ -122,6 +162,11 @@ export default {
         x: false,
         y: true,
       }
+      if (this.marketing) {
+        this.$router.push({ name: 'index', params: { scroll: pageName } })
+        return
+      }
+
       if (pageName === 'industries') {
         VueScrollTo.scrollTo(
           document.getElementById('industries'),
@@ -145,12 +190,22 @@ export default {
 </script>
 
 <style scoped>
+.v-btn {
+  text-transform: unset !important;
+}
 ::v-deep .v-toolbar__content {
   padding: 0px !important;
   margin: 0px !important;
+  height: 12vh !important;
+}
+
+::v-deep .theme--light.v-divider {
+  border-color: #0a1551;
+  height: 5vh;
+  margin-bottom: 0.2rem;
 }
 .mainRow {
-  height: 100%;
+  height: 12vh;
   width: 100%;
   justify-content: space-around;
 }
@@ -176,6 +231,7 @@ export default {
 }
 
 .buttonFont {
+  font-size: 0.9rem;
   font-weight: 600;
 }
 </style>
