@@ -9,8 +9,10 @@
     <v-row class="mainRow">
       <v-col cols="1" class="centerize imageSize">
         <v-img
-          max-height="90%"
-          max-width="90%"
+          :max-height="
+            windowWidth < 700 ? '130%' : largeScreen ? '90%' : '100%'
+          "
+          :max-width="windowWidth < 700 ? '130%' : largeScreen ? '90%' : '100%'"
           contain
           :src="require('../static/main-logo.svg')"
         ></v-img>
@@ -123,6 +125,7 @@ export default {
         { name: 'Our Team', route: 'ourTeam' },
         { name: 'Industries', route: 'industries' },
       ],
+      windowWidth: '',
     }
   },
   mounted() {
@@ -134,6 +137,7 @@ export default {
   },
   methods: {
     onResize() {
+      this.windowWidth = window.innerWidth
       window.innerWidth < 970
         ? (this.appBarSize = true)
         : (this.appBarSize = false)
