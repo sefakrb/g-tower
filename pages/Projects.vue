@@ -336,7 +336,7 @@ export default {
   watch: {
     model: {
       handler(n, o) {
-        if (n === 11) {
+        if (n === 10) {
           this.model = 1
           setTimeout(() => {
             this.nextSlide()
@@ -344,6 +344,7 @@ export default {
           }, 200)
         }
       },
+      deep: true,
     },
   },
 }
