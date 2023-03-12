@@ -257,7 +257,7 @@ export default {
         },
         {
           image: 'solar_racking.png',
-          title: 'Solaf Racking Structures Supply Project',
+          title: 'Solar Racking Structures Supply Project',
           client: '                InterPlus',
           info: '     Fixed solar racking structures for a solar farm in the Middle East. \n                           Quantity of the project is 2,400 tons (~5,300,000 lbs).',
           scope:
