@@ -1,5 +1,5 @@
 <template>
-  <v-row class="mainLayout" v-resize="onResize">
+  <v-row v-resize="onResize">
     <app-bar :marketing="true"></app-bar>
     <!-- sidebar -->
     <!-- <v-col class="sideBarLayout" cols="1">
@@ -24,7 +24,7 @@
     </v-col> -->
 
     <!-- content -->
-    <v-col class="contentPart" cols="12">
+    <v-col class="mainLayout contentPart" cols="12">
       <v-row
         id="first-project"
         class="ma-0 pa-0"
@@ -288,7 +288,7 @@
     </v-col>
 
     <!-- footer -->
-    <v-row class="ma-0 pa-0">
+    <v-row class="mainLayout ma-0 pa-0">
       <v-col cols="12" class="ma-0 pa-0">
         <v-footer color="#181818" style="margin-top: 8rem">
           <v-col cols="2">
