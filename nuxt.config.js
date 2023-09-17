@@ -11,7 +11,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Discover G-Tower: Your Trusted Global Support Structure Solutions Partner. We treat your projects as our own, delivering beyond expectations with quality engineering. Committed to reliability, clean energy, and cost-effective solutions. Building an environmentally sustainable and economically viable world.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [

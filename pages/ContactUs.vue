@@ -2,18 +2,13 @@
   <v-row class="ma-0" v-resize="onResize">
     <v-col style="padding: 12 !improtant" class="d-flex" cols="12">
       <v-card-title class="mainTitle">Contact Us</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
     <v-col class="centerize" cols="12">
       <v-card width="85vw" flat class="centerize">
         <v-img
           max-width="90%"
           contain
-          :src="require('../static/map.png')"
+          :src="'https://g-tower.com/map.png'"
         ></v-img>
       </v-card>
     </v-col>

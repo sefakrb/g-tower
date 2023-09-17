@@ -14,7 +14,7 @@
           "
           :max-width="windowWidth < 700 ? '130%' : largeScreen ? '90%' : '100%'"
           contain
-          :src="require('../static/main-logo.svg')"
+          :src="'https://g-tower.com/main-logo.svg'"
         ></v-img>
       </v-col>
 

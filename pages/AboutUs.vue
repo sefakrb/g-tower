@@ -2,11 +2,6 @@
   <v-row class="centerize ma-0 pa-0">
     <v-col cols="12" class="d-flex">
       <v-card-title>About Us</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
     <v-card class="px-5 pb-10 pt-10" width="95vw" color="#F7FBFD">
       <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
@@ -24,7 +19,7 @@
               contain
               max-width="10px"
               class="mr-3"
-              :src="require('../static/dot.png')"
+              :src="'https://g-tower.com/dot.png'"
             ></v-img>
             <span style="font-weight: 500; font-size: 1rem; color: #0e0e0e">
               {{ item }}

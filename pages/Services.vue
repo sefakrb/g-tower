@@ -6,11 +6,6 @@
   >
     <v-col cols="12" class="d-flex">
       <v-card-title class="mainTitle">Services</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
 
     <v-row
@@ -44,7 +39,7 @@
               class="mt-10 mb-5"
               max-height="80px"
               contain
-              :src="require('../static/services/' + item.image)"
+              :src="'https://g-tower.com/services/' + item.image"
             ></v-img>
           </v-card>
           <!-- title -->

@@ -1,10 +1,21 @@
 <template>
   <v-row v-resize="onResize" class="centerize">
     <v-col class="centerize flex-column" cols="12" md="5">
-      <v-card-title :style="width < 420 ? { 'font-size': '2.2rem' } : ''"
-        >Supporting Future Energy
-      </v-card-title>
-
+      <h1
+        :style="
+          width < 420
+            ? { 'font-size': '2.2rem' }
+            : {
+                'font-size': '2.2rem',
+                'font-weight': '700',
+                'text-align': 'center',
+                'font-size': '2.5rem',
+                'line-height': '2rem',
+              }
+        "
+      >
+        Supporting Future Energy
+      </h1>
       <v-card-text class="pb-0"
         >Solution Partner for Renewable Energy <br />
         Infra-Structures
@@ -32,7 +43,7 @@
       >
         <video class="videoStyle" autoplay playsinline muted loop>
           <source
-            :src="require('../static/banner-video.mp4')"
+            :src="'https://g-tower.com/banner-video.mp4'"
             type="video/mp4"
           />
           Your browser does not support HTML video.
@@ -83,5 +94,6 @@ export default {
   max-height: 90%;
   max-width: 90%;
   border-radius: 3% !important;
+  margin-top: 4rem;
 }
 </style>

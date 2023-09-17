@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <div name="readme-top"  align="center">
-    <img style="width:20%;height:20%" src="static/main-logo.svg" alt="Logo">
+    <img style="width:20%;height:20%" src="https://g-tower.com/main-logo.svg" alt="Logo">
 </div>
 
 <br />

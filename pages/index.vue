@@ -141,7 +141,7 @@ export default {
 }
 
 #concat {
-  background-image: url('../static/concat-background.svg');
+  background-image: url('https://g-tower.com/concat-background.svg');
   background-repeat: no-repeat, no-repeat;
 }
 </style>

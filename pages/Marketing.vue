@@ -10,12 +10,6 @@
         :width="currentWidth < 600 ? '100%' : '70%'"
         class="sideBarCardLayout"
       >
-        <v-img
-          max-height="72px"
-          contain
-          class="mt-7"
-          :src="require('../static/main-logo.svg')"
-        ></v-img>
         <v-divider class="mt-10"></v-divider>
 
         <div class="sideBar" @click="pushPage('/contactUs')">Contact Us</div>
@@ -35,7 +29,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             class=""
             style="border-radius: 15px"
-            :src="require('../static/marketing/first-image.jpg')"
+            :src="'https://g-tower.com/marketing/first-image.png'"
           ></v-img>
         </v-col>
 
@@ -175,7 +169,7 @@
             contain
             class=""
             style="border-radius: 15px"
-            :src="require('../static/marketing/second-image.png')"
+            :src="'https://g-tower.com/marketing/second-image.png'"
           ></v-img>
         </v-col>
       </v-row>
@@ -186,7 +180,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             contain
             class=""
-            :src="require('../static/marketing/third-image.png')"
+            :src="'https://g-tower.com/marketing/third-image.png'"
           ></v-img>
         </v-col>
         <v-col :cols="colSize">
@@ -229,7 +223,7 @@
             style="border-radius: 15px"
             contain
             class=""
-            :src="require('../static/marketing/fourth-image.jpg')"
+            :src="'https://g-tower.com/marketing/fourth-image.png'"
           ></v-img>
         </v-col>
       </v-row>
@@ -241,7 +235,7 @@
             contain
             class=""
             style="border-radius: 15px"
-            :src="require('../static/marketing/fifth-image.jpg')"
+            :src="'https://g-tower.com/marketing/fifth-image.png'"
           ></v-img>
         </v-col>
         <v-col :cols="colSize">
@@ -281,7 +275,7 @@
             contain
             class=""
             style="border-radius: 15px"
-            :src="require('../static/marketing/sixth-image.jpg')"
+            :src="'https://g-tower.com/marketing/sixth-image.png'"
           ></v-img>
         </v-col>
       </v-row>

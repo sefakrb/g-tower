@@ -2,11 +2,6 @@
   <v-row v-resize="onResize" class="ma-0 mainRow centerize">
     <v-col cols="12" class="d-flex pb-0">
       <v-card-title class="mainTitle">Projects</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
     <v-slide-group
       style="padding: 1rem"
@@ -37,7 +32,7 @@
             min-height="50vh"
             max-height="50vh"
             contain
-            :src="require('../static/projects/' + item.image)"
+            :src="'https://g-tower.com/projects/' + item.image"
             @load="item.loading = false"
           >
           </v-img>
@@ -110,7 +105,7 @@
           <v-img
             max-height="60%"
             contain
-            :src="require('../static/projects/' + item.image)"
+            :src="'https://g-tower.com/services/' + item.image"
             @load="item.loading = false"
           >
           </v-img>

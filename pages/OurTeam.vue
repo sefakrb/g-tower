@@ -2,11 +2,6 @@
   <v-row v-resize="onResize" class="ma-0 team centerize">
     <v-col :style="{ 'padding-left': titleSize }" cols="12" class="d-flex">
       <v-card-title class="mainTitle">Our Team</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
 
     <v-col
@@ -33,8 +28,8 @@
           <v-img
             height="100%"
             width="100%"
-            :src="require('../static/employee/' + item.image)"
-            :lazy-src="require('../static/employee/' + item.image)"
+            :src="'https://g-tower.com/employee/' + item.image"
+            :lazy-src="'https://g-tower.com/employee/' + item.image"
           >
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
@@ -84,7 +79,7 @@
             >
               <v-img
                 max-width="75%"
-                :src="require('../static/employee/' + user.image)"
+                :src="'https://g-tower.com/employee/' + user.image"
               ></v-img>
               <a
                 style="text-decoration: none"
@@ -221,6 +216,22 @@ export default {
           bio: 'Akin is Civil Engineering student at Middle East Technical University. He supports G-Tower’s inspection services including tower prototyping, mass production, pre-shipment and factory acceptance test. In addition to that Akin attends tower testing of our clients in Turkey. His youth and dynamism bring lots of positive energy to G-Tower Team. Although his gentle nature, he is big fan of Marshall arts. The Karate Kid is one his favorite movie series. His dream is to move to Africa and start G-Tower’s entity to expand our business in Africa.',
           linkedin: '/in/ak%C4%B1n-veske-635b56190/',
         },
+        {
+          image: 'serhat-boztogan.jpg',
+          name: 'Serhat',
+          surname: 'Boztogan',
+          title: 'Mechanical Engineer',
+          bio: 'Serhat is a mechanical engineer graduated from Middle East Technical University. He worked in the Formula Student team of his university and was the technical team captain of the first electric Formula car they built. He is interested in structural & mechanical design, structural analysis, mechanical vibrations and aims to improve himself in these subjects continuously. He follows the developments in renewable energy, aerospace and automotive technologies. His hobbies include fountain pen collecting, leather crafting and cooking. Together with the G-Tower, he aims to make vertical axis wind turbines more efficient and to be used more widely around the world.',
+          linkedin: '/in/serhat-bozto%C4%9Fan/',
+        },
+        {
+          image: 'alperen-eroglu.png',
+          name: 'Alperen',
+          surname: 'Eroglu',
+          title: 'Design Engineer',
+          bio: 'Alperen is a design engineer at G-Tower. He graduated from Middle East Technical University’s Civil Engineering Department in 2019 as an honour student. After graduation, he started working in the private sector as a design engineer and gained experience in various projects across civil engineering disciplines, including structural and geotechnical engineering. Through these projects, he has improved himself in the manner of using design softwares, application of specifications & codes, achieving engineering design approaches and time- project management skills. In recent years, he has focused primarily on structural design and analysis of polygonal poles and lattice towers used for lighting, monitoring, energy transmission & telecommunication purposes. Beyond his professional career, he enjoys swimming, scuba diving, sailing, camping, cooking, and following scientific & historical documentaries.',
+          linkedin: '/in/alpereneroğlu/',
+        },
       ],
       cardSize: false,
       titleSize: null,
@@ -263,7 +274,7 @@ export default {
 
 <style scoped>
 .team {
-  background-image: url('../static/team-background.png');
+  background-image: url('https://g-tower.com/team-background.png');
   background-repeat: no-repeat, no-repeat;
 }
 .go-top {

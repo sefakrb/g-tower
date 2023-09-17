@@ -2,11 +2,6 @@
   <v-row class="ma-0 centerize" v-resize="onResize">
     <v-col class="d-flex" cols="12">
       <v-card-title class="mainTitle">Industries</v-card-title>
-      <!-- <v-img
-        contain
-        max-width="20px"
-        :src="require('../static/header-dot.png')"
-      ></v-img> -->
     </v-col>
     <v-col
       v-for="item in items"
@@ -24,7 +19,7 @@
         <v-img
           max-width="100%"
           contain
-          :src="require('../static/industries/' + item.image)"
+          :src="'https://g-tower.com/industries/' + item.image"
         ></v-img>
         <v-card-title
           class="justify-center"
