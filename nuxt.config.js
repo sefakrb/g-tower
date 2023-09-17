@@ -17,6 +17,55 @@ export default {
         content:
           'Discover G-Tower: Your Trusted Global Support Structure Solutions Partner. We treat your projects as our own, delivering beyond expectations with quality engineering. Committed to reliability, clean energy, and cost-effective solutions. Building an environmentally sustainable and economically viable world.',
       },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'G-Tower',
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://g-tower.com',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://g-tower.com/main-logo.png',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'G-Tower',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content:
+          'Discover G-Tower: Your Trusted Global Support Structure Solutions Partner. We treat your projects as our own, delivering beyond expectations with quality engineering. Committed to reliability, clean energy, and cost-effective solutions. Building an environmentally sustainable and economically viable world.',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content:
+          'Discover G-Tower: Your Trusted Global Support Structure Solutions Partner. We treat your projects as our own, delivering beyond expectations with quality engineering. Committed to reliability, clean energy, and cost-effective solutions. Building an environmentally sustainable and economically viable world.',
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://g-tower.com/main-logo.png',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'G-Tower',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Discover G-Tower: Your Trusted Global Support Structure Solutions Partner. We treat your projects as our own, delivering beyond expectations with quality engineering. Committed to reliability, clean energy, and cost-effective solutions. Building an environmentally sustainable and economically viable world.',
+      },
+
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
