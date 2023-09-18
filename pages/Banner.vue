@@ -50,6 +50,9 @@
         </video>
       </v-card>
     </v-col>
+    <v-col class="centerize">
+      <v-img src="https://g-tower.com/g-tower_certificate.png" alt="g-tower_certificates" max-width="300" max-heigth="300"/>
+    </v-col>
   </v-row>
 </template>
 
@@ -89,7 +92,6 @@ export default {
   text-align: center;
   font-size: 2.5rem;
 }
-
 .videoStyle {
   max-height: 90%;
   max-width: 90%;
