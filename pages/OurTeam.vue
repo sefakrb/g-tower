@@ -232,6 +232,23 @@ export default {
           bio: 'Alperen is a design engineer at G-Tower. He graduated from Middle East Technical University’s Civil Engineering Department in 2019 as an honour student. After graduation, he started working in the private sector as a design engineer and gained experience in various projects across civil engineering disciplines, including structural and geotechnical engineering. Through these projects, he has improved himself in the manner of using design softwares, application of specifications & codes, achieving engineering design approaches and time- project management skills. In recent years, he has focused primarily on structural design and analysis of polygonal poles and lattice towers used for lighting, monitoring, energy transmission & telecommunication purposes. Beyond his professional career, he enjoys swimming, scuba diving, sailing, camping, cooking, and following scientific & historical documentaries.',
           linkedin: '/in/alpereneroğlu/',
         },
+        {
+          image: 'seda_yuksel.jpg',
+          name: 'Seda Serife',
+          surname: 'Yuksel',
+          title: 'Quality Engineer',
+          bio: 'Seda is a Quality Engineer at G-tower. She graduated from Iskenderun Technical University, Mechanical Engineering Department in 2018. She supports to G-tower’s inspection service including production inspection, factory acceptance testing, prototype inspection.She enjoys travelling, discovering new places, drawing and hiking.',
+          linkedin: '/in/seda-ş-yüksel-6a6b8110b/',
+        },
+        {
+          image: 'ekrem_targitay.jpeg',
+          name: 'Ekrem',
+          surname: 'Targitay',
+          title: 'Quality Inspector',
+          bio: 'Ekrem is studying Metallurgical and Materials Engineering at Manisa Celal Bayar University. In his graduation project, he is working on "Aluminum/graphite powder doped hybrid composites" supported by the Turkish aerospace industry. He is interested in the properties and forming processes of metal materials. He is involved in production supervision, factory acceptance tests, and quality control processes at G-Tower. He enjoys traveling and swimming. He is a confident table tennis player.',
+          linkedin: '/in/ekrem-targıtay-/',
+        }
+
       ],
       cardSize: false,
       titleSize: null,
