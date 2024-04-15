@@ -248,7 +248,6 @@ export default {
           bio: 'Ekrem is studying Metallurgical and Materials Engineering at Manisa Celal Bayar University. In his graduation project, he is working on "Aluminum/graphite powder doped hybrid composites" supported by the Turkish aerospace industry. He is interested in the properties and forming processes of metal materials. He is involved in production supervision, factory acceptance tests, and quality control processes at G-Tower. He enjoys traveling and swimming. He is a confident table tennis player.',
           linkedin: '/in/ekrem-targıtay-/',
         }
-
       ],
       cardSize: false,
       titleSize: null,
