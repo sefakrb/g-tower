@@ -184,22 +184,13 @@ export default {
           linkedin: '/in/nazife-nur-i%C5%9Fcan-356278133/',
         },
         {
-          image: 'didem_ergin.jpg',
-          name: 'Didem',
-          surname: 'Ergin, PE',
-          title: 'Consultant, Engineer',
-          bio: 'Didem is an environmental engineer with over 10 years of diverse technical and project management experience. Her expertise includes managing the environmental aspects throughout the life cycle of a wide range of large capital projects, including site selection and alternative analysis; schedule and budgeting; impact assessments; federal, state, and local permitting and regulatory compliance; environmental plan preparation; and auditing, reporting, and agency negotiations. Didem is a licensed P.E. in Texas. Didem has worked for top-notch environmental consultancy and engineering firms throughout her career.',
-          linkedin: '/in/didem-ergin/',
+          image: 'emre_insel.png',
+          name: 'Emre',
+          surname: 'Insel',
+          title: 'Volunteer Consultant',
+          bio: 'Emre has over 15 years of experience in the design of a diverse range of structures and in project management, with projects spanning four continents. He is currently engaged in research at the University of Ottawa in Ontario, Canada, focusing on the application of high ductility cementitious materials under blast loads. This research complements his extensive expertise in structural design and innovative materials, enabling him to offer unique solutions to complex engineering challenges. Emre is a professional civil engineer in California and Oregon. He enjoys biking and hiking.',
+          linkedin: '/in/emre-insel-msc-pe-pmp/',
         },
-        {
-          image: 'matt_rogers.jpg',
-          name: 'Matt',
-          surname: 'Rogers, PE',
-          title: 'Consultant, Engineer',
-          bio: 'Matt is a licensed Professional Engineer in Colorado with approximately 10 years of experience in consulting and project management. He holds an M. E. in Engineering Management and a B.Sc. in Civil Engineering from Colorado University Boulder. He performs statistical analysis and modeling projects for a variety of mid-sized businesses. He excels in stakeholder management, multi-million-dollar contract negotiations and purchase orders, cost-effective system engineering, health and safety auditing, and logistics coordination. He enjoys hiking in wilderness and traveling.',
-          linkedin: '/in/matt-rogers-p-e-79283467/',
-        },
-
         {
           image: 'mehmet_gurdin.jpg',
           name: 'Mehmet',
