@@ -238,7 +238,25 @@ export default {
           title: 'Quality Inspector',
           bio: 'Ekrem is studying Metallurgical and Materials Engineering at Manisa Celal Bayar University. In his graduation project, he is working on "Aluminum/graphite powder doped hybrid composites" supported by the Turkish aerospace industry. He is interested in the properties and forming processes of metal materials. He is involved in production supervision, factory acceptance tests, and quality control processes at G-Tower. He enjoys traveling and swimming. He is a confident table tennis player.',
           linkedin: '/in/ekrem-targıtay-/',
+        },
+        {
+          image: 'gozde_isik.jpeg',
+          name: 'Gozde',
+          surname: 'Isik',
+          title: 'Structural Engineer',
+          bio: 'Gözde is Structural Engineer at G-Tower.She graduated from Atilim University Faculty of Civil Engineering in 2022 and studied project management at Istanbul Technical University.She completed her school internships at Mitek A.Ş. steel fabrication assembly and Kalyon Temelli solar energy factory where she gained practical experience in steel construction fabrication and renewable energy fields.After graduation, she worked at Ural Engineering for more than a year on superstructure steel construction projects. After working at Yüksel Proje for a short time, she joined the G-Tower team. She has the ability to analyze steel construction projects and perform static calculations using softwares such as Sap2000, IdeaStatiCa, AutoCAD and Tekla. With her knowledge of English and Russian, she is able to collaborate effectively in multi-cultural environments. Beyond her professional career, she enjoys fitness, pilates, yoga, figure skating and traveling.',
+          linkedin: 'in/g%C3%B6zde-i%C5%9F%C4%B1k-0866911a9/',
+        },
+        {
+          image: 'ertan_surucu.jpg',
+          name: 'Ertan',
+          surname: 'Surucu',
+          title: 'Structural Engineer',
+          bio: 'Ertan is a dynamic civil engineer, graduated from Middle East Technical University in 2023, with a passion for innovation and a dedication to excellence. Currently pursuing a Masters degree at Middle East Technical University, he continues to expand his knowledge and expertise in the field. Known for his boundless energy and enthusiasm, he approaches every project with vigor, striving to incorporate the latest advancements in engineering while maintaining a focus on sustainability and efficiency.Outside of the professional realm, he leads an active lifestyle, finding joy in a variety of hobbies. Whether hitting the gym for an intense workout session, engaging in friendly matches of football and basketball, or exploring new destinations through travel, he embraces life with zest and curiosity. Additionally, he nurtures a deep appreciation for culture and the arts, often spending leisure time wandering through museums and art galleries, drawing inspiration from the creativity of others.',
+          linkedin: '/in/ertan-s%C3%BCr%C3%BCc%C3%BC-360ab91b8/',
         }
+
+
       ],
       cardSize: false,
       titleSize: null,
