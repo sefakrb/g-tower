@@ -29,7 +29,7 @@
             :max-width="currentWidth < 600 ? '60vw' : '40vw'"
             class=""
             style="border-radius: 15px"
-            :src="'https://g-tower.com/marketing/first-image.png'"
+            :src="'https://g-tower.com/marketing/first-image.jpg'"
           ></v-img>
         </v-col>
 
@@ -223,7 +223,7 @@
             style="border-radius: 15px"
             contain
             class=""
-            :src="'https://g-tower.com/marketing/fourth-image.png'"
+            :src="'https://g-tower.com/marketing/fourth-image.jpg'"
           ></v-img>
         </v-col>
       </v-row>
@@ -235,7 +235,7 @@
             contain
             class=""
             style="border-radius: 15px"
-            :src="'https://g-tower.com/marketing/fifth-image.png'"
+            :src="'https://g-tower.com/marketing/fifth-image.jpg'"
           ></v-img>
         </v-col>
         <v-col :cols="colSize">
@@ -244,7 +244,7 @@
           >
           <a
             class="redirectButton"
-            href="https://g-tower.com/wp-content/uploads/2022/09/G-Tower_Inspection_Services.pdf"
+            href="https://g-tower.com/marketing/20240430_G-Tower_Overseas_Fabrication_Inspection_Services.pdf"
             target="blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -262,7 +262,7 @@
           >
           <a
             class="redirectButton"
-            href="https://g-tower.com/wp-content/uploads/2022/09/G-Tower_Engineering_Services.pdf"
+            href="https://g-tower.com/marketing/20240430_G-Tower_Engineering_Services.pdf"
             target="_blank"
             style="text-decoration: underline; color: black"
             >Learn More</a
@@ -275,7 +275,7 @@
             contain
             class=""
             style="border-radius: 15px"
-            :src="'https://g-tower.com/marketing/sixth-image.png'"
+            :src="'https://g-tower.com/marketing/sixth-image.jpg'"
           ></v-img>
         </v-col>
       </v-row>
