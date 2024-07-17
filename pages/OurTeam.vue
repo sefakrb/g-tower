@@ -4,102 +4,44 @@
       <v-card-title class="mainTitle">Our Team</v-card-title>
     </v-col>
 
-    <v-col
-      v-for="item in items"
-      :key="item.image"
-      class="pa-0"
-      :class="cardSize === '5' ? 'ma-2' : 'ma-10'"
-      :cols="cardSize"
-    >
-      <v-card
-        height="100%"
-        class="ma-0 pa-0 cardStyle"
-        color="#EFFFEF"
-        rounded="lg"
-      >
-        <v-card
-          rounded="lg"
-          flat
-          color="#EFFFEF"
-          height="70%"
-          width="100%"
-          class="d-flex justify-center"
-        >
-          <v-img
-            height="100%"
-            width="100%"
-            :src="'https://g-tower.com/employee/' + item.image"
-            :lazy-src="'https://g-tower.com/employee/' + item.image"
-          >
+    <v-col v-for="item in items" :key="item.image" class="pa-0" :class="cardSize === '5' ? 'ma-2' : 'ma-10'"
+      :cols="cardSize">
+      <v-card height="100%" class="ma-0 pa-0 cardStyle" color="#EFFFEF" rounded="lg">
+        <v-card rounded="lg" flat color="#EFFFEF" height="70%" width="100%" class="d-flex justify-center">
+          <v-img height="100%" width="100%" :src="'https://g-tower.com/employee/' + item.image"
+            :lazy-src="'https://g-tower.com/employee/' + item.image">
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="black"
-                ></v-progress-circular>
-              </v-row> </template
-          ></v-img>
+                <v-progress-circular indeterminate color="black"></v-progress-circular>
+              </v-row> </template></v-img>
         </v-card>
-        <v-card-title
-          class="nameTitle pb-0"
-          :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'"
-          >{{ item.name }} {{ item.surname }}</v-card-title
-        >
-        <v-card-title
-          class="role pt-0"
-          :class="cardSize === '5' ? 'rolePhone' : 'role'"
-          >{{ item.title }}</v-card-title
-        >
+        <v-card-title class="nameTitle pb-0" :class="cardSize === '5' ? 'nameTitlePhone' : 'nameTitle'">{{ item.name }}
+          {{
+    item.surname }}</v-card-title>
+        <v-card-title class="role pt-0" :class="cardSize === '5' ? 'rolePhone' : 'role'">{{ item.title }}</v-card-title>
         <div class="buttonStyle" style="width: 100%">
-          <v-btn small text depressed @click="bio(item)"
-            >More<v-icon>mdi-arrow-right-thin</v-icon></v-btn
-          >
+          <v-btn small text depressed @click="bio(item)">More<v-icon>mdi-arrow-right-thin</v-icon></v-btn>
         </div>
-      </v-card></v-col
-    >
-    <v-dialog
-      @click:outside="resetScroll()"
-      v-if="user.image"
-      v-model="dialog"
-      width="80vw"
-    >
+      </v-card></v-col>
+    <v-dialog @click:outside="resetScroll()" v-if="user.image" v-model="dialog" width="80vw">
       <v-card style="overflow-x: hidden" min-height="60vh" v-model="user">
         <v-row class="ma-0 pa-0 centerize">
           <div style="width: 100%; height: 2%" class="d-flex justify-end pa-2">
-            <v-icon @click=";(dialog = false), resetScroll()">mdi-close</v-icon>
+            <v-icon @click="; (dialog = false), resetScroll()">mdi-close</v-icon>
           </div>
-          <v-col
-            :cols="cardSize !== '2' ? '10' : '4'"
-            class="centerize align-center"
-          >
-            <v-card
-              flat
-              class="centerize align-center flex-column"
-              rounded="lg"
-            >
-              <v-img
-                max-width="75%"
-                :src="'https://g-tower.com/employee/' + user.image"
-              ></v-img>
-              <a
-                style="text-decoration: none"
-                class="mt-5"
-                :href="'https://linkedin.com/' + user.linkedin"
-                target="_blank"
-                ><v-icon large style="max-width: 75%" color="blue">
-                  mdi-linkedin</v-icon
-                ></a
-              >
+          <v-col :cols="cardSize !== '2' ? '10' : '4'" class="centerize align-center">
+            <v-card flat class="centerize align-center flex-column" rounded="lg">
+              <v-img max-width="75%" :src="'https://g-tower.com/employee/' + user.image"></v-img>
+              <a style="text-decoration: none" class="mt-5" :href="'https://linkedin.com/' + user.linkedin"
+                target="_blank"><v-icon large style="max-width: 75%" color="blue">
+                  mdi-linkedin</v-icon></a>
             </v-card>
           </v-col>
 
-          <v-col
-            :cols="cardSize !== '2' ? '10' : '8'"
-            class="centerize flex-column"
-          >
+          <v-col :cols="cardSize !== '2' ? '10' : '8'" class="centerize flex-column">
             <v-card-title class="dialogTitle pb-0">{{
-              user.name
-            }}</v-card-title>
+    user.name
+  }}</v-card-title>
             <v-card-title class="dialogTitle">{{ user.surname }}</v-card-title>
             <v-card-text class="dialogText">{{ user.title }}</v-card-text>
             <v-card-text>{{ user.bio }}</v-card-text>
@@ -187,7 +129,7 @@ export default {
           image: 'emre_insel.png',
           name: 'Emre',
           surname: 'Insel',
-          title: 'Volunteer Consultant',
+          title: 'Structural Advisor',
           bio: 'Emre has over 15 years of experience in the design of a diverse range of structures and in project management, with projects spanning four continents. He is currently engaged in research at the University of Ottawa in Ontario, Canada, focusing on the application of high ductility cementitious materials under blast loads. This research complements his extensive expertise in structural design and innovative materials, enabling him to offer unique solutions to complex engineering challenges. Emre is a professional civil engineer in California and Oregon. He enjoys biking and hiking.',
           linkedin: '/in/emre-insel-msc-pe-pmp/',
         },
@@ -254,7 +196,16 @@ export default {
           title: 'Structural Engineer',
           bio: 'Ertan is a dynamic civil engineer, graduated from Middle East Technical University in 2023, with a passion for innovation and a dedication to excellence. Currently pursuing a Masters degree at Middle East Technical University, he continues to expand his knowledge and expertise in the field. Known for his boundless energy and enthusiasm, he approaches every project with vigor, striving to incorporate the latest advancements in engineering while maintaining a focus on sustainability and efficiency.Outside of the professional realm, he leads an active lifestyle, finding joy in a variety of hobbies. Whether hitting the gym for an intense workout session, engaging in friendly matches of football and basketball, or exploring new destinations through travel, he embraces life with zest and curiosity. Additionally, he nurtures a deep appreciation for culture and the arts, often spending leisure time wandering through museums and art galleries, drawing inspiration from the creativity of others.',
           linkedin: '/in/ertan-s%C3%BCr%C3%BCc%C3%BC-360ab91b8/',
+        },
+        {
+          image: 'emre_manavoglu.jpeg',
+          name: 'Emre',
+          surname: 'Manavoglu',
+          title: 'Project Engineer',
+          bio: 'Emre is a highly skilled structural engineer with two years of experience in the field. Emre has demonstrated proficiency in tower, platform, rooftop, mount analysis etc., and foundation design, making notable contributions to various projects. Emre\'s academic background includes graduation from the prestigious Middle East Technical University, renowned for its excellence in engineering education. His education has equipped him with a strong theoretical foundation, which he has successfully applied to real-world engineering challenges. In addition to his professional accomplishments, Emre is a licensed chess and football player, showcasing his dedication, strategic thinking, and teamwork skills both on and off the field. These qualities translate seamlessly into his work as an engineer, where he consistently approaches projects with creativity, analytical thinking, and collaboration.',
+          linkedin: '/in/emre-manavo%C4%9Flu/',
         }
+
 
 
       ],
@@ -302,6 +253,7 @@ export default {
   background-image: url('https://g-tower.com/team-background.png');
   background-repeat: no-repeat, no-repeat;
 }
+
 .go-top {
   scroll-margin-top: 0;
 }
