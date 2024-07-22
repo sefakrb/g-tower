@@ -119,7 +119,7 @@ export default {
 
         {
           image: 'nazife_nur_iscan.jpg',
-          name: 'Nazife Nur',
+          name: 'Nazife Mert',
           surname: 'Iscan',
           title: 'Project Engineer',
           bio: 'Nazife is a Project Engineering at G-Tower. She graduated from Süleyman Demirel University, Civil Engineering Department in 2020. She is also studied at Cracow University of Technology for certain amount of period as part of the Erasmus Project in 2019. During the Erasmus Project, She visited 11 countries and experienced different cultures. She developed her organization and communication skills by participating in volunteer and social activities in student clubs. Nazife uses PLS-CADD, PLS-Tower and PLS-Pole. She designs transmission lines and support structures including lattice towers and tubular poles. From time to time, she visits tower factories to support G-Tower’s prototype and fabrication inspection projects. She enjoys travelling and hiking.',
