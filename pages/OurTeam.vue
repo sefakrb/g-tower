@@ -128,7 +128,7 @@ export default {
         {
           image: 'emre_insel.png',
           name: 'Emre',
-          surname: 'Insel',
+          surname: 'Insel, PE, PEng',
           title: 'Structural Advisor',
           bio: 'Emre has over 15 years of experience in the design of a diverse range of structures and in project management, with projects spanning four continents. He is currently engaged in research at the University of Ottawa in Ontario, Canada, focusing on the application of high ductility cementitious materials under blast loads. This research complements his extensive expertise in structural design and innovative materials, enabling him to offer unique solutions to complex engineering challenges. Emre is a professional civil engineer in California and Oregon. He enjoys biking and hiking.',
           linkedin: '/in/emre-insel-msc-pe-pmp/',
@@ -204,9 +204,15 @@ export default {
           title: 'Project Engineer',
           bio: 'Emre is a highly skilled structural engineer with two years of experience in the field. Emre has demonstrated proficiency in tower, platform, rooftop, mount analysis etc., and foundation design, making notable contributions to various projects. Emre\'s academic background includes graduation from the prestigious Middle East Technical University, renowned for its excellence in engineering education. His education has equipped him with a strong theoretical foundation, which he has successfully applied to real-world engineering challenges. In addition to his professional accomplishments, Emre is a licensed chess and football player, showcasing his dedication, strategic thinking, and teamwork skills both on and off the field. These qualities translate seamlessly into his work as an engineer, where he consistently approaches projects with creativity, analytical thinking, and collaboration.',
           linkedin: '/in/emre-manavo%C4%9Flu/',
+        },
+        {
+          image: 'gungor_sahin.png',
+          name: 'Gungor',
+          surname: 'Sahin',
+          title: 'Transmission Line Engineer',
+          bio: 'Gungur is a Transmission Line Engineer at G-Tower. He graduated from the department of Civil Engineering at Middle East Technical University in 2022. Immediately following his graduation, he commenced employment with Mitaş Energy and remained for a duration of two years. Throughout this two-year period, he acquired experience as a transmission line design engineer and developed proficiency in the PLS-Tower and PLS-CADD software programs. Alongside her professional experience, he is also an accomplished ultimate frisbee player.',
+          linkedin: '/in/gungor-sahin/',
         }
-
-
 
       ],
       cardSize: false,
