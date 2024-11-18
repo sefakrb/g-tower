@@ -98,6 +98,23 @@
         >
           <v-icon large style="color: #0a1551">mdi-youtube</v-icon>
         </a>
+        <div class="language-switcher">
+          <span
+            class="lang-link"
+            :class="{ active: $i18n.locale === 'tr' }"
+            @click="changeLanguage('tr')"
+          >
+            tr
+          </span>
+          |
+          <span
+            class="lang-link"
+            :class="{ active: $i18n.locale === 'en' }"
+            @click="changeLanguage('en')"
+          >
+            eng
+          </span>
+        </div>
       </v-col>
     </v-row>
   </v-app-bar>
@@ -105,8 +122,11 @@
 
 <script>
 import vue from 'vue'
+import i18n from '@/i18n'
 const VueScrollTo = require('vue-scrollto')
 vue.use(VueScrollTo)
+
+
 
 export default {
   props: {
@@ -136,6 +156,13 @@ export default {
     }
   },
   methods: {
+    changeLanguage(lang) {
+    if (this.$i18n) {
+      this.$i18n.locale = lang; // Dynamically switch locale
+    } else {
+      console.error('$i18n is not available');
+    }
+    },
     onResize() {
       this.windowWidth = window.innerWidth
       window.innerWidth < 970
