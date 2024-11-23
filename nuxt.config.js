@@ -124,7 +124,22 @@ export default {
     defaultLocale: 'en',
     lazy: false,
     langDir: 'locales',  // Simplified path
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
+    locales: [
+      {
+        code: 'en',
+        file: 'en.json'
+      },
+      {
+        code: 'tr',
+        file: 'tr.json'
+      },
+    ],
     vueI18n: {
       fallbackLocale: 'en',
       messages: {

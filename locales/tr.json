@@ -240,11 +240,11 @@
             "australia": "Avustralya"
         },
         "offices": {
-            "toronto": "Toronto, ON Ofisi",
-            "ankara": "Ankara Ofisi",
-            "santiago": "Santiago Ofisi",
-            "kolkata": "Kalküta Ofisi",
-            "sydney": "Sidney Ofisi"
+            "canada": "Toronto, ON Ofisi",
+            "turkey": "Ankara Ofisi",
+            "chile": "Santiago Ofisi",
+            "india": "Kalküta Ofisi",
+            "australia": "Sidney Ofisi"
         }
     },
     "marketing": {

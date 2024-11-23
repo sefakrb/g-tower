@@ -24,7 +24,7 @@
         <v-card text flat class="mx-auto" max-width="70vw">
           <v-slide-group style="background-color: #f5f5f5" multiple show-arrows>
             <v-slide-item
-              v-for="item in items"
+              v-for="item in menuItems"
               :key="item.route"
               v-slot="{ active }"
             >
@@ -47,11 +47,7 @@
               @click="routePage('contactUs')"
               ><span style="color: white">{{ $t('menu.contactUs') }}</span></v-btn
             >
-            <v-btn-toggle v-model="$i18n.locale" mandatory>
-          <v-btn value="en" small>EN</v-btn>
-          <v-btn value="tr" small>TR</v-btn>
-        </v-btn-toggle>
-
+            <language-switcher />
           </v-slide-group>
         </v-card>
       </v-col>
@@ -103,22 +99,24 @@
           style="text-decoration: none"
           target="_blank"
           href="https://www.youtube.com/@g-tower6904"
+          class="mr-4"
         >
           <v-icon large style="color: #0a1551">mdi-youtube</v-icon>
         </a>
-        <div class="language-switcher">
-          <v-btn-toggle v-model="$i18n.locale" mandatory>
-              <v-btn value="en" small>EN</v-btn>
-              <v-btn value="tr" small>TR</v-btn>
-            </v-btn-toggle>
-        </div>
-      </v-col>
+        <language-switcher class="ml-4" /> <!-- Add margin-left -->      </v-col>
     </v-row>
   </v-app-bar>
 </template>
 
 <script>
+import LanguageSwitcher from './LanguageSwitcher.vue'
+
 export default {
+  name: 'AppBar',
+  components: {
+    LanguageSwitcher
+  },
+
   data() {
     return {
       drawer: false,

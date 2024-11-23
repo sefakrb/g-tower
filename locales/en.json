@@ -245,11 +245,11 @@
       "australia": "Australia"
     },
     "offices": {
-      "toronto": "Toronto, ON Office",
-      "ankara": "Ankara Office",
-      "santiago": "Santiago Office",
-      "kolkata": "Kolkata Office",
-      "sydney": "Sydney Office"
+      "canada": "Toronto, ON Office",
+      "turkey": "Ankara Office",
+      "chile": "Santiago Office",
+      "india": "Kolkata Office",
+      "australia": "Sydney Office"
     }
   },
   "marketing": {
