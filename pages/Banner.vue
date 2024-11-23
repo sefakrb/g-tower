@@ -14,22 +14,21 @@
               }
         "
       >
-        Supporting Future Energy
+        {{ $t('banner.title') }}
       </h1>
-      <v-card-text class="pb-0"
-        >Solution Partner for Renewable Energy <br />
-        Infra-Structures
+      <v-card-text class="pb-0">
+        {{ $t('banner.subtitle1') }}<br />
+        {{ $t('banner.subtitle2') }}
       </v-card-text>
       <v-btn
         color="#43D000"
         class="mt-6"
         @click="routeHome('about_us')"
         style="text-transform: unset !important; color: white"
-        >Who We Are?</v-btn
-      >
+      >{{ $t('banner.whoWeAreButton') }}</v-btn>
       <v-card-text class="pt-0">
-        Independent Tower Solutions Company</v-card-text
-      >
+        {{ $t('banner.companyDescription') }}
+      </v-card-text>
     </v-col>
 
     <v-col cols="12" md="7" class="centerize mt-10">
@@ -43,12 +42,20 @@
       >
         <video class="videoStyle" autoplay playsinline muted loop>
           <source
-            :src="'https://g-tower.com/banner-video.mp4'"
+            :src="$t('banner.videoUrl')"
             type="video/mp4"
           />
-          Your browser does not support HTML video.
+          {{ $t('banner.browserNotSupported') }}
         </video>
       </v-card>
+    </v-col>
+    <v-col class="centerize">
+      <v-img 
+        :src="$t('banner.certificateImage')" 
+        :alt="$t('banner.certificateAlt')" 
+        max-width="300" 
+        max-heigth="300"
+      />
     </v-col>
   </v-row>
 </template>
@@ -89,7 +96,6 @@ export default {
   text-align: center;
   font-size: 2.5rem;
 }
-
 .videoStyle {
   max-height: 90%;
   max-width: 90%;

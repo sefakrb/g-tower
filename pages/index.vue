@@ -104,9 +104,28 @@ export default {
   data() {
     return {
       titleSize: null,
+      currentLocale: 'en'
+    }
+  },
+  watch: {
+    // Watch for language changes
+    '$i18n.locale': {
+      immediate: true,
+      handler(newLocale) {
+        this.currentLocale = newLocale
+        this.updateContent()
+      }
     }
   },
   methods: {
+    updateContent() {
+      // You can trigger any content updates here when language changes
+      console.log('Language changed to:', this.currentLocale)
+      // Example: Force child components to re-render if needed
+      this.$nextTick(() => {
+        this.$forceUpdate()
+      })
+    },
     onResize() {
       if (window.innerWidth < 600) {
         this.titleSize = '15%'
@@ -124,6 +143,10 @@ export default {
         .scrollIntoView({ block: 'start', behavior: 'smooth' })
     },
   },
+  // Optional: Handle initial language
+  created() {
+    this.currentLocale = this.$i18n.locale
+  }
 }
 </script>
 

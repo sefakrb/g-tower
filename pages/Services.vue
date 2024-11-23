@@ -5,21 +5,15 @@
     v-resize="onResize"
   >
     <v-col cols="12" class="d-flex">
-      <v-card-title class="mainTitle">Services</v-card-title>
+      <v-card-title class="mainTitle">{{ $t('services.title') }}</v-card-title>
     </v-col>
 
     <v-row
-      style="
-        width: 100%;
-        display: flex;
-        padding-right: 2rem;
-        padding-left: 2rem;
-        margin: 0;
-      "
+      style="width: 100%; display: flex; padding-right: 2rem; padding-left: 2rem; margin: 0;"
     >
       <v-col
-        v-for="item in items"
-        :key="item.title"
+        v-for="(item, type) in items"
+        :key="type"
         class="ma-0 pa-0"
         md="3"
         sm="6"
@@ -29,37 +23,30 @@
           class="cardStyle"
           color="#F9FBFD"
           :width="isLarge ? '80%' : ''"
-          :height="
-            !appBarSize && isLarge ? '40vh' : appBarSize ? '55vh' : '60vh'
-          "
+          :height="!appBarSize && isLarge ? '40vh' : appBarSize ? '55vh' : '60vh'"
         >
-          <!-- image -->
           <v-card color="#F9FBFD" flat>
             <v-img
               class="mt-10 mb-5"
               max-height="80px"
               contain
-              :src="'https://g-tower.com/services/' + item.image"
+              :src="`https://g-tower.com/services/${item.image}`"
             ></v-img>
           </v-card>
-          <!-- title -->
           <v-card color="#F9FBFD" flat class="centerize" height="20%">
-            <v-card-title class="itemTitle">{{
-              item.title
-            }}</v-card-title></v-card
-          >
-          <!-- detail -->
+            <v-card-title class="itemTitle">{{ $t(`services.${type}.title`) }}</v-card-title>
+          </v-card>
           <v-card style="margin-bottom: 1.5rem" color="#F9FBFD" flat>
             <ul>
               <li
                 class="itemDetail"
-                v-for="detail in item.details"
-                :key="detail"
+                v-for="(detail, index) in $t(`services.${type}.details`)"
+                :key="index"
               >
                 {{ detail }}
               </li>
-            </ul></v-card
-          >
+            </ul>
+          </v-card>
         </v-card>
       </v-col>
     </v-row>
@@ -70,56 +57,20 @@
 export default {
   data() {
     return {
-      items: [
-        {
-          image: 'engineering-img.png',
-          title: 'ENGINEERING',
-          details: [
-            'Transmission Line Design',
-            'Lattice Tower Design',
-            'Tubular Pole Design',
-            'Foundation Design',
-            'Drafting & Detailing',
-            'Cost Estimates',
-          ],
+      items: {
+        engineering: {
+          image: 'engineering-img.png'
         },
-        {
-          image: 'overseas-img.svg',
-          title: 'OVERSEAS FABRICATION \n INSPECTION',
-          details: [
-            'Tower Testing Attendance',
-            'Factory Audit',
-            'Prototype Inspection',
-            'Fabrication Inspection',
-            'Pre-Shipment Inspection',
-            'Factory Acceptance Test',
-          ],
+        overseas: {
+          image: 'overseas-img.svg'
         },
-        {
-          image: 'sourcing-img.svg',
-          title: 'SOURCING',
-          details: [
-            'Lattice Tower Supply',
-            'Tubular Pole Supply',
-            'Tower Accessories Supply',
-            'Composite Member Supply',
-            'After Sales Services',
-            'Project Supply Management',
-          ],
+        sourcing: {
+          image: 'sourcing-img.svg'
         },
-        {
-          image: 'consulting-img.svg',
-          title: 'CONSULTING',
-          details: [
-            'Owner’s Engineer',
-            'Investor’s Engineer',
-            'Business Plans & Strategy',
-            'Expert Witness',
-            'Technical Advisory',
-            'Project Management',
-          ],
-        },
-      ],
+        consulting: {
+          image: 'consulting-img.svg'
+        }
+      },
       appBarSize: false,
       isLarge: false,
     }

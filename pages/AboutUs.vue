@@ -1,19 +1,17 @@
 <template>
   <v-row class="centerize ma-0 pa-0">
     <v-col cols="12" class="d-flex">
-      <v-card-title>About Us</v-card-title>
+      <v-card-title>{{ $t('aboutUs.title') }}</v-card-title>
     </v-col>
     <v-card class="px-5 pb-10 pt-10" width="95vw" color="#F7FBFD">
       <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
-        <span style="color: #43d000; font-weight: 900">G-Tower</span> is a
-        global support structure solutions company.<br />
+        <span style="color: #43d000; font-weight: 900">G-Tower</span>
+        {{ $t('aboutUs.description.part1') }}<br />
         <br />
-        G-Tower’s <span style="font-weight: bold">mission</span> is to be a
-        reliable partner to enhance and add value to the customers’ projects. In
-        line with its mission, G-Tower:
+        {{ $t('aboutUs.description.part2') }}
       </v-card-text>
       <v-card-text style="font-size: 1.2rem">
-        <ul v-for="item in items" :key="item" style="margin-bottom: 0.3rem">
+        <ul v-for="(item, index) in $t('aboutUs.items')" :key="index" style="margin-bottom: 0.3rem">
           <div class="d-flex">
             <v-img
               contain
@@ -28,13 +26,11 @@
         </ul>
       </v-card-text>
       <v-card-text style="font-size: 1rem; font-weight: 500; color: #0e0e0e">
-        G-Tower’s <span style="font-weight: bold">vision</span> is to create a
-        world that is environmentally sustainable and economically viable.
+        {{ $t('aboutUs.vision') }}
       </v-card-text>
     </v-card>
   </v-row>
 </template>
-
 <script>
 export default {
   data() {

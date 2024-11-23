@@ -114,9 +114,41 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
+    '@nuxtjs/i18n',
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr.json' }
+    ],
+    defaultLocale: 'en',
+    lazy: false,
+    langDir: 'locales',  // Simplified path
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
+    locales: [
+      {
+        code: 'en',
+        file: 'en.json'
+      },
+      {
+        code: 'tr',
+        file: 'tr.json'
+      },
+    ],
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: require('./locales/en.json'),
+        tr: require('./locales/tr.json')
+      },
+      silentFallbackWarn: true
+    }
+  },
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',

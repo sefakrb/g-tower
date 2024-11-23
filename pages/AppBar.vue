@@ -15,6 +15,7 @@
           :max-width="windowWidth < 700 ? '130%' : largeScreen ? '90%' : '100%'"
           contain
           :src="'https://g-tower.com/main-logo.svg'"
+          :alt="$t('menu.home')"
         ></v-img>
       </v-col>
 
@@ -23,7 +24,7 @@
         <v-card text flat class="mx-auto" max-width="70vw">
           <v-slide-group style="background-color: #f5f5f5" multiple show-arrows>
             <v-slide-item
-              v-for="item in items"
+              v-for="item in menuItems"
               :key="item.route"
               v-slot="{ active }"
             >
@@ -36,16 +37,17 @@
                 active-class="purple white--text"
                 @click="routePage(item.route)"
               >
-                {{ item.name }}
-              </v-btn>
+              {{ $t(`menu.${item.name}`) }}
+            </v-btn>
             </v-slide-item>
             <v-btn
               color="#43D000"
               class="buttonFont"
               small
               @click="routePage('contactUs')"
-              ><span style="color: white"> Contact Us</span></v-btn
+              ><span style="color: white">{{ $t('menu.contactUs') }}</span></v-btn
             >
+            <language-switcher />
           </v-slide-group>
         </v-card>
       </v-col>
@@ -57,22 +59,24 @@
         :class="largeScreen ? 'largeScreen' : 'centerize'"
       >
         <v-btn
-          v-for="item in items"
+          v-for="item in menuItems"
           :key="item.route"
           depressed
           text
           small
           class="buttonFont"
           @click="routePage(item.route)"
-          >{{ item.name }}</v-btn
+          >
+          {{ $t(`menu.${item.name}`) }}
+          </v-btn
         >
         <v-btn
           color="#43D000"
           class="buttonFont"
           small
           @click="routePage('contactUs')"
-          ><span style="color: white"> Contact Us</span></v-btn
-        >
+          ><span style="color: white">{{ $t('menu.contactUs') }}</span></v-btn
+          >
         <div class="ma-0 pa-0">
           <v-divider
             class="mx-4"
@@ -95,102 +99,68 @@
           style="text-decoration: none"
           target="_blank"
           href="https://www.youtube.com/@g-tower6904"
+          class="mr-4"
         >
           <v-icon large style="color: #0a1551">mdi-youtube</v-icon>
         </a>
-      </v-col>
+        <language-switcher class="ml-4" /> <!-- Add margin-left -->      </v-col>
     </v-row>
   </v-app-bar>
 </template>
 
 <script>
-import vue from 'vue'
-const VueScrollTo = require('vue-scrollto')
-vue.use(VueScrollTo)
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
 export default {
-  props: {
-    marketing: Boolean,
+  name: 'AppBar',
+  components: {
+    LanguageSwitcher
   },
+
   data() {
     return {
-      model: null,
-      appBarSize: false,
-      largeScreen: false,
-      items: [
-        { name: 'Home', route: 'home' },
-        { name: 'Services', route: 'services' },
-        { name: 'Projects', route: 'projects' },
-        { name: 'About Us', route: 'aboutUs' },
-        { name: 'Our Team', route: 'ourTeam' },
-        { name: 'Industries', route: 'industries' },
+      drawer: false,
+      menuItems: [
+        { name: 'home', route: 'home' },
+        { name: 'services', route: 'services' },
+        { name: 'projects', route: 'projects' },
+        { name: 'aboutUs', route: 'aboutUs' },
+        { name: 'ourTeam', route: 'ourTeam' },
+        { name: 'industries', route: 'industries' },
       ],
-      windowWidth: '',
+      windowWidth: 0,
+      largeScreen: false
+    }
+  },
+  computed: {
+    isMobile() {
+      return this.windowWidth < 960
     }
   },
   mounted() {
-    if (!this.marketing && this.$route.params.scroll) {
-      setTimeout(() => {
-        this.routePage(this.$route.params.scroll)
-      }, 500)
-    }
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
   },
   methods: {
     onResize() {
       this.windowWidth = window.innerWidth
-      window.innerWidth < 970
-        ? (this.appBarSize = true)
-        : (this.appBarSize = false)
-      window.innerWidth > 970
-        ? (this.largeScreen = true)
-        : (this.largeScreen = false)
+      this.largeScreen = window.innerWidth > 1264
+      this.appBarSize = window.innerWidth <= 960  // Add this line
     },
-
-    routePage(pageName) {
-      const options = {
-        // container: '#container',
-        easing: 'ease-in',
-        lazy: false,
+    routePage(route) {
+      this.drawer = false
+      this.$vuetify.goTo(`#${route}`, {
+        duration: 300,
         offset: 0,
-        force: true,
-        cancelable: true,
-        onStart: function (element) {
-          // scrolling started
-        },
-        onDone: function (element) {
-          // scrolling is done
-        },
-        onCancel: function () {
-          // scrolling has been interrupted
-        },
-        x: false,
-        y: true,
-      }
-      if (this.marketing) {
-        this.$router.push({ name: 'index', params: { scroll: pageName } })
-        return
-      }
-
-      if (pageName === 'industries') {
-        VueScrollTo.scrollTo(
-          document.getElementById('industries'),
-          1100,
-          options
-        )
-      } else if (pageName === 'contactUs') {
-        VueScrollTo.scrollTo(
-          document.getElementById('contactUs'),
-          1100,
-          options
-        )
-      } else {
-        document
-          .getElementById(pageName)
-          .scrollIntoView({ block: 'start', behavior: 'smooth' })
-      }
-    },
-  },
+        easing: 'easeInOutCubic'
+      })
+    }
+  }
 }
+
 </script>
 
 <style scoped>
