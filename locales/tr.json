@@ -1,11 +1,312 @@
 {
-    "banner": "G-Tower'a Hoş Geldiniz",
-    "services": "Hizmetlerimiz",
-    "projects": "Projelerimiz",
-    "aboutUs": "Hakkımızda",
-    "ourTeam": "Ekibimiz",
-    "industries": "Sektörler",
-    "contactUs": "İletişim",
-    "footer": "© 2023 G-Tower, Tüm Hakları Saklıdır.",
-    "home": "Ana Sayfa"
+    "menu": {
+        "home": "Ana Sayfa",
+        "services": "Hizmetler",
+        "projects": "Projeler",
+        "aboutUs": "Hakkımızda",
+        "contactUs": "İletişim",
+        "ourTeam": "Ekibimiz",
+        "industries": "Sektörler"
+    },
+    "banner": {
+        "title": "Geleceğin Enerjisini Destekliyoruz",
+        "subtitle1": "Yenilenebilir Enerji için Çözüm Ortağı",
+        "subtitle2": "Altyapılar",
+        "whoWeAreButton": "Biz Kimiz?",
+        "companyDescription": "Bağımsız Kule Çözümleri Şirketi",
+        "videoUrl": "https://g-tower.com/banner-video.mp4",
+        "browserNotSupported": "Tarayıcınız HTML video'yu desteklemiyor.",
+        "certificateImage": "https://g-tower.com/g-tower_certificate.png",
+        "certificateAlt": "g-tower sertifikaları"
+    },
+    "aboutUs": {
+        "title": "Hakkımızda",
+        "description": {
+            "part1": "G-Tower, global destek yapıları çözümleri şirketidir.",
+            "part2": "G-Tower'ın misyonu, müşterilerin projelerine değer katmak ve geliştirmek için güvenilir bir ortak olmaktır. Misyonu doğrultusunda G-Tower:"
+        },
+        "items": [
+            "Her müşteri ve projeyi kendine özgü ele alır.",
+            "Beklenenden fazlasını sunar.",
+            "Kaliteli mühendislik hizmeti sunmaya çalışır.",
+            "Müşterilerinin ihtiyaçlarını karşılamak için güvenilir, kapsamlı hizmetler sunmayı taahhüt eder.",
+            "Temiz enerjiyi destekler.",
+            "Teknik sorunlara maliyet-etkin çözümler önerir.",
+            "Yerel işletmeleri destekler."
+        ],
+        "vision": "G-Tower'ın vizyonu, çevresel açıdan sürdürülebilir ve ekonomik açıdan uygulanabilir bir dünya yaratmaktır."
+    },
+    "projects": {
+        "title": "Projeler",
+        "details": {
+            "client": "Müşteri",
+            "owner": "Sahibi",
+            "projectInfo": "Proje Bilgisi",
+            "ourScope": "Hizmet Kapsamımız"
+        },
+        "items": [
+            {
+                "image": "wataynikaneyap.png",
+                "title": "Wataynikaneyap Güç Projesi",
+                "client": "Fortis Ontario",
+                "info": "300 km (186 mil) – 230kV S/C \n1500 km (930 mil) – 115/44/25kV S/C",
+                "scope": "İletim Hattı Mühendislik ve Danışmanlık Hizmeti\n30% Ön Plan ve Profil Çizimlerinin hazırlanması."
+            },
+            {
+                "image": "east_west_tie_transmission.jpg",
+                "title": "East-West Tie İletim Hattı Projesi",
+                "owner": "NextBridge (NextEra & EnBridge Ortak Girişimi)",
+                "info": "450 km (280 mil) – 230kV D/C \nProje miktarı 20.000 ton (~44.000.000 lbs).",
+                "scope": "Kafes kule yapıların yetkili mühendisi olarak hizmet verilmesi.\nTürkiye'de kafes kule yapıların denizaşırı üretim denetimi."
+            },
+            {
+                "image": "samson.jpg",
+                "title": "Samson 345kV İletim Hattı Projesi",
+                "client": "RES Americas",
+                "info": "Saha koşulları nedeniyle boru direklerinin kafes kulelere dönüştürülmesi \n29 kule – 345kV D/C \nProje miktarı 500 ton (~1.100.000 lbs).",
+                "scope": "100% IFC seviyesinde çizim hazırlığı ve kafes kule yapıların yetkili mühendisi olarak hizmet verilmesi.\nTürkiye'de kafes kule yapıların denizaşırı üretim denetimi. \nTürkiye'de kafes kule yapıların prototip montaj denetimi."
+            },
+            {
+                "image": "overland_transmission.png",
+                "title": "Pawnee Express İletim Hattı Projesi",
+                "owner": "ABD'den bir Yenilenebilir Enerji Projesi Geliştiricisi",
+                "info": "128 km (80 mil) – 345kV S/C & D/C",
+                "scope": "İletim Hattı Mühendislik ve Danışmanlık Hizmeti\n30% Ön Plan ve Profil Çizimlerinin hazırlanması."
+            },
+            {
+                "image": "centella.jpg",
+                "title": "Centella İletim Hattı Projesi",
+                "client": "Ferrovial S.A.",
+                "info": "250 km (155 mil) – 230kV D/C\nProje miktarı 8.000 ton (~17.637.000 lbs).",
+                "scope": "Türkiye'de kafes kule yapıların denizaşırı üretim denetimi. \nTürkiye'de kafes kule yapıların prototip montaj denetimi."
+            },
+            {
+                "image": "steel_pole.png",
+                "title": "144kV & 240kV Çelik Direk Tedarik Projesi",
+                "owner": "Alberta İletim Şirketi (ATCO)",
+                "info": "Toplamda 90 boru direk yapısı. \nProje miktarı 500 ton (~1.100.000 lbs).",
+                "scope": "Hindistan'da boru direk yapıların denizaşırı üretim denetimi. \nHindistan'da boru direk yapıların prototip montaj denetimi."
+            },
+            {
+                "image": "expert_witness.jpg",
+                "title": "Uzman Tanıklık Projesi",
+                "client": "Stites & Harbison PLLC",
+                "info": "Kentucky'deki bir iletim hattı önerisi için uzman tanıklık.",
+                "scope": "Arazi sahipleri adına mühendislik danışmanlığı ve uzman tanıklık hizmetleri."
+            },
+            {
+                "image": "solar_racking.png",
+                "title": "Solar Montaj Yapıları Tedarik Projesi",
+                "client": "InterPlus",
+                "info": "Orta Doğu'daki bir güneş enerjisi çiftliği için sabit güneş montaj yapıları. \nProje miktarı 2.400 ton (~5.300.000 lbs).",
+                "scope": "Türkiye'de galvanizli çelik montaj yapıların denetimi."
+            },
+            {
+                "image": "north_america_solar.png",
+                "title": "Kuzey Amerika Solar Aydınlatma",
+                "info": "Kanada ve ABD genelinde 1000'den fazla site tamamlandı.",
+                "scope": "Mühendislik aydınlatma direkleri, güneş çerçeveleri, yapısal temel dolapları, ışık kolları ve aksesuarların tedariki."
+            },
+            {
+                "image": "nigeria.png",
+                "title": "Nijerya Solar Telekom Projeleri",
+                "info": "Nijerya'da 400 Kırsal Telekomünikasyon kule yapısı.",
+                "scope": "Mühendislik telekom direkleri, güneş destek çerçeveleri, batarya dolabı ve aksesuarların tedariki."
+            },
+            {
+                "image": "steel_moduler_wind.png",
+                "title": "Çelik Modüler Rüzgar Kulesi Mühendislik Çalışması",
+                "client": "NorthStar Wind",
+                "info": "ABD'de modüler çelik rüzgar kulesi konsept tasarımı.",
+                "scope": "Şirketler arasında teknoloji ve bilgi transferi konusunda mühendislik danışmanlığı ve yardım."
+            },
+            {
+                "image": "wind_tower1.png",
+                "title": "Rüzgar Kulesi ve Temel Tasarımı",
+                "client": "Çeşitli global müşteri portföyleri.",
+                "scope": "Temel tasarımı, kule tasarımı, mevcut yapı değerlendirmesi,\nkapsama projeleri, platform ve tırmanma aksesuarları için mühendislik danışmanlığı."
+            }
+        ]
+    },
+    "industries": {
+        "title": "Sektörler",
+        "transmission": "İletim",
+        "distribution": "Dağıtım",
+        "substation": "Trafo Merkezi",
+        "onshoreWind": "Kara Rüzgar",
+        "offshoreWind": "Deniz Rüzgar",
+        "solar": "Güneş",
+        "telecom": "Telekomünikasyon",
+        "lighting": "Aydınlatma"
+    },
+    "services": {
+        "title": "Hizmetler",
+        "engineering": {
+            "title": "MÜHENDİSLİK",
+            "details": [
+                "İletim Hattı Tasarımı",
+                "Kafes Kule Tasarımı",
+                "Boru Direk Tasarımı",
+                "Temel Tasarımı",
+                "Çizim ve Detaylandırma",
+                "Maliyet Tahminleri"
+            ]
+        },
+        "overseas": {
+            "title": "YURTDIŞI ÜRETİM\nDENETİMİ",
+            "details": [
+                "Kule Test Katılımı",
+                "Fabrika Denetimi",
+                "Prototip Denetimi",
+                "Üretim Denetimi",
+                "Sevkiyat Öncesi Denetim",
+                "Fabrika Kabul Testi"
+            ]
+        },
+        "sourcing": {
+            "title": "TEDARİK",
+            "details": [
+                "Kafes Kule Tedariği",
+                "Boru Direk Tedariği",
+                "Kule Aksesuarları Tedariği",
+                "Kompozit Eleman Tedariği",
+                "Satış Sonrası Hizmetler",
+                "Proje Tedarik Yönetimi"
+            ]
+        },
+        "consulting": {
+            "title": "DANIŞMANLIK",
+            "details": [
+                "İşveren Mühendisliği",
+                "Yatırımcı Mühendisliği",
+                "İş Planları ve Stratejisi",
+                "Uzman Tanıklığı",
+                "Teknik Danışmanlık",
+                "Proje Yönetimi"
+            ]
+        }
+    },
+    "ourTeam": {
+        "title": "Ekibimiz",
+        "more": "Detay",
+        "positions": {
+            "president": "Başkan",
+            "vicePresident": "Başkan Yardımcısı",
+            "qualityManager": "Kalite Müdürü",
+            "regionalManager": "Bölge Müdürü",
+            "commercialManager": "Ticaret Müdürü",
+            "seniorQualityEngineer": "Kıdemli Kalite Mühendisi",
+            "projectEngineer": "Proje Mühendisi",
+            "structuralAdvisor": "Yapı Danışmanı",
+            "strategicPartner": "Stratejik Ortak",
+            "qualityInspector": "Kalite Denetçisi",
+            "mechanicalEngineer": "Makine Mühendisi",
+            "designEngineer": "Tasarım Mühendisi",
+            "qualityEngineer": "Kalite Mühendisi",
+            "structuralEngineer": "Yapı Mühendisi",
+            "transmissionLineEngineer": "İletim Hattı Mühendisi"
+        },
+        "bios": {
+            "gunesDemirbas": "Güneş, 6MW'a kadar rüzgar kuleleri, 600kV'a kadar elektrik iletim ve dağıtım kuleleri, telekomünikasyon kuleleri ve aydınlatma direkleri dahil olmak üzere kule işinde yaklaşık 20 yıllık mühendislik ve proje yönetimi deneyimine sahiptir. G-Tower'ı kurmadan önce, tanınmış kule üreticileri Valmont Industries ve Mitas Enerji'de çalıştı. Orta Doğu Teknik Üniversitesi'nden İnşaat Mühendisliği alanında Yüksek Lisans ve Lisans derecelerine sahiptir. Colorado, Texas ve New York'ta lisanslı Profesyonel Mühendis olup NCEES kaydına sahiptir. Seyahat etmekten, bisiklet sürmekten, yüzmekten ve doğa yürüyüşünden hoşlanır.",
+            "aliGulgeze": "Ali, çeşitli yapısal sistemlerin yapısal tasarımında deneyimli olup, çeşitli projelerde sözleşme yönetimi ve maliyet tahmin çalışmalarında deneyime sahiptir. Ali, farklı ölçeklerdeki projelerde yer almış ve teknik bilgisini ekonomik ve işlevsel çözümlerle yeni tasarım konseptleri oluşturmak için yorumlamıştır. Şu anda şirketin uluslararası çalışmaları için büyük iletim hattı projelerini ve yurtdışı personelini yönetmektedir. Ali, Kanada'nın Ontario, Manitoba, Alberta ve Saskatchewan eyaletlerinde kayıtlı Profesyonel Mühendis olup Western Ontario Üniversitesi'nden Yüksek Mühendislik derecesine sahiptir. Kodlama yapmaktan hoşlanır, yeni teknolojileri keşfetmeyi ve yelken yapmayı sever.",
+            "sabrinaAgeca": "Sabrina, enerji sektöründe Proje Müdürü ve Kaynak Mühendisi olarak yaklaşık 20 yıllık deneyime sahiptir. CWB (Kanada Kaynak Bürosu) tarafından sertifikalandırılmış Seviye I Kaynak Denetçisidir. Kaynak yönetim sistemleri (EN 1090-2/ISO 3834-2) ve entegre kalite/çevre/güvenlik (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) yönetim sistemlerinde deneyimlidir. Geçmişte saygın kule üreticileri Mitas, Valmont ve Şa-Ra'da çalıştı. Dokuz Eylül Üniversitesi'nden Mühendislik alanında lisans derecesine sahiptir. Orta Doğu Teknik Üniversitesi ve Avrupa Kaynak Federasyonu'nda birçok Kaynak Mühendisliği sertifika programını tamamladı. Resim yapmaktan, seramikten, doğa yürüyüşünden ve bisiklet sürmekten hoşlanır.",
+            "mahirErgin": "İstanbul Kabataş Lisesi'nden mezun olduktan sonra Matematik okudu. Matematik alanında Yüksek Lisans ve Lisans derecelerine sahiptir. Rüzgar enerjisine olan tutkusu ve ilgisi nedeniyle 2018'de G-Tower'a katılmaya karar verdi. Ankara, Türkiye'de görev yapmaktadır. Türkiye'de üretilen tüm kule ve direk ürünlerinin yurtdışına sevk edilmeden önceki kalite kontrolünden sorumludur. Buna ek olarak Orta Doğu'daki iş geliştirme faaliyetlerini desteklemektedir. Futbol izlemekten ve iki çocuğu Can & Umut Efe ile vakit geçirmekten hoşlanır.",
+            "selmaHaciraifoglu": "Selma, Enerji, Telekomünikasyon ve Aydınlatma sektöründe İthalat-İhracat ve Lojistik Uzmanı olarak ve aynı zamanda Proje Yönetiminde 20 yılı aşkın deneyim sunan dinamik ve üstün yönetim profesyonelidir. Kule ve direk üreticisi Mitas, Mitas-Valmont ortak girişimi ve inşaat şirketi Emta'da çalıştı. Hacettepe Üniversitesi'nden İşletme lisans derecesine sahiptir. Dış ticaret, finans, tedarik zinciri ve lojistik yönetimi, sözleşme yönetimi vb. alanlarda sertifika programlarını tamamladı. Farklı milliyetlerden insanlarla etkili iletişim kurma ve çok kültürlü bir ortamda çalışma konusunda kanıtlanmış yeteneğe sahiptir. Kayak yapmayı sever ve seyahat etmekten hoşlanır.",
+            "alperYavuzer": "Alper, makine mühendisliği geçmişine sahip G-Tower'da Kıdemli Kalite Mühendisidir. 15+ yıllık inşaat, çelik ve kalite kontrol deneyimine sahiptir. 2019'da G-Tower'a katıldı ve altyapı projeleri için üretim denetimi ve kalite kontrol sürecinden sorumludur. G-Tower'ın yurtdışındaki kafes kule fabrika denetim çalışmalarını yönetmekte ve yönetmektedir. Alper seyahat etmeyi ve farklı kültürleri keşfetmeyi sever. Memleketi Zonguldak'ta Karadeniz kıyısında balık tutmaktan keyif alır.",
+            "ensarDuran": "Ensar, G-Tower'da Proje Mühendisidir. Abdullah Gül Üniversitesi'nden (AGÜ) İnşaat Mühendisliği derecesine sahiptir. Michigan, MI'daki bir eğitim kurumundan İngilizce Dil sertifikası almıştır. Çeşitli uluslararası projelerde yer almış olup, enerji iletim hatları ve telekomünikasyon yapılarının mühendislik tasarımı ve analizinde deneyim sahibidir. G-Tower'ın Güney Amerika Pazarı için Santiago, Şili'deki iş geliştirme çalışmalarını yönetmektedir. Ensar profesyonel bir snowboardcudur ve üniversitesini çeşitli ulusal turnuvalarda temsil etmiştir. Ayrıca doğa yürüyüşü, tırmanış ve kamp gibi diğer açık hava sporlarına ilgi duymaktadır.",
+            "nazifeMert": "Nazife, G-Tower'da Proje Mühendisidir. 2020 yılında Süleyman Demirel Üniversitesi İnşaat Mühendisliği Bölümü'nden mezun oldu. 2019 yılında Erasmus Projesi kapsamında Cracow Teknoloji Üniversitesi'nde belirli bir süre eğitim gördü. Erasmus Projesi süresince 11 ülkeyi ziyaret etti ve farklı kültürleri deneyimledi. Öğrenci kulüplerinde gönüllü ve sosyal aktivitelere katılarak organizasyon ve iletişim becerilerini geliştirdi. Nazife, PLS-CADD, PLS-Tower ve PLS-Pole programlarını kullanmaktadır. Kafes kuleler ve boru direkler dahil olmak üzere iletim hatları ve destek yapılarının tasarımını yapmaktadır. Zaman zaman G-Tower'ın prototip ve üretim denetim projelerini desteklemek için kule fabrikalarını ziyaret etmektedir. Seyahat etmekten ve doğa yürüyüşünden hoşlanır.",
+            "emreInsel": "Emre, dört kıtaya yayılan projeleriyle çeşitli yapıların tasarımı ve proje yönetiminde 15 yılı aşkın deneyime sahiptir. Şu anda Ontario, Kanada'daki Ottawa Üniversitesi'nde, yüksek süneklikli çimentolu malzemelerin patlama yükleri altındaki uygulamasına odaklanan araştırmalarda bulunmaktadır. Bu araştırma, yapısal tasarım ve yenilikçi malzemeler konusundaki kapsamlı uzmanlığını tamamlayarak, karmaşık mühendislik zorluklarına benzersiz çözümler sunmasını sağlamaktadır. Emre, Kaliforniya ve Oregon'da profesyonel inşaat mühendisidir. Bisiklete binmekten ve doğa yürüyüşünden hoşlanır.",
+            "mehmetGurdin": "Mehmet, Konya, Türkiye merkezli IMG Energy'nin sahibidir. IMG Energy, G-Tower'ın EMEA (Avrupa - Orta Doğu - Afrika) Pazarı'ndaki koludur. Mehmet, EMEA Pazarı'nda enerji, telekom ve aydınlatma altyapı projelerinin kule/direk kısmının yönetimi, tedariki ve mühendisliğinde yaklaşık 25 yıllık deneyime sahiptir. Orta Doğu Teknik Üniversitesi'nden İnşaat Mühendisliği alanında Yüksek Lisans ve Lisans derecelerine sahiptir. Basketbol oynamaktan ve izlemekten hoşlanır.",
+            "akinVeske": "Akın, Orta Doğu Teknik Üniversitesi'nde İnşaat Mühendisliği öğrencisidir. G-Tower'ın kule prototipleme, seri üretim, sevkiyat öncesi ve fabrika kabul testi dahil olmak üzere denetim hizmetlerini desteklemektedir. Buna ek olarak Akın, Türkiye'deki müşterilerimizin kule testlerine katılmaktadır. Gençliği ve dinamizmi G-Tower Ekibine çok pozitif enerji katmaktadır. Nazik yapısına rağmen, dövüş sanatlarının büyük bir hayranıdır. Karate Kid en sevdiği film serilerinden biridir. Hayali Afrika'ya taşınmak ve G-Tower'ın Afrika'daki işlerini genişletmek için orada bir varlık oluşturmaktır.",
+            "serhatBoztogan": "Serhat, Orta Doğu Teknik Üniversitesi'nden mezun bir makine mühendisidir. Üniversitesinin Formula Student takımında çalıştı ve inşa ettikleri ilk elektrikli Formula aracının teknik takım kaptanlığını yaptı. Yapısal ve mekanik tasarım, yapısal analiz, mekanik titreşimler konularıyla ilgilenmekte ve bu konularda kendini sürekli geliştirmeyi hedeflemektedir. Yenilenebilir enerji, havacılık ve otomotiv teknolojilerindeki gelişmeleri takip etmektedir. Hobileri arasında dolma kalem koleksiyonu yapmak, deri işçiliği ve yemek yapmak bulunmaktadır. G-Tower ile birlikte dikey eksenli rüzgar türbinlerini daha verimli hale getirmeyi ve dünya çapında daha yaygın kullanılmasını hedeflemektedir.",
+            "alperenEroglu": "Alperen, G-Tower'da tasarım mühendisidir. 2019 yılında Orta Doğu Teknik Üniversitesi İnşaat Mühendisliği Bölümü'nden onur öğrencisi olarak mezun oldu. Mezuniyetinin ardından özel sektörde tasarım mühendisi olarak çalışmaya başladı ve yapısal ve geoteknik mühendislik dahil olmak üzere inşaat mühendisliği disiplinlerinde çeşitli projelerde deneyim kazandı. Bu projeler sayesinde tasarım yazılımlarının kullanımı, şartname ve kodların uygulanması, mühendislik tasarım yaklaşımlarının gerçekleştirilmesi ve zaman-proje yönetimi becerileri konusunda kendini geliştirdi. Son yıllarda öncelikli olarak aydınlatma, izleme, enerji iletimi ve telekomünikasyon amaçlı kullanılan poligonal direklerin ve kafes kulelerin yapısal tasarım ve analizine odaklanmıştır. Profesyonel kariyerinin dışında yüzme, dalış, yelken, kamp, yemek yapmak ve bilimsel ve tarihi belgeselleri takip etmekten hoşlanır.",
+            "sedaYuksel": "Seda, G-Tower'da Kalite Mühendisidir. 2018 yılında İskenderun Teknik Üniversitesi Makine Mühendisliği Bölümü'nden mezun oldu. Üretim denetimi, fabrika kabul testi, prototip denetimi dahil olmak üzere G-Tower'ın denetim hizmetlerini desteklemektedir. Seyahat etmekten, yeni yerler keşfetmekten, resim yapmaktan ve doğa yürüyüşünden hoşlanır.",
+            "ekremTargitay": "Ekrem, Manisa Celal Bayar Üniversitesi'nde Metalurji ve Malzeme Mühendisliği eğitimi görmektedir. Mezuniyet projesinde Türk havacılık endüstrisi tarafından desteklenen 'Alüminyum/grafit tozu katkılı hibrit kompozitler' üzerinde çalışmaktadır. Metal malzemelerin özellikleri ve şekillendirme süreçleriyle ilgilenmektedir. G-Tower'da üretim denetimi, fabrika kabul testleri ve kalite kontrol süreçlerinde görev almaktadır. Seyahat etmekten ve yüzmekten hoşlanır. Kendine güvenen bir masa tenisi oyuncusudur.",
+            "gozdeIsik": "Gözde, G-Tower'da Yapı Mühendisidir. 2022 yılında Atılım Üniversitesi İnşaat Mühendisliği Fakültesi'nden mezun oldu ve İstanbul Teknik Üniversitesi'nde proje yönetimi eğitimi aldı. Okul stajlarını Mitek A.Ş. çelik imalat montaj ve Kalyon Temelli güneş enerjisi fabrikasında tamamlayarak çelik yapı imalatı ve yenilenebilir enerji alanlarında pratik deneyim kazandı. Mezuniyetinin ardından Ural Mühendislik'te bir yıldan fazla üstyapı çelik yapı projelerinde çalıştı. Yüksel Proje'de kısa bir süre çalıştıktan sonra G-Tower ekibine katıldı. Sap2000, IdeaStatiCa, AutoCAD ve Tekla gibi yazılımları kullanarak çelik yapı projelerini analiz etme ve statik hesaplamalar yapma yeteneğine sahiptir. İngilizce ve Rusça bilgisiyle çok kültürlü ortamlarda etkin işbirliği yapabilmektedir. Profesyonel kariyerinin dışında fitness, pilates, yoga, buz pateni ve seyahat etmekten hoşlanır.",
+            "ertanSurucu": "Ertan, 2023 yılında Orta Doğu Teknik Üniversitesi'nden mezun olmuş, yenilikçilik tutkusu ve mükemmeliyetçiliğe olan bağlılığı ile dinamik bir inşaat mühendisidir. Şu anda Orta Doğu Teknik Üniversitesi'nde Yüksek Lisans eğitimine devam ederek alandaki bilgi ve uzmanlığını genişletmektedir. Sınırsız enerjisi ve coşkusuyla tanınan Ertan, her projeye büyük bir şevkle yaklaşarak, sürdürülebilirlik ve verimliliğe odaklanırken mühendislikteki en son gelişmeleri uygulamaya çalışmaktadır. Profesyonel alanın dışında aktif bir yaşam tarzı sürdürmekte, çeşitli hobilerde keyif bulmaktadır. İster yoğun bir spor salonu seansı, ister dostane futbol ve basketbol maçları, isterse seyahat ederek yeni destinasyonları keşfetmek olsun, hayatı coşku ve merakla kucaklamaktadır. Ayrıca kültür ve sanata derin bir ilgi duymakta, boş zamanlarını müze ve sanat galerilerinde dolaşarak geçirmekte ve başkalarının yaratıcılığından ilham almaktadır.",
+            "emreManavoglu": "Emre, alanında iki yıllık deneyime sahip yüksek vasıflı bir yapı mühendisidir. Emre, kule, platform, çatı, montaj analizi vb. ve temel tasarımında uzmanlık göstermiş, çeşitli projelere önemli katkılarda bulunmuştur. Emre'nin akademik geçmişi, mühendislik eğitimindeki mükemmelliği ile tanınan prestijli Orta Doğu Teknik Üniversitesi'nden mezuniyetini içermektedir. Eğitimi ona güçlü bir teorik temel sağlamış ve bunu gerçek dünya mühendislik zorluklarına başarıyla uygulamıştır. Profesyonel başarılarının yanı sıra, Emre lisanslı satranç ve futbol oyuncusudur, saha içinde ve dışında adanmışlığını, stratejik düşünme ve takım çalışması becerilerini sergilemektedir. Bu özellikler, projelere yaratıcılık, analitik düşünme ve işbirliği ile yaklaştığı mühendislik çalışmalarına kusursuz bir şekilde yansımaktadır.",
+            "gungorSahin": "Güngör, G-Tower'da İletim Hattı Mühendisidir. 2022 yılında Orta Doğu Teknik Üniversitesi İnşaat Mühendisliği bölümünden mezun oldu. Mezuniyetinin hemen ardından Mitaş Enerji'de çalışmaya başladı ve iki yıl boyunca burada görev yaptı. Bu iki yıllık süre boyunca iletim hattı tasarım mühendisi olarak deneyim kazandı ve PLS-Tower ve PLS-CADD yazılım programlarında uzmanlık geliştirdi. Profesyonel deneyiminin yanı sıra başarılı bir ultimate frizbi oyuncusudur."
+        }
+    },
+    "contactUs": {
+        "title": "İletişim",
+        "usHeadquarter": "Amerika Merkez Ofisi",
+        "usAddress": "4571 Broadway St, Boulder, CO 80304",
+        "regions": {
+            "canada": "Kanada",
+            "turkey": "Türkiye",
+            "chile": "Şili",
+            "india": "Hindistan",
+            "australia": "Avustralya"
+        },
+        "offices": {
+            "toronto": "Toronto, ON Ofisi",
+            "ankara": "Ankara Ofisi",
+            "santiago": "Santiago Ofisi",
+            "kolkata": "Kalküta Ofisi",
+            "sydney": "Sidney Ofisi"
+        }
+    },
+    "marketing": {
+        "firstImage": "https://g-tower.com/marketing/first-image.jpg",
+        "mainTitle": "REFERANSLAR & SUNUMLAR",
+        "whoWeAre": {
+            "question": "Biz kimiz?",
+            "answer": "G-Tower, enerji altyapı projelerinin kule ve direk kısmına odaklanan bir mühendislik ve denetim hizmetleri şirketidir"
+        },
+        "whatWeDo": {
+            "question": "Ne yapıyoruz?",
+            "services1": [
+                "Mühendislik Hizmetleri",
+                "Danışmanlık Hizmetleri",
+                "Denetim Hizmetleri"
+            ],
+            "services2": [
+                "Üretim Denetimi",
+                "Prototip Denetimi",
+                "Üçüncü Taraf Denetimi"
+            ]
+        },
+        "learnMore": "Daha Fazla Bilgi",
+        "projects": [
+            {
+                "id": "second-project",
+                "title": "DENETİM BROŞÜRÜ",
+                "description": "Üç ülkedeki deneyimli, kurum içi ve yetenekli personelimizle Güçlü Enerjiyi Destekliyoruz",
+                "image": "https://g-tower.com/marketing/second-image.png",
+                "link": "https://g-tower.com/wp-content/uploads/2022/09/G-Tower_Inspection_Flyer.pdf"
+            },
+            {
+                "id": "third-project",
+                "title": "NEDEN KK/KG ORTAĞINIZ OLARAK G-TOWER?",
+                "image": "https://g-tower.com/marketing/third-image.png",
+                "link": "https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf"
+            },
+            {
+                "id": "fourth-project",
+                "title": "MÜHENDİSLİK HİZMETLERİ BROŞÜRÜ",
+                "description": "G-Tower Mühendisleri, çeşitli sektörler için özelleştirilmiş mühendislik çözümleri sunar. Enerji iletimi, rüzgar enerjisi, güneş enerjisi, telekomünikasyon ve aydınlatma gibi.",
+                "image": "https://g-tower.com/marketing/fourth-image.jpg",
+                "link": "https://g-tower.com/wp-content/uploads/2022/09/G-Tower-Engineering-Services-Flyer.jpg"
+            },
+            {
+                "id": "fifth-project",
+                "title": "YURTDIŞI ÜRETİM DENETİM HİZMETLERİ",
+                "image": "https://g-tower.com/marketing/fifth-image.jpg",
+                "link": "https://g-tower.com/marketing/20240430_G-Tower_Overseas_Fabrication_Inspection_Services.pdf"
+            },
+            {
+                "id": "sixth-project",
+                "title": "MÜHENDİSLİK HİZMETLERİ",
+                "description": "G-Tower bağımsız bir kule çözümleri şirketidir. G-Tower, yenilenebilir enerji altyapı projelerine mühendislik hizmetleri sağlar.",
+                "image": "https://g-tower.com/marketing/sixth-image.jpg",
+                "link": "https://g-tower.com/marketing/20240430_G-Tower_Engineering_Services.pdf"
+            }
+        ],
+        "socialLinks": {
+            "linkedin": "https://www.linkedin.com/company/g-tower/",
+            "youtube": "https://www.youtube.com/@g-tower6904"
+        },
+        "copyright": "[© 2023] G-Tower, Tüm Hakları Saklıdır."
+    }
 }

@@ -1,12 +1,317 @@
 {
-    "banner": "Welcome to G-Tower",
-    "services": "Our Services",
-    "projects": "Our Projects",
+  "menu": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
     "aboutUs": "About Us",
     "ourTeam": "Our Team",
     "industries": "Industries",
-    "contactUs": "Contact Us",
-    "footer": "© 2023 G-Tower, All Rights Reserved.",
-    "home": "Home"      
+    "contactUs": "Contact Us"
+  },
+  "banner": {
+    "title": "Supporting Future Energy",
+    "subtitle1": "Solution Partner for Renewable Energy",
+    "subtitle2": "Infra-Structures",
+    "whoWeAreButton": "Who We Are?",
+    "companyDescription": "Independent Tower Solutions Company",
+    "videoUrl": "https://g-tower.com/banner-video.mp4",
+    "browserNotSupported": "Your browser does not support HTML video.",
+    "certificateImage": "https://g-tower.com/g-tower_certificate.png",
+    "certificateAlt": "g-tower certificates"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": {
+      "part1": "G-Tower is a global support structure solutions company.",
+      "part2": "G-Tower's mission is to be a reliable partner to enhance and add value to the customers' projects. In line with its mission, G-Tower:"
+    },
+    "items": [
+      "Treats each customer and project as its own.",
+      "Delivers more than what is expected.",
+      "Strives to provide quality engineering.",
+      "Commits delivering reliable, comprehensive services to meet the needs of its customers.",
+      "Supports clean energy.",
+      "Proposes cost-effective solutions to technical issues.",
+      "Supports local businesses."
+    ],
+    "vision": "G-Tower's vision is to create a world that is environmentally sustainable and economically viable."
+  },
+  "projects": {
+    "title": "Projects",
+    "details": {
+      "client": "Client",
+      "owner": "Owner",
+      "projectInfo": "Project Info",
+      "ourScope": "Our Scope"
+    },
+    "items": [
+      {
+        "image": "wataynikaneyap.png",
+        "title": "Wataynikaneyap Power Project",
+        "client": "Fortis Ontario",
+        "info": "300 km (186 miles) – 230kV S/C \n1500 km (930 miles) – 115/44/25kV S/C",
+        "scope": "Transmission Line Engineering & Consultancy Service\non the preparation of 30% Preliminary Plan & Profile Drawings."
+      },
+      {
+        "image": "east_west_tie_transmission.jpg",
+        "title": "East-West Tie Transmission Line Project",
+        "owner": "NextBridge (NextEra & EnBridge Joint Venture)",
+        "info": "450 km (280 miles) – 230kV D/C \nQuantity of the project is 20,000 tons (~44,000,000 lbs).",
+        "scope": "Engineer of Record for the lattice tower structures.\nInspection of overseas fabrication of the lattice tower structures in Turkey."
+      },
+      {
+        "image": "samson.jpg",
+        "title": "Samson 345kV Transmission Line Project",
+        "client": "RES Americas",
+        "info": "Conversion of tubular poles to lattice towers due to site conditions \n29 towers – 345kV D/C \nQuantity of project 500 tons (~1,100,000 lbs).",
+        "scope": "100% IFC level drawing preparation and acted as Engineer of Record for the lattice tower structures.\nInspection of overseas fabrication of the lattice tower structures in Turkey. \nPrototype fitting inspections of the lattice tower structures in Turkey."
+      },
+      {
+        "image": "overland_transmission.png",
+        "title": "Pawnee Express Transmission Line Project",
+        "owner": "A Renewable Energy Project Developer from U.S.A",
+        "info": "128 km (80 miles) – 345kV S/C & D/C",
+        "scope": "Transmission Line Engineering & Consultancy Service\non the preparation of 30% Preliminary Plan & Profile Drawings."
+      },
+      {
+        "image": "centella.jpg",
+        "title": "Centella Transmission Line Project",
+        "client": "Ferrovial S.A.",
+        "info": "250 km (155 miles) – 230kV D/C\nQuantity of the project is 8,000 tons (~17,637,000 lbs).",
+        "scope": "Inspection of overseas fabrication of the lattice tower structures in Turkey. \nPrototype fitting inspections of the lattice tower structures in Turkey."
+      },
+      {
+        "image": "steel_pole.png",
+        "title": "144kV & 240kV Steel Pole Supply Project",
+        "owner": "Alberta Transmission Company (ATCO)",
+        "info": "Total of 90 tubular pole structures. \nQuantity of the project is 500 tons (~1,100,000 lbs).",
+        "scope": "Inspection of overseas fabrication of tubular pole structures in India. \nPrototype fitting inspections of the tubular pole structures in India."
+      },
+      {
+        "image": "expert_witness.jpg",
+        "title": "Expert Witness Project",
+        "client": "Stites & Harbison PLLC",
+        "info": "Expert witness for a proposed transmission line in Kentucky.",
+        "scope": "Engineering consultancy and expert witness services on behalf of the landowners."
+      },
+      {
+        "image": "solar_racking.png",
+        "title": "Solar Racking Structures Supply Project",
+        "client": "InterPlus",
+        "info": "Fixed solar racking structures for a solar farm in the Middle East. \nQuantity of the project is 2,400 tons (~5,300,000 lbs).",
+        "scope": "Inspection of fabricated galvanized steel racking structures in Turkey."
+      },
+      {
+        "image": "north_america_solar.png",
+        "title": "North America Solar Lighting",
+        "info": "Completed 1000+ sites within Canada and the US.",
+        "scope": "Supply of engineered lighting poles, solar framing, structural base cabinet, light arms, and accessories."
+      },
+      {
+        "image": "nigeria.png",
+        "title": "Nigeria Solar Telecom Projects",
+        "info": "400 Rural Telecommunication tower structures in Nigeria.",
+        "scope": "Supply of engineered telecom poles, solar support framing, battery cabinet and accessories."
+      },
+      {
+        "image": "steel_moduler_wind.png",
+        "title": "Steel Modular Wind Tower Engineering Work",
+        "client": "NorthStar Wind",
+        "info": "Concept design of modular steel wind tower in the US.",
+        "scope": "Engineering consultancy and assistance on technology and knowhow transfer between companies."
+      },
+      {
+        "image": "wind_tower1.png",
+        "title": "Wind Tower and Foundation Design",
+        "client": "Various global client portfolios.",
+        "scope": "Engineering consultancy on foundation design, tower design, existing structure assessment, \nretrofit projects, platform and climbing accessories."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "engineering": {
+      "title": "ENGINEERING",
+      "details": [
+        "Transmission Line Design",
+        "Lattice Tower Design",
+        "Tubular Pole Design",
+        "Foundation Design",
+        "Drafting & Detailing",
+        "Cost Estimates"
+      ]
+    },
+    "overseas": {
+      "title": "OVERSEAS FABRICATION \nINSPECTION",
+      "details": [
+        "Tower Testing Attendance",
+        "Factory Audit",
+        "Prototype Inspection",
+        "Fabrication Inspection",
+        "Pre-Shipment Inspection",
+        "Factory Acceptance Test"
+      ]
+    },
+    "sourcing": {
+      "title": "SOURCING",
+      "details": [
+        "Lattice Tower Supply",
+        "Tubular Pole Supply",
+        "Tower Accessories Supply",
+        "Composite Member Supply",
+        "After Sales Services",
+        "Project Supply Management"
+      ]
+    },
+    "consulting": {
+      "title": "CONSULTING",
+      "details": [
+        "Owner's Engineer",
+        "Investor's Engineer",
+        "Business Plans & Strategy",
+        "Expert Witness",
+        "Technical Advisory",
+        "Project Management"
+      ]
+    }
+  },
+  "buttons": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "industries": {
+    "title": "Industries",
+    "transmission": "Transmission",
+    "distribution": "Distribution",
+    "substation": "Substation",
+    "onshoreWind": "Onshore Wind",
+    "offshoreWind": "Offshore Wind",
+    "solar": "Solar",
+    "telecom": "Telecom",
+    "lighting": "Lighting"
+  },
+  "ourTeam": {
+    "title": "Our Team",
+    "more": "More",
+    "positions": {
+      "president": "President",
+      "vicePresident": "Vice President",
+      "qualityManager": "Quality Manager",
+      "regionalManager": "Regional Manager",
+      "commercialManager": "Commercial Manager",
+      "seniorQualityEngineer": "Senior Quality Engineer",
+      "projectEngineer": "Project Engineer",
+      "structuralAdvisor": "Structural Advisor",
+      "strategicPartner": "Strategic Partner",
+      "qualityInspector": "Quality Inspector",
+      "mechanicalEngineer": "Mechanical Engineer",
+      "designEngineer": "Design Engineer",
+      "qualityEngineer": "Quality Engineer",
+      "structuralEngineer": "Structural Engineer",
+      "transmissionLineEngineer": "Transmission Line Engineer"
+    },
+    "bios": {
+      "gunesDemirbas": "Gunes has almost 20 years of engineering and project management experience specializing in tower business including wind towers up to 6MW, electric transmission & distribution towers up to 600kV, telecommunication towers and lighting poles. Before founding G-Tower, he worked for well-known tower manufacturers; Valmont Industries and Mitas Energy. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He is a currently licensed Professional Engineer in Colorado, Texas and New York; holding NCEES record. He enjoys travelling, cycling, swimming and hiking.",
+      "aliGulgeze": "Ali is experienced in the structural design of a diverse range of structural systems and has experience in contract administration and cost estimating studies on a variety of projects. Ali has been involved in projects of different scales and has interpreted his technical knowledge to formulate new design concepts with economical and functional solutions. Currently managing large transmission line projects and overseas staff for company's international work. Ali is a Professional Engineer registered in Ontario, Manitoba, Alberta and Saskatchewan, Canada and holds a M.Eng. degree from University of Western Ontario. He enjoys coding, loves discovering new technology and sailing.",
+      "sabrinaAgeca": "Sabrina has almost 20 years of experience as Project Manager and Weld Engineer in the energy sector. She is a Level I Weld Inspector certified by CWB (Canadian Welding Bureau). She is experienced in weld management systems (EN 1090-2/ISO 3834-2) and integrated quality/environmental/safety (ISO 9001:2015 / ISO 14001:2015 / OHSAS 18001:2007) management systems. Worked for reputable tower manufacturers Mitas, Valmont and Şa-Ra in the past. She has B.Sc. in Engineering from Dokuz Eylul University. Completed multiple certification programs in Weld Engineering at Middle East Technical University and European Welding Federation. She enjoys painting, ceramics, trekking and cycling.",
+      "mahirErgin": "After graduated from Istanbul Kabatas High School, Mahir studied Mathematics. He holds M.Sc. and B.Sc. degrees in Mathematics. Because of his passion and interest in wind energy, he decided to join G-Tower in 2018. He is based in Ankara, Turkey. He is responsible from quality control of all the manufactured tower and pole products within Turkey prior to ship overseas. In addition to that he supports business development activities in the Middle East. He enjoys watching soccer and spending time with his two children Can & Umut Efe.",
+      "selmaHaciraifoglu": "Selma has dynamic and outstanding management professional offering over 20 years of experience as Import-Export and Logistics Specialist as well as in Project Management in the sector of Energy, Telecommunication and Lighting. Worked for tower and pole manufacturer Mitas, Mitas-Valmont JV and construction company Emta. She has BBA from Hacettepe University. Completed certification programs in foreign trade, finance, managing supply chain and logistics, contract management and so on. Proven ability to interact effectively with people of different nationalities and comfortable working in a multicultural setting. She loves skiing and enjoys travelling.",
+      "alperYavuzer": "Alper is Senior Quality Engineer at G-Tower, with mechanical engineering background. He has 15+ years of construction, steel and quality control experience. He joined G-Tower in 2019 and he is responsible from manufacturing inspection and quality control process for the utility projects. He leads and manages lattice tower factory audit work of G-Tower in overseas. Alper likes travelling and discovering different cultures. He enjoys fishing in his hometown Zonguldak on the Black Sea Coast.",
+      "ensarDuran": "Ensar is a Project Engineer at G-Tower. He has a Civil Engineering degree from Abdullah Gül University (AGU), Turkey. He earned an English Language certificate from a learning institution in Michigan, MI. He has involved in various international projects and has experience in engineering design and analysis of power transmission lines and telecommunication structures. He leads G-Tower's business development efforts in Santiago, Chile for the South American Market. Ensar is a professional snowboarder and he represented his university at various national tournaments. He also has an interest in other outdoor sports such as trekking, climbing, and camping.",
+      "nazifeMert": "Nazife is a Project Engineering at G-Tower. She graduated from Süleyman Demirel University, Civil Engineering Department in 2020. She is also studied at Cracow University of Technology for certain amount of period as part of the Erasmus Project in 2019. During the Erasmus Project, She visited 11 countries and experienced different cultures. She developed her organization and communication skills by participating in volunteer and social activities in student clubs. Nazife uses PLS-CADD, PLS-Tower and PLS-Pole. She designs transmission lines and support structures including lattice towers and tubular poles. From time to time, she visits tower factories to support G-Tower's prototype and fabrication inspection projects. She enjoys travelling and hiking.",
+      "emreInsel": "Emre has over 15 years of experience in the design of a diverse range of structures and in project management, with projects spanning four continents. He is currently engaged in research at the University of Ottawa in Ontario, Canada, focusing on the application of high ductility cementitious materials under blast loads. This research complements his extensive expertise in structural design and innovative materials, enabling him to offer unique solutions to complex engineering challenges. Emre is a professional civil engineer in California and Oregon. He enjoys biking and hiking.",
+      "mehmetGurdin": "Mehmet is the owner of IMG Energy based in Konya, Turkey. IMG Energy is G-Tower's arm in the EMEA (Europe – Middle East – Africa) Market. Mehmet has almost 25 years of experience in the management, supply and engineering of tower/pole part of energy, telecom and lighting infra-structure projects in the EMEA Market. He holds M.Sc. and B.Sc. Degrees in Civil Engineering from Middle East Technical University. He enjoys playing and watching basketball.",
+      "akinVeske": "Akin is Civil Engineering student at Middle East Technical University. He supports G-Tower's inspection services including tower prototyping, mass production, pre-shipment and factory acceptance test. In addition to that Akin attends tower testing of our clients in Turkey. His youth and dynamism bring lots of positive energy to G-Tower Team. Although his gentle nature, he is big fan of Marshall arts. The Karate Kid is one his favorite movie series. His dream is to move to Africa and start G-Tower's entity to expand our business in Africa.",
+      "serhatBoztogan": "Serhat is a mechanical engineer graduated from Middle East Technical University. He worked in the Formula Student team of his university and was the technical team captain of the first electric Formula car they built. He is interested in structural & mechanical design, structural analysis, mechanical vibrations and aims to improve himself in these subjects continuously. He follows the developments in renewable energy, aerospace and automotive technologies. His hobbies include fountain pen collecting, leather crafting and cooking. Together with the G-Tower, he aims to make vertical axis wind turbines more efficient and to be used more widely around the world.",
+      "alperenEroglu": "Alperen is a design engineer at G-Tower. He graduated from Middle East Technical University's Civil Engineering Department in 2019 as an honour student. After graduation, he started working in the private sector as a design engineer and gained experience in various projects across civil engineering disciplines, including structural and geotechnical engineering. Through these projects, he has improved himself in the manner of using design softwares, application of specifications & codes, achieving engineering design approaches and time- project management skills. In recent years, he has focused primarily on structural design and analysis of polygonal poles and lattice towers used for lighting, monitoring, energy transmission & telecommunication purposes. Beyond his professional career, he enjoys swimming, scuba diving, sailing, camping, cooking, and following scientific & historical documentaries.",
+      "sedaYuksel": "Seda is a Quality Engineer at G-tower. She graduated from Iskenderun Technical University, Mechanical Engineering Department in 2018. She supports to G-tower's inspection service including production inspection, factory acceptance testing, prototype inspection. She enjoys travelling, discovering new places, drawing and hiking.",
+      "ekremTargitay": "Ekrem is studying Metallurgical and Materials Engineering at Manisa Celal Bayar University. In his graduation project, he is working on \"Aluminum/graphite powder doped hybrid composites\" supported by the Turkish aerospace industry. He is interested in the properties and forming processes of metal materials. He is involved in production supervision, factory acceptance tests, and quality control processes at G-Tower. He enjoys traveling and swimming. He is a confident table tennis player.",
+      "gozdeIsik": "Gözde is Structural Engineer at G-Tower. She graduated from Atilim University Faculty of Civil Engineering in 2022 and studied project management at Istanbul Technical University. She completed her school internships at Mitek A.Ş. steel fabrication assembly and Kalyon Temelli solar energy factory where she gained practical experience in steel construction fabrication and renewable energy fields. After graduation, she worked at Ural Engineering for more than a year on superstructure steel construction projects. After working at Yüksel Proje for a short time, she joined the G-Tower team. She has the ability to analyze steel construction projects and perform static calculations using softwares such as Sap2000, IdeaStatiCa, AutoCAD and Tekla. With her knowledge of English and Russian, she is able to collaborate effectively in multi-cultural environments. Beyond her professional career, she enjoys fitness, pilates, yoga, figure skating and traveling.",
+      "ertanSurucu": "Ertan is a dynamic civil engineer, graduated from Middle East Technical University in 2023, with a passion for innovation and a dedication to excellence. Currently pursuing a Masters degree at Middle East Technical University, he continues to expand his knowledge and expertise in the field. Known for his boundless energy and enthusiasm, he approaches every project with vigor, striving to incorporate the latest advancements in engineering while maintaining a focus on sustainability and efficiency. Outside of the professional realm, he leads an active lifestyle, finding joy in a variety of hobbies. Whether hitting the gym for an intense workout session, engaging in friendly matches of football and basketball, or exploring new destinations through travel, he embraces life with zest and curiosity. Additionally, he nurtures a deep appreciation for culture and the arts, often spending leisure time wandering through museums and art galleries, drawing inspiration from the creativity of others.",
+      "emreManavoglu": "Emre is a highly skilled structural engineer with two years of experience in the field. Emre has demonstrated proficiency in tower, platform, rooftop, mount analysis etc., and foundation design, making notable contributions to various projects. Emre's academic background includes graduation from the prestigious Middle East Technical University, renowned for its excellence in engineering education. His education has equipped him with a strong theoretical foundation, which he has successfully applied to real-world engineering challenges. In addition to his professional accomplishments, Emre is a licensed chess and football player, showcasing his dedication, strategic thinking, and teamwork skills both on and off the field. These qualities translate seamlessly into his work as an engineer, where he consistently approaches projects with creativity, analytical thinking, and collaboration.",
+      "gungorSahin": "Gungur is a Transmission Line Engineer at G-Tower. He graduated from the department of Civil Engineering at Middle East Technical University in 2022. Immediately following his graduation, he commenced employment with Mitaş Energy and remained for a duration of two years. Throughout this two-year period, he acquired experience as a transmission line design engineer and developed proficiency in the PLS-Tower and PLS-CADD software programs. Alongside her professional experience, he is also an accomplished ultimate frisbee player."
+    }
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "usHeadquarter": "United States Headquarter",
+    "usAddress": "4571 Broadway St, Boulder, CO 80304",
+    "usEmail": "contact.us@g-tower.com",
+    "regions": {
+      "canada": "Canada",
+      "turkey": "Turkey",
+      "chile": "Chile",
+      "india": "India",
+      "australia": "Australia"
+    },
+    "offices": {
+      "toronto": "Toronto, ON Office",
+      "ankara": "Ankara Office",
+      "santiago": "Santiago Office",
+      "kolkata": "Kolkata Office",
+      "sydney": "Sydney Office"
+    }
+  },
+  "marketing": {
+    "firstImage": "https://g-tower.com/marketing/first-image.jpg",
+    "mainTitle": "REFERENCES & PRESENTATIONS",
+    "whoWeAre": {
+      "question": "Who we are?",
+      "answer": "G-Tower is an engineering & inspection services company focusing on tower & pole portion of the energy infra-structure projects"
+    },
+    "whatWeDo": {
+      "question": "What we do?",
+      "services1": [
+        "Engineering Services",
+        "Consulting Services",
+        "Inspection Services"
+      ],
+      "services2": [
+        "Manufacturing Inspection",
+        "Prototype Inspection",
+        "Third Party Inspection"
+      ]
+    },
+    "learnMore": "Learn More",
+    "projects": [
+      {
+        "id": "second-project",
+        "title": "INSPECTION FLYER",
+        "description": "Supporting Good Power with our experienced, in-house and skilled staff in three countries",
+        "image": "https://g-tower.com/marketing/second-image.png",
+        "link": "https://g-tower.com/wp-content/uploads/2022/09/G-Tower_Inspection_Flyer.pdf"
+      },
+      {
+        "id": "third-project",
+        "title": "WHY WORK WITH G-TOWER AS YOUR QA/QC PARTNER",
+        "image": "https://g-tower.com/marketing/third-image.png",
+        "link": "https://g-tower.com/wp-content/uploads/2022/09/Why_Work_G-Tower.pdf"
+      },
+      {
+        "id": "fourth-project",
+        "title": "ENGINEERING SERVICES FLYER",
+        "description": "G-Tower Engineers provide tailored engineering solutions for various industries. Like power transmission, wind power, solar power, telecommunication, lighting.",
+        "image": "https://g-tower.com/marketing/fourth-image.jpg",
+        "link": "https://g-tower.com/wp-content/uploads/2022/09/G-Tower-Engineering-Services-Flyer.jpg"
+      },
+      {
+        "id": "fifth-project",
+        "title": "OVERSEAS FABRICATION INSPECTION SERVICES",
+        "image": "https://g-tower.com/marketing/fifth-image.jpg",
+        "link": "https://g-tower.com/marketing/20240430_G-Tower_Overseas_Fabrication_Inspection_Services.pdf"
+      },
+      {
+        "id": "sixth-project",
+        "title": "ENGINEERING SERVICES",
+        "description": "G-Tower is an independent tower solutions company. G-Tower provides engineering services to renewable energy infra-structure projects.",
+        "image": "https://g-tower.com/marketing/sixth-image.jpg",
+        "link": "https://g-tower.com/marketing/20240430_G-Tower_Engineering_Services.pdf"
+      }
+    ],
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/company/g-tower/",
+      "youtube": "https://www.youtube.com/@g-tower6904"
+    },
+    "copyright": "[© 2023] G-Tower, All Rights Reserved."
   }
-  
+}

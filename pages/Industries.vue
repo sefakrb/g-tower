@@ -1,7 +1,7 @@
 <template>
   <v-row class="ma-0 centerize" v-resize="onResize">
     <v-col class="d-flex" cols="12">
-      <v-card-title class="mainTitle">Industries</v-card-title>
+      <v-card-title class="mainTitle">{{ $t('industries.title') }}</v-card-title>
     </v-col>
     <v-col
       v-for="item in items"
@@ -20,15 +20,14 @@
           max-width="100%"
           contain
           :src="'https://g-tower.com/industries/' + item.image"
+          :alt="$t(`industries.${item.translationKey}`)"
         ></v-img>
         <v-card-title
           class="justify-center"
-          style=""
           :class="cardSize === '6' ? 'cardTitlePhone' : 'cardTitle'"
-          >{{ item.text }}</v-card-title
-        >
-      </v-card></v-col
-    >
+        >{{ $t(`industries.${item.translationKey}`) }}</v-card-title>
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 
@@ -39,36 +38,36 @@ export default {
       items: [
         {
           image: 'transmission.png',
-          text: 'Transmission',
+          translationKey: 'transmission'
         },
         {
           image: 'distrubition.png',
-          text: 'Distribution',
+          translationKey: 'distribution'
         },
         {
           image: 'substation.png',
-          text: 'Substation',
+          translationKey: 'substation'
         },
         {
           image: 'utility_scale_wind.png',
-          text: 'Onshore Wind',
+          translationKey: 'onshoreWind'
         },
         {
           image: 'offshore_wind.png',
-          text: 'Offshore Wind',
+          translationKey: 'offshoreWind'
         },
         {
           image: 'solar.png',
-          text: 'Solar',
+          translationKey: 'solar'
         },
         {
           image: 'telecom.png',
-          text: 'Telecom',
+          translationKey: 'telecom'
         },
         {
           image: 'lighting.png',
-          text: 'Lighting',
-        },
+          translationKey: 'lighting'
+        }
       ],
       cardSize: null,
     }
@@ -86,6 +85,9 @@ export default {
       }
     },
   },
+  mounted() {
+    this.onResize()
+  }
 }
 </script>
 

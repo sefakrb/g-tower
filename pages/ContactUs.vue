@@ -1,7 +1,7 @@
 <template>
   <v-row class="ma-0" v-resize="onResize">
-    <v-col style="padding: 12 !improtant" class="d-flex" cols="12">
-      <v-card-title class="mainTitle">Contact Us</v-card-title>
+    <v-col style="padding: 12px !important" class="d-flex" cols="12">
+      <v-card-title class="mainTitle">{{ $t('contactUs.title') }}</v-card-title>
     </v-col>
     <v-col class="centerize" cols="12">
       <v-card width="85vw" flat class="centerize">
@@ -16,109 +16,86 @@
     <div class="d-flex justify-center" style="width: 100%">
       <v-col cols="6" class="d-flex justify-center">
         <v-card height="100%" class="d-flex flex-column" flat rounded="lg">
-          <v-card-title class="country">United States Headquarter</v-card-title>
+          <v-card-title class="country">{{ $t('contactUs.usHeadquarter') }}</v-card-title>
           <v-card-text
             :class="locationSize === '6' ? 'contextMobile' : 'context'"
             style="font-weight: 450"
             class="pb-0"
-          >
-            4571 Broadway St, Boulder, CO 80304
-          </v-card-text>
+          >{{ $t('contactUs.usAddress') }}</v-card-text>
           <v-card-text
             :class="locationSize === '6' ? 'contextMobile' : 'context'"
             style="font-weight: 450"
             class="pt-0 text-center"
-          >
-            contact.us@g-tower.com
-          </v-card-text>
-        </v-card></v-col
-      >
+          >{{ $t('contactUs.usEmail') }}</v-card-text>
+        </v-card>
+      </v-col>
     </div>
-    <v-col cols="12"></v-col>
 
     <v-row class="ma-0 pa-0 d-flex justify-center">
       <v-col
         :style="locationSize === '2' ? { margin: '1%' } : ''"
-        v-for="item in items"
-        :key="item.region"
+        v-for="office in offices"
+        :key="office.region"
         :cols="locationSize"
         class="pa-0 d-flex justify-center"
       >
         <v-card class="cardContext mr-2" flat rounded="lg">
           <div>
             <v-card-title
-              :style="{ color: item.color }"
+              :style="{ color: office.color }"
               class="pb-2 country d-flex justify-center"
-              >{{ item.region }}</v-card-title
-            >
+            >{{ $t(`contactUs.regions.${office.region}`) }}</v-card-title>
             <v-card-text
               :class="locationSize === '6' ? 'contextMobile' : 'context'"
               class="pb-0 d-flex justify-center"
-            >
-              {{ item.location }}
-            </v-card-text>
+            >{{ $t(`contactUs.offices.${office.region}`) }}</v-card-text>
             <v-card-text
               :class="locationSize === '6' ? 'contextMobile' : 'context'"
               class="pt-0 d-flex justify-center"
-              @click="mailTo(item)"
+              @click="mailTo(office)"
             >
               <a
                 class="text-center"
-                style="
-                  text-decoration: none;
-                  color: rgba(0, 0, 0, 0.6);
-                  width: 100%;
-                "
-                :href="'mailto:' + item.email + '?subject=Info%20Request'"
+                style="text-decoration: none; color: rgba(0, 0, 0, 0.6); width: 100%"
+                :href="`mailto:${office.email}?subject=${$t('contactUs.emailSubject')}`"
               >
-                {{ item.email }}
+                {{ office.email }}
               </a>
             </v-card-text>
           </div>
-          <!-- <v-divider
-            v-if="item.region !== 'Australia'"
-            inset
-            vertical
-          ></v-divider> -->
         </v-card>
       </v-col>
     </v-row>
   </v-row>
 </template>
-
 <script>
 export default {
   data() {
     return {
-      items: [
+      offices: [
         {
-          region: 'Canada',
+          region: 'canada',
           color: '#FF7F00',
-          location: 'Toronto, ON Office',
           email: 'contact.ca@g-tower.com',
         },
         {
-          region: 'Turkey',
+          region: 'turkey',
           color: '#4EB3D3',
-          location: 'Ankara Office',
           email: 'contact.tr@g-tower.com',
         },
         {
-          region: 'Chile',
+          region: 'chile',
           color: '#E31A1C',
-          location: 'Santiago Office',
           email: 'contact.cl@g-tower.com',
         },
         {
-          region: 'India',
+          region: 'india',
           color: '#084081',
-          location: 'Kolkata Office',
           email: 'contact.in@g-tower.com',
         },
         {
-          region: 'Australia',
+          region: 'australia',
           color: 'rgb(136, 65, 157)',
-          location: 'Sydney Office',
           email: 'contact.au@g-tower.com',
         },
       ],
@@ -126,7 +103,7 @@ export default {
     }
   },
   methods: {
-    mailTo(item) {},
+    mailTo(office) {},
     onResize() {
       this.show = true
       if (window.innerWidth < 300) {
